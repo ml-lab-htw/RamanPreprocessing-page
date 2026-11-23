@@ -4285,6 +4285,422 @@
    "wavelet_bc_snv": 2.75
   }
  },
+ "fig2": {
+  "regression": {
+   "cd": 1.1206,
+   "n_blocks": 1260,
+   "ranks": [
+    {
+     "recipe": "bc_snv_avgpool",
+     "rank": 9.746,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_sg_snv",
+     "rank": 9.9877,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "wavelet_bc_snv",
+     "rank": 10.3437,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "snv",
+     "rank": 10.8444,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "sg_rubberband_snv",
+     "rank": 11.1282,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_sg_msc",
+     "rank": 11.2397,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_snv",
+     "rank": 11.3877,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "emsc",
+     "rank": 11.4659,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "msc",
+     "rank": 11.648,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "prep_ensemble",
+     "rank": 12.4444,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "sg_d1_snv",
+     "rank": 12.5849,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "gcu_lvse",
+     "rank": 12.6718,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "all",
+     "rank": 13.4659,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "airpls_snv",
+     "rank": 13.4885,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "arpls_snv",
+     "rank": 13.7127,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "gcu",
+     "rank": 14.219,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_sg",
+     "rank": 14.2683,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "crr_snv",
+     "rank": 14.3437,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc",
+     "rank": 15.0167,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "avgpool",
+     "rank": 15.5028,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "lvse",
+     "rank": 15.6099,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "sg",
+     "rank": 16.4456,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "none",
+     "rank": 16.7933,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "sg_d2_snv",
+     "rank": 17.3246,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "decimate",
+     "rank": 17.6496,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "stdscale",
+     "rank": 17.6671,
+     "vs_none": "not_separated"
+    }
+   ],
+   "cliques": [
+    [
+     0,
+     3
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     6,
+     9
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     8,
+     11
+    ],
+    [
+     9,
+     13
+    ],
+    [
+     11,
+     14
+    ],
+    [
+     12,
+     17
+    ],
+    [
+     15,
+     18
+    ],
+    [
+     18,
+     20
+    ],
+    [
+     19,
+     21
+    ],
+    [
+     21,
+     23
+    ],
+    [
+     22,
+     25
+    ]
+   ]
+  },
+  "classification": {
+   "cd": 2.8486,
+   "n_blocks": 195,
+   "ranks": [
+    {
+     "recipe": "sg_rubberband_snv",
+     "rank": 10.3718,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_snv_avgpool",
+     "rank": 10.8205,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "airpls_snv",
+     "rank": 10.8974,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_sg_snv",
+     "rank": 10.9128,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "wavelet_bc_snv",
+     "rank": 11.0974,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "snv",
+     "rank": 11.2436,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "sg_d1_snv",
+     "rank": 11.2769,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_snv",
+     "rank": 11.5949,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "crr_snv",
+     "rank": 12.5821,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "gcu_lvse",
+     "rank": 12.659,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "all",
+     "rank": 13.4821,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "arpls_snv",
+     "rank": 13.6872,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "bc_sg",
+     "rank": 13.7692,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "prep_ensemble",
+     "rank": 13.8308,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "bc",
+     "rank": 13.8897,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "lvse",
+     "rank": 14.1436,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "avgpool",
+     "rank": 14.7077,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "emsc",
+     "rank": 14.9,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "bc_sg_msc",
+     "rank": 15.0026,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "sg",
+     "rank": 15.2,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "msc",
+     "rank": 15.3436,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "none",
+     "rank": 15.4231,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "sg_d2_snv",
+     "rank": 15.6359,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "gcu",
+     "rank": 15.9026,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "stdscale",
+     "rank": 16.0949,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "decimate",
+     "rank": 16.5308,
+     "vs_none": "not_separated"
+    }
+   ],
+   "cliques": [
+    [
+     0,
+     9
+    ],
+    [
+     1,
+     10
+    ],
+    [
+     2,
+     11
+    ],
+    [
+     4,
+     14
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     8,
+     21
+    ],
+    [
+     10,
+     24
+    ],
+    [
+     11,
+     25
+    ]
+   ]
+  }
+ },
+ "fig3": [
+  {
+   "label": "Regression, all models",
+   "task": "regression",
+   "n_models": 14,
+   "n_targets": 91,
+   "shares": {
+    "model": 70.64,
+    "recipe": 9.09,
+    "interaction": 14.03,
+    "noise": 2.65
+   }
+  },
+  {
+   "label": "Regression, TFMs",
+   "task": "regression",
+   "n_models": 4,
+   "n_targets": 91,
+   "shares": {
+    "model": 26.54,
+    "recipe": 46.58,
+    "interaction": 9.4,
+    "noise": 8.03
+   }
+  },
+  {
+   "label": "Classification, all models",
+   "task": "classification",
+   "n_models": 15,
+   "n_targets": 13,
+   "shares": {
+    "model": 56.02,
+    "recipe": 14.74,
+    "interaction": 16.76,
+    "noise": 3.43
+   }
+  },
+  {
+   "label": "Classification, TFMs",
+   "task": "classification",
+   "n_models": 4,
+   "n_targets": 13,
+   "shares": {
+    "model": 12.84,
+    "recipe": 51.01,
+    "interaction": 7.49,
+    "noise": 8.65
+   }
+  }
+ ],
  "fig4": {
   "global_recipe": "bc_snv_avgpool",
   "rows": [
@@ -4415,5 +4831,1231 @@
     "targets": 89
    }
   ]
+ },
+ "fig5": {
+  "regression": [
+   {
+    "model": "RamanPFN",
+    "family": "Tabular foundation",
+    "recipe": "msc",
+    "ins": -0.71,
+    "held": 0.82,
+    "lo": -2.54,
+    "hi": 3.09,
+    "stable": false
+   },
+   {
+    "model": "Kumo",
+    "family": "Tabular foundation",
+    "recipe": "snv",
+    "ins": -4.16,
+    "held": -1.25,
+    "lo": -6.42,
+    "hi": 1.43,
+    "stable": false
+   },
+   {
+    "model": "TabPFN-3.5",
+    "family": "Tabular foundation",
+    "recipe": "prep_ensemble",
+    "ins": -7.45,
+    "held": -5.09,
+    "lo": -10.33,
+    "hi": -1.71,
+    "stable": true
+   },
+   {
+    "model": "PCR",
+    "family": "Chemometric",
+    "recipe": "bc_sg_snv",
+    "ins": -8.95,
+    "held": -5.57,
+    "lo": -12.11,
+    "hi": 4.18,
+    "stable": false
+   },
+   {
+    "model": "Ridge",
+    "family": "Chemometric",
+    "recipe": "wavelet_bc_snv",
+    "ins": -9.6,
+    "held": -1.74,
+    "lo": -24.87,
+    "hi": 10.97,
+    "stable": false
+   },
+   {
+    "model": "PLS",
+    "family": "Chemometric",
+    "recipe": "bc_sg_snv",
+    "ins": -10.13,
+    "held": -6.9,
+    "lo": -13.79,
+    "hi": 4.13,
+    "stable": false
+   },
+   {
+    "model": "ReZeroNet",
+    "family": "Deep learning",
+    "recipe": "bc_snv_avgpool",
+    "ins": -10.75,
+    "held": -7.11,
+    "lo": -12.93,
+    "hi": -0.5,
+    "stable": true
+   },
+   {
+    "model": "DeepCNN",
+    "family": "Deep learning",
+    "recipe": "bc_snv_avgpool",
+    "ins": -12.35,
+    "held": -8.48,
+    "lo": -17.63,
+    "hi": -0.57,
+    "stable": true
+   },
+   {
+    "model": "TabICLv2",
+    "family": "Tabular foundation",
+    "recipe": "emsc",
+    "ins": -12.96,
+    "held": -8.68,
+    "lo": -18.62,
+    "hi": -3.57,
+    "stable": true
+   },
+   {
+    "model": "kNN",
+    "family": "Chemometric",
+    "recipe": "bc_sg_snv",
+    "ins": -18.27,
+    "held": -16.52,
+    "lo": -21.78,
+    "hi": -7.48,
+    "stable": true
+   },
+   {
+    "model": "SVM",
+    "family": "Kernel methods",
+    "recipe": "all",
+    "ins": -18.8,
+    "held": -14.89,
+    "lo": -26.49,
+    "hi": -4.56,
+    "stable": true
+   },
+   {
+    "model": "XGB",
+    "family": "Tree ensembles",
+    "recipe": "prep_ensemble",
+    "ins": -25.31,
+    "held": -21.54,
+    "lo": -27.5,
+    "hi": -12.99,
+    "stable": true
+   },
+   {
+    "model": "RF",
+    "family": "Tree ensembles",
+    "recipe": "prep_ensemble",
+    "ins": -26.26,
+    "held": -22.26,
+    "lo": -31.65,
+    "hi": -15.36,
+    "stable": true
+   },
+   {
+    "model": "GBM",
+    "family": "Tree ensembles",
+    "recipe": "prep_ensemble",
+    "ins": -26.87,
+    "held": -21.81,
+    "lo": -31.28,
+    "hi": -17.6,
+    "stable": true
+   }
+  ],
+  "classification": [
+   {
+    "model": "Kumo",
+    "family": "Tabular foundation",
+    "recipe": "gcu_lvse",
+    "ins": 0.1,
+    "held": -0.16,
+    "lo": -1.43,
+    "hi": 0.48,
+    "stable": false
+   },
+   {
+    "model": "ReZeroNet",
+    "family": "Deep learning",
+    "recipe": "bc_snv_avgpool",
+    "ins": 0.35,
+    "held": -0.32,
+    "lo": -2.22,
+    "hi": 0.98,
+    "stable": false
+   },
+   {
+    "model": "RamanPFN",
+    "family": "Tabular foundation",
+    "recipe": "airpls_snv",
+    "ins": 0.56,
+    "held": -0.15,
+    "lo": -1.26,
+    "hi": 0.61,
+    "stable": false
+   },
+   {
+    "model": "DeepCNN",
+    "family": "Deep learning",
+    "recipe": "bc_sg_snv",
+    "ins": 1.07,
+    "held": -0.03,
+    "lo": -1.77,
+    "hi": 1.68,
+    "stable": false
+   },
+   {
+    "model": "TabPFN-3.5",
+    "family": "Tabular foundation",
+    "recipe": "avgpool",
+    "ins": 1.34,
+    "held": 0.21,
+    "lo": -1.12,
+    "hi": 4.1,
+    "stable": false
+   },
+   {
+    "model": "TabICLv2",
+    "family": "Tabular foundation",
+    "recipe": "gcu_lvse",
+    "ins": 1.99,
+    "held": 1.28,
+    "lo": -1.33,
+    "hi": 3.65,
+    "stable": false
+   },
+   {
+    "model": "PCR",
+    "family": "Chemometric",
+    "recipe": "all",
+    "ins": 1.99,
+    "held": 1.67,
+    "lo": -1.47,
+    "hi": 7.94,
+    "stable": false
+   },
+   {
+    "model": "PLS",
+    "family": "Chemometric",
+    "recipe": "all",
+    "ins": 2.18,
+    "held": 1.69,
+    "lo": -0.88,
+    "hi": 6.93,
+    "stable": false
+   },
+   {
+    "model": "PCA-LDA",
+    "family": "Chemometric",
+    "recipe": "sg_rubberband_snv",
+    "ins": 2.48,
+    "held": 2.22,
+    "lo": -2.09,
+    "hi": 5.73,
+    "stable": false
+   },
+   {
+    "model": "Ridge",
+    "family": "Chemometric",
+    "recipe": "sg_d1_snv",
+    "ins": 5.79,
+    "held": 3.26,
+    "lo": 0.68,
+    "hi": 7.15,
+    "stable": true
+   },
+   {
+    "model": "XGB",
+    "family": "Tree ensembles",
+    "recipe": "airpls_snv",
+    "ins": 8.89,
+    "held": 5.23,
+    "lo": 0.36,
+    "hi": 11.99,
+    "stable": true
+   },
+   {
+    "model": "RF",
+    "family": "Tree ensembles",
+    "recipe": "wavelet_bc_snv",
+    "ins": 9.5,
+    "held": 5.61,
+    "lo": 0.9,
+    "hi": 11.5,
+    "stable": true
+   },
+   {
+    "model": "GBM",
+    "family": "Tree ensembles",
+    "recipe": "prep_ensemble",
+    "ins": 9.92,
+    "held": 5.35,
+    "lo": 0.31,
+    "hi": 12.13,
+    "stable": true
+   },
+   {
+    "model": "kNN",
+    "family": "Chemometric",
+    "recipe": "wavelet_bc_snv",
+    "ins": 10.16,
+    "held": 4.47,
+    "lo": -0.23,
+    "hi": 14.05,
+    "stable": false
+   },
+   {
+    "model": "SVM",
+    "family": "Kernel methods",
+    "recipe": "all",
+    "ins": 13.03,
+    "held": 10.35,
+    "lo": 1.06,
+    "hi": 22.28,
+    "stable": true
+   }
+  ]
+ },
+ "fig6": {
+  "groups": [
+   {
+    "n_lo": 0,
+    "label": "< 50",
+    "n": 15,
+    "median": {
+     "global": -12.43,
+     "family": -13.38,
+     "nested": -21.6
+    },
+    "worse": {
+     "global": 27,
+     "family": 13,
+     "nested": 13
+    }
+   },
+   {
+    "n_lo": 50,
+    "label": "50–100",
+    "n": 13,
+    "median": {
+     "global": 7.55,
+     "family": -2.05,
+     "nested": -10.2
+    },
+    "worse": {
+     "global": 54,
+     "family": 46,
+     "nested": 8
+    }
+   },
+   {
+    "n_lo": 100,
+    "label": "100–200",
+    "n": 28,
+    "median": {
+     "global": -8.22,
+     "family": -11.5,
+     "nested": -13.68
+    },
+    "worse": {
+     "global": 7,
+     "family": 0,
+     "nested": 4
+    }
+   },
+   {
+    "n_lo": 200,
+    "label": "200–500",
+    "n": 29,
+    "median": {
+     "global": -17.3,
+     "family": -16.74,
+     "nested": -20.55
+    },
+    "worse": {
+     "global": 10,
+     "family": 3,
+     "nested": 3
+    }
+   },
+   {
+    "n_lo": 500,
+    "label": "> 500",
+    "n": 21,
+    "median": {
+     "global": -8.75,
+     "family": -9.14,
+     "nested": -16.07
+    },
+    "worse": {
+     "global": 14,
+     "family": 14,
+     "nested": 5
+    }
+   }
+  ],
+  "targets": [
+   {
+    "g": 0,
+    "key": "acetic_acid_species__0",
+    "dataset": "acetic_acid_species",
+    "global": -72.51,
+    "family": -74.98,
+    "nested": -39.27
+   },
+   {
+    "g": 0,
+    "key": "acetic_acid_species__1",
+    "dataset": "acetic_acid_species",
+    "global": -69.32,
+    "family": -74.65,
+    "nested": -37.63
+   },
+   {
+    "g": 0,
+    "key": "ait_glucose_blood_sers__0",
+    "dataset": "ait_glucose_blood_sers",
+    "global": -0.37,
+    "family": -0.7,
+    "nested": -5.49
+   },
+   {
+    "g": 0,
+    "key": "citric_acid_species__1",
+    "dataset": "citric_acid_species",
+    "global": -17.37,
+    "family": -56.67,
+    "nested": -23.55
+   },
+   {
+    "g": 0,
+    "key": "formic_acid_species__0",
+    "dataset": "formic_acid_species",
+    "global": 104.99,
+    "family": 4.79,
+    "nested": 5.16
+   },
+   {
+    "g": 0,
+    "key": "formic_acid_species__1",
+    "dataset": "formic_acid_species",
+    "global": -50.84,
+    "family": -4.42,
+    "nested": -21.6
+   },
+   {
+    "g": 0,
+    "key": "formic_acid_species__2",
+    "dataset": "formic_acid_species",
+    "global": 53.93,
+    "family": -7.27,
+    "nested": -1.08
+   },
+   {
+    "g": 0,
+    "key": "fuel_benchtop__1",
+    "dataset": "fuel",
+    "global": 4.82,
+    "family": -0.36,
+    "nested": 11.16
+   },
+   {
+    "g": 0,
+    "key": "fuel_handheld__1",
+    "dataset": "fuel",
+    "global": -12.43,
+    "family": -13.38,
+    "nested": -19.94
+   },
+   {
+    "g": 0,
+    "key": "itaconic_acid_species__0",
+    "dataset": "itaconic_acid_species",
+    "global": -38.74,
+    "family": -45.02,
+    "nested": -40.4
+   },
+   {
+    "g": 0,
+    "key": "itaconic_acid_species__1",
+    "dataset": "itaconic_acid_species",
+    "global": -16.61,
+    "family": -36.12,
+    "nested": -25.67
+   },
+   {
+    "g": 0,
+    "key": "levulinic_acid_species__0",
+    "dataset": "levulinic_acid_species",
+    "global": -6.16,
+    "family": -17.0,
+    "nested": -34.72
+   },
+   {
+    "g": 0,
+    "key": "levulinic_acid_species__1",
+    "dataset": "levulinic_acid_species",
+    "global": -35.27,
+    "family": -16.9,
+    "nested": -51.94
+   },
+   {
+    "g": 0,
+    "key": "microgel_synthesis__0",
+    "dataset": "microgel_synthesis",
+    "global": -10.16,
+    "family": -10.56,
+    "nested": -7.01
+   },
+   {
+    "g": 0,
+    "key": "streptococcus_thermophilus_fermentation_kaiser__1",
+    "dataset": "streptococcus_thermophilus_fermentation_kaiser",
+    "global": 15.07,
+    "family": 6.76,
+    "nested": 0.0
+   },
+   {
+    "g": 50,
+    "key": "flow_microgel_synthesis__0",
+    "dataset": "flow_microgel_synthesis",
+    "global": -4.48,
+    "family": -2.05,
+    "nested": -4.98
+   },
+   {
+    "g": 50,
+    "key": "ralstonia_fermentations__0",
+    "dataset": "ralstonia_fermentations",
+    "global": 24.25,
+    "family": 24.25,
+    "nested": -6.09
+   },
+   {
+    "g": 50,
+    "key": "ralstonia_fermentations__1",
+    "dataset": "ralstonia_fermentations",
+    "global": -11.44,
+    "family": -12.36,
+    "nested": -23.46
+   },
+   {
+    "g": 50,
+    "key": "ralstonia_fermentations__2",
+    "dataset": "ralstonia_fermentations",
+    "global": 38.04,
+    "family": 12.2,
+    "nested": -19.56
+   },
+   {
+    "g": 50,
+    "key": "ralstonia_fermentations__3",
+    "dataset": "ralstonia_fermentations",
+    "global": -2.47,
+    "family": -2.47,
+    "nested": -23.05
+   },
+   {
+    "g": 50,
+    "key": "ralstonia_fermentations__4",
+    "dataset": "ralstonia_fermentations",
+    "global": 29.28,
+    "family": 0.26,
+    "nested": -7.34
+   },
+   {
+    "g": 50,
+    "key": "ralstonia_fermentations__5",
+    "dataset": "ralstonia_fermentations",
+    "global": -14.96,
+    "family": -10.23,
+    "nested": -11.97
+   },
+   {
+    "g": 50,
+    "key": "succinic_acid_species__0",
+    "dataset": "succinic_acid_species",
+    "global": -19.92,
+    "family": -18.01,
+    "nested": -21.7
+   },
+   {
+    "g": 50,
+    "key": "succinic_acid_species__1",
+    "dataset": "succinic_acid_species",
+    "global": 25.14,
+    "family": -13.98,
+    "nested": -27.12
+   },
+   {
+    "g": 50,
+    "key": "yeast_fermentation__0",
+    "dataset": "yeast_fermentation",
+    "global": 7.55,
+    "family": 9.65,
+    "nested": -3.11
+   },
+   {
+    "g": 50,
+    "key": "yeast_fermentation__1",
+    "dataset": "yeast_fermentation",
+    "global": 16.87,
+    "family": 13.04,
+    "nested": 3.98
+   },
+   {
+    "g": 50,
+    "key": "yeast_fermentation__2",
+    "dataset": "yeast_fermentation",
+    "global": -1.69,
+    "family": -2.75,
+    "nested": -10.2
+   },
+   {
+    "g": 50,
+    "key": "yeast_fermentation__3",
+    "dataset": "yeast_fermentation",
+    "global": 30.51,
+    "family": 34.97,
+    "nested": -3.14
+   },
+   {
+    "g": 100,
+    "key": "bioprocess_analytes_kaiser__0",
+    "dataset": "bioprocess_analytes_kaiser",
+    "global": -4.12,
+    "family": -5.24,
+    "nested": -17.7
+   },
+   {
+    "g": 100,
+    "key": "bioprocess_analytes_kaiser__1",
+    "dataset": "bioprocess_analytes_kaiser",
+    "global": -11.74,
+    "family": -17.32,
+    "nested": -20.51
+   },
+   {
+    "g": 100,
+    "key": "bioprocess_analytes_kaiser__2",
+    "dataset": "bioprocess_analytes_kaiser",
+    "global": -13.76,
+    "family": -13.76,
+    "nested": -20.52
+   },
+   {
+    "g": 100,
+    "key": "bioprocess_analytes_timegate__0",
+    "dataset": "bioprocess_analytes_timegate",
+    "global": -41.8,
+    "family": -36.24,
+    "nested": -40.54
+   },
+   {
+    "g": 100,
+    "key": "bioprocess_analytes_timegate__1",
+    "dataset": "bioprocess_analytes_timegate",
+    "global": -29.91,
+    "family": -37.14,
+    "nested": -43.7
+   },
+   {
+    "g": 100,
+    "key": "bioprocess_analytes_timegate__2",
+    "dataset": "bioprocess_analytes_timegate",
+    "global": -47.88,
+    "family": -47.47,
+    "nested": -55.59
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__0",
+    "dataset": "fuel_benchtop",
+    "global": -9.92,
+    "family": -14.19,
+    "nested": -15.64
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__10",
+    "dataset": "fuel_benchtop",
+    "global": -5.95,
+    "family": -7.98,
+    "nested": -5.16
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__11",
+    "dataset": "fuel_benchtop",
+    "global": 10.97,
+    "family": -9.31,
+    "nested": -17.9
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__2",
+    "dataset": "fuel_benchtop",
+    "global": -6.85,
+    "family": -13.0,
+    "nested": -8.53
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__3",
+    "dataset": "fuel_benchtop",
+    "global": -6.75,
+    "family": -9.97,
+    "nested": -15.28
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__4",
+    "dataset": "fuel_benchtop",
+    "global": -10.83,
+    "family": -14.83,
+    "nested": -16.57
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__5",
+    "dataset": "fuel_benchtop",
+    "global": -4.28,
+    "family": -6.42,
+    "nested": -4.09
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__6",
+    "dataset": "fuel_benchtop",
+    "global": -3.3,
+    "family": -1.48,
+    "nested": 1.07
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__7",
+    "dataset": "fuel_benchtop",
+    "global": 0.15,
+    "family": -3.57,
+    "nested": -5.3
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__8",
+    "dataset": "fuel_benchtop",
+    "global": -0.46,
+    "family": -5.81,
+    "nested": -4.3
+   },
+   {
+    "g": 100,
+    "key": "fuel_benchtop__9",
+    "dataset": "fuel_benchtop",
+    "global": -13.55,
+    "family": -14.07,
+    "nested": -15.72
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__0",
+    "dataset": "fuel_handheld",
+    "global": -5.16,
+    "family": -7.48,
+    "nested": -10.59
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__10",
+    "dataset": "fuel_handheld",
+    "global": -18.64,
+    "family": -17.94,
+    "nested": -17.58
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__11",
+    "dataset": "fuel_handheld",
+    "global": -21.74,
+    "family": -21.15,
+    "nested": -24.32
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__2",
+    "dataset": "fuel_handheld",
+    "global": -15.7,
+    "family": -13.95,
+    "nested": -11.32
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__3",
+    "dataset": "fuel_handheld",
+    "global": -14.65,
+    "family": -13.29,
+    "nested": -12.04
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__4",
+    "dataset": "fuel_handheld",
+    "global": -37.41,
+    "family": -33.2,
+    "nested": -36.62
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__5",
+    "dataset": "fuel_handheld",
+    "global": -5.91,
+    "family": -6.17,
+    "nested": -5.26
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__6",
+    "dataset": "fuel_handheld",
+    "global": -0.19,
+    "family": -0.31,
+    "nested": -0.28
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__7",
+    "dataset": "fuel_handheld",
+    "global": -6.08,
+    "family": -5.25,
+    "nested": -5.94
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__8",
+    "dataset": "fuel_handheld",
+    "global": -4.06,
+    "family": -4.81,
+    "nested": -3.18
+   },
+   {
+    "g": 100,
+    "key": "fuel_handheld__9",
+    "dataset": "fuel_handheld",
+    "global": -9.56,
+    "family": -9.2,
+    "nested": -6.01
+   },
+   {
+    "g": 200,
+    "key": "adenine_colloidal_gold__0",
+    "dataset": "adenine_colloidal_gold",
+    "global": -35.82,
+    "family": -41.72,
+    "nested": -38.93
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_anton_532__0",
+    "dataset": "bioprocess_analytes_anton_532",
+    "global": 37.67,
+    "family": 0.4,
+    "nested": 1.58
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_anton_532__1",
+    "dataset": "bioprocess_analytes_anton_532",
+    "global": -1.93,
+    "family": -2.04,
+    "nested": -2.29
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_anton_532__2",
+    "dataset": "bioprocess_analytes_anton_532",
+    "global": -29.31,
+    "family": -29.0,
+    "nested": -20.55
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_anton_785__0",
+    "dataset": "bioprocess_analytes_anton_785",
+    "global": -20.16,
+    "family": -15.15,
+    "nested": -14.55
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_anton_785__1",
+    "dataset": "bioprocess_analytes_anton_785",
+    "global": -15.73,
+    "family": -8.06,
+    "nested": -26.58
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_anton_785__2",
+    "dataset": "bioprocess_analytes_anton_785",
+    "global": -19.49,
+    "family": -14.48,
+    "nested": -21.89
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_metrohm__0",
+    "dataset": "bioprocess_analytes_metrohm",
+    "global": -36.99,
+    "family": -45.29,
+    "nested": -34.44
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_metrohm__1",
+    "dataset": "bioprocess_analytes_metrohm",
+    "global": -20.89,
+    "family": -37.01,
+    "nested": -39.25
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_metrohm__2",
+    "dataset": "bioprocess_analytes_metrohm",
+    "global": -29.46,
+    "family": -43.53,
+    "nested": -40.82
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_mettler_toledo__0",
+    "dataset": "bioprocess_analytes_mettler_toledo",
+    "global": 1.4,
+    "family": -8.55,
+    "nested": -11.24
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_mettler_toledo__1",
+    "dataset": "bioprocess_analytes_mettler_toledo",
+    "global": -29.67,
+    "family": -22.89,
+    "nested": -11.4
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_mettler_toledo__2",
+    "dataset": "bioprocess_analytes_mettler_toledo",
+    "global": -5.34,
+    "family": -24.29,
+    "nested": -5.55
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_tec5__0",
+    "dataset": "bioprocess_analytes_tec5",
+    "global": -7.13,
+    "family": -17.49,
+    "nested": -13.8
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_tec5__1",
+    "dataset": "bioprocess_analytes_tec5",
+    "global": -24.71,
+    "family": -35.72,
+    "nested": -31.19
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_tec5__2",
+    "dataset": "bioprocess_analytes_tec5",
+    "global": -28.22,
+    "family": -30.86,
+    "nested": -31.24
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_tornado__0",
+    "dataset": "bioprocess_analytes_tornado",
+    "global": -46.04,
+    "family": -41.65,
+    "nested": -38.13
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_tornado__1",
+    "dataset": "bioprocess_analytes_tornado",
+    "global": -53.84,
+    "family": -43.24,
+    "nested": -39.75
+   },
+   {
+    "g": 200,
+    "key": "bioprocess_analytes_tornado__2",
+    "dataset": "bioprocess_analytes_tornado",
+    "global": -38.63,
+    "family": -38.63,
+    "nested": -37.92
+   },
+   {
+    "g": 200,
+    "key": "ecoli_fermentation__0",
+    "dataset": "ecoli_fermentation",
+    "global": -41.56,
+    "family": -32.4,
+    "nested": -39.46
+   },
+   {
+    "g": 200,
+    "key": "ecoli_fermentation__1",
+    "dataset": "ecoli_fermentation",
+    "global": -10.92,
+    "family": -6.16,
+    "nested": -9.35
+   },
+   {
+    "g": 200,
+    "key": "ecoli_metabolites_dig4bio__0",
+    "dataset": "ecoli_metabolites_dig4bio",
+    "global": -7.95,
+    "family": -16.74,
+    "nested": -19.82
+   },
+   {
+    "g": 200,
+    "key": "ecoli_metabolites_dig4bio__1",
+    "dataset": "ecoli_metabolites_dig4bio",
+    "global": -10.58,
+    "family": -9.76,
+    "nested": -14.73
+   },
+   {
+    "g": 200,
+    "key": "ecoli_metabolites_dig4bio__2",
+    "dataset": "ecoli_metabolites_dig4bio",
+    "global": -4.65,
+    "family": -7.42,
+    "nested": -19.0
+   },
+   {
+    "g": 200,
+    "key": "ht_raman_bio_catalysis_axp__0",
+    "dataset": "ht_raman_bio_catalysis_axp",
+    "global": -10.86,
+    "family": -1.66,
+    "nested": -20.11
+   },
+   {
+    "g": 200,
+    "key": "ht_raman_bio_catalysis_axp__1",
+    "dataset": "ht_raman_bio_catalysis_axp",
+    "global": -12.94,
+    "family": -2.63,
+    "nested": -17.7
+   },
+   {
+    "g": 200,
+    "key": "ht_raman_bio_catalysis_axp__2",
+    "dataset": "ht_raman_bio_catalysis_axp",
+    "global": -17.3,
+    "family": -6.88,
+    "nested": -27.74
+   },
+   {
+    "g": 200,
+    "key": "ht_raman_bio_catalysis_axp__3",
+    "dataset": "ht_raman_bio_catalysis_axp",
+    "global": -16.45,
+    "family": -8.06,
+    "nested": -37.39
+   },
+   {
+    "g": 200,
+    "key": "microgel_size_raw_global__0",
+    "dataset": "microgel_size_raw_global",
+    "global": 0.33,
+    "family": -1.81,
+    "nested": -1.77
+   },
+   {
+    "g": 500,
+    "key": "adenine_colloidal_silver__0",
+    "dataset": "adenine_colloidal_silver",
+    "global": -21.58,
+    "family": -23.68,
+    "nested": -22.45
+   },
+   {
+    "g": 500,
+    "key": "adenine_solid_gold__0",
+    "dataset": "adenine_solid_gold",
+    "global": -15.05,
+    "family": -13.7,
+    "nested": -15.22
+   },
+   {
+    "g": 500,
+    "key": "adenine_solid_silver__0",
+    "dataset": "adenine_solid_silver",
+    "global": -8.75,
+    "family": -14.95,
+    "nested": -14.87
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__0",
+    "dataset": "bioprocess_substrates",
+    "global": -16.24,
+    "family": -16.26,
+    "nested": -18.61
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__1",
+    "dataset": "bioprocess_substrates",
+    "global": -18.26,
+    "family": -18.88,
+    "nested": -25.48
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__2",
+    "dataset": "bioprocess_substrates",
+    "global": -17.94,
+    "family": -16.54,
+    "nested": -21.34
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__3",
+    "dataset": "bioprocess_substrates",
+    "global": -31.92,
+    "family": -33.45,
+    "nested": -32.55
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__4",
+    "dataset": "bioprocess_substrates",
+    "global": -39.6,
+    "family": -26.12,
+    "nested": -45.27
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__5",
+    "dataset": "bioprocess_substrates",
+    "global": 89.23,
+    "family": 2.99,
+    "nested": -17.44
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__6",
+    "dataset": "bioprocess_substrates",
+    "global": -20.46,
+    "family": -20.46,
+    "nested": -21.65
+   },
+   {
+    "g": 500,
+    "key": "bioprocess_substrates__7",
+    "dataset": "bioprocess_substrates",
+    "global": -13.21,
+    "family": -14.0,
+    "nested": -16.56
+   },
+   {
+    "g": 500,
+    "key": "ecoli_metabolites__0",
+    "dataset": "ecoli_metabolites",
+    "global": -5.65,
+    "family": -1.3,
+    "nested": -14.96
+   },
+   {
+    "g": 500,
+    "key": "ecoli_metabolites__1",
+    "dataset": "ecoli_metabolites",
+    "global": -4.27,
+    "family": -4.27,
+    "nested": -7.85
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_high_snr__0",
+    "dataset": "sugar_mixtures_high_snr",
+    "global": 8.57,
+    "family": 4.84,
+    "nested": 2.22
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_high_snr__1",
+    "dataset": "sugar_mixtures_high_snr",
+    "global": -5.96,
+    "family": -3.94,
+    "nested": -9.57
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_high_snr__2",
+    "dataset": "sugar_mixtures_high_snr",
+    "global": 6.44,
+    "family": -1.07,
+    "nested": -9.27
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_high_snr__3",
+    "dataset": "sugar_mixtures_high_snr",
+    "global": -3.59,
+    "family": 8.99,
+    "nested": -27.56
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_low_snr__0",
+    "dataset": "sugar_mixtures_low_snr",
+    "global": -7.7,
+    "family": -6.49,
+    "nested": -9.63
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_low_snr__1",
+    "dataset": "sugar_mixtures_low_snr",
+    "global": -8.5,
+    "family": -4.46,
+    "nested": -16.07
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_low_snr__2",
+    "dataset": "sugar_mixtures_low_snr",
+    "global": -9.46,
+    "family": -6.8,
+    "nested": -5.26
+   },
+   {
+    "g": 500,
+    "key": "sugar_mixtures_low_snr__3",
+    "dataset": "sugar_mixtures_low_snr",
+    "global": -5.55,
+    "family": -9.14,
+    "nested": -7.63
+   }
+  ],
+  "n_models": 13
  }
 }

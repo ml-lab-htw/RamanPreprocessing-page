@@ -173,6 +173,8 @@ section.block { padding-block: 64px; border-top: 1px solid var(--line); }
   border: 0; background: transparent; padding: 6px 12px; border-radius: 99px; font-size: var(--step--1); color: var(--muted); cursor: pointer;
   white-space: nowrap;
 }
+.seg button i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.seg button[aria-pressed="false"] i { opacity: .35; }
 .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
 .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
 .toolbar .spacer { flex: 1; }
@@ -301,7 +303,8 @@ td.fcell { width: 34%; min-width: 160px; }
 dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: min(1400px, 96vw); width: 96vw; }
 dialog.lightbox::backdrop { background: rgba(8, 14, 20, .78); }
 dialog.lightbox .lb-inner { background: var(--figbg); border-radius: 10px; padding: 18px; position: relative; max-height: 90vh; overflow: auto; }
-dialog.lightbox img { width: 100%; height: auto; display: block; }
+dialog.lightbox .lb-figs { display: grid; gap: 18px; }
+dialog.lightbox img { width: 100%; height: auto; display: block; max-width: 900px; margin: 0 auto; }
 dialog.lightbox .close {
   position: absolute; top: 8px; right: 8px; border: 0; background: #142230; color: #fff; border-radius: 99px; width: 32px; height: 32px; cursor: pointer;
 }
@@ -357,3 +360,4 @@ footer ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
   section.block { padding-block: 48px; }
   .brand { display: none; }
 }
+.seg.align button i { opacity: 1; }

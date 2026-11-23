@@ -13,6 +13,7 @@ import json
 import re
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,7 +22,7 @@ ACR = {"svm": "SVM", "tfm": "TFM", "cv": "CV", "rmse": "RMSE", "ba": "BA", "snv"
        "sg": "SG", "asls": "AsLS", "airpls": "airPLS", "arpls": "arPLS", "msc": "MSC", "emsc": "EMSC", "gcu": "GCU",
        "lvse": "LVSE"}
 SHORT = {"TABPFN-V3.5": "TabPFN-3.5", "TABICLV2": "TabICLv2", "KUMO-TABULAR": "Kumo", "RAMANPFN": "RamanPFN",
-         "DEEPCNN": "DeepCNN", "REZERONET": "ReZeroNet", "RIDGE": "Ridge", "KNN": "kNN"}
+         "DEEPCNN": "DeepCNN", "REZERONET": "ReZeroNet", "RIDGE": "Ridge", "KNN": "kNN", "PCALDA": "PCA-LDA"}
 FAMILIES = ["Chemometric", "Kernel methods", "Tree ensembles", "Deep learning", "Tabular foundation"]
 
 
@@ -184,17 +185,109 @@ def fig4(native: Path):
     return {"global_recipe": glob, "rows": rows}
 
 
+def cd_cliques(vals: list[float], cd: float) -> list[list[int]]:
+    """Maximal runs of rank-ordered recipes spanning <= CD (as analyze_prep_effects._cd_cliques)."""
+    bars = []
+    for i in range(len(vals)):
+        j = i
+        while j + 1 < len(vals) and vals[j + 1] - vals[i] <= cd:
+            j += 1
+        if j > i:
+            bars.append((i, j))
+    return [list(b) for b in bars if not any(o[0] <= b[0] and b[1] <= o[1] and o != b for o in bars)]
+
+
+def fig2(analysis: Path):
+    """Critical-difference diagrams, (model, target) blocks (plot_prep_effects_kfold.plot_cd_diagrams)."""
+    ranks = pd.read_csv(analysis / "cd_average_ranks.csv")
+    summ = pd.read_csv(analysis / "cd_friedman_nemenyi.csv")
+    out = {}
+    for task in ("regression", "classification"):
+        s = summ[(summ.task_type == task) & (summ.blocking == "model_target")].iloc[0]
+        r = ranks[(ranks.task_type == task) & (ranks.blocking == "model_target")].sort_values("avg_rank")
+        vals = r.avg_rank.tolist()
+        out[task] = {"cd": round(float(s.cd), 4), "n_blocks": int(s.n_blocks),
+                     "ranks": [{"recipe": x.recipe, "rank": round(float(x.avg_rank), 4), "vs_none": x.vs_none}
+                               for x in r.itertuples()],
+                     "cliques": cd_cliques(vals, float(s.cd))}
+    n_better = {t: sum(x["vs_none"] == "better" for x in out[t]["ranks"]) for t in out}
+    assert n_better == {"regression": 21, "classification": 8}, n_better  # Fig. 2 caption
+    return out
+
+
+def fig3(native: Path):
+    var = pd.read_csv(native / "variance_summary.csv")
+    rows = []
+    for task, sub, lab, n in [("regression", "all", "Regression, all models", 14), ("regression", "foundation", "Regression, TFMs", 4),
+                              ("classification", "all", "Classification, all models", 15),
+                              ("classification", "foundation", "Classification, TFMs", 4)]:
+        v = var[(var.task_type == task) & (var.subset == sub)].iloc[0]
+        rows.append({"label": lab, "task": task, "n_models": n, "n_targets": int(v.n_targets),
+                     "shares": {"model": round(100 * v.median_share_model, 2), "recipe": round(100 * v.median_share_recipe, 2),
+                                "interaction": round(100 * v.median_share_interaction_net, 2),
+                                "noise": round(100 * v.median_share_noise, 2)}})
+    assert round(rows[0]["shares"]["model"]) == 71 and round(rows[0]["shares"]["recipe"]) == 9  # Conclusions
+    return rows
+
+
+def fig5(analysis: Path, native: Path):
+    """In-sample against held-out gain of each model's best recipe (plot_study1_native.sensitivity_vs_heldout)."""
+    ho = pd.read_csv(analysis / "heldout_fixed_best_family.csv")
+    hb = pd.read_csv(analysis / "heldout_bootstrap.csv")
+    ho = ho.merge(hb[["task_type", "model", "heldout_median", "ci_lo", "ci_hi"]], on=["task_type", "model"])
+    gains = pd.read_csv(native / "model_gains.csv")
+    fam = {m: f for m, f in zip(gains.model, gains.family) if not m.startswith("[")}
+    conv = {"regression": lambda v: 100 * (np.exp(v) - 1), "classification": lambda v: -100 * np.asarray(v)}
+    out = {}
+    for task in ("regression", "classification"):
+        t = ho[(ho.task_type == task) & ho.model.isin(list(fam))].copy()
+        f = conv[task]
+        t["ins"], t["held"] = f(t.full_insample_native_median), f(t.heldout_native_median_med)
+        lo, hi = f(t.ci_lo), f(t.ci_hi)
+        t["lo"], t["hi"] = np.minimum(lo, hi), np.maximum(lo, hi)
+        t["stable"] = t.hi < 0 if task == "regression" else t.lo > 0
+        t = t.sort_values("ins", ascending=task != "regression")
+        out[task] = [{"model": SHORT.get(r.model, r.model), "family": fam[r.model], "recipe": r.full_fixed_best,
+                      "ins": round(float(r.ins), 2), "held": round(float(r.held), 2), "lo": round(float(r.lo), 2),
+                      "hi": round(float(r.hi), 2), "stable": bool(r.stable)} for r in t.itertuples()]
+    assert len(out["regression"]) == 14 and len(out["classification"]) == 15
+    return out
+
+
+def fig6(native: Path):
+    """Selection rules by task size, one point per target = median over its models of the log RMSE
+    ratio (plot_study1_native.selection_by_size), stored as % change."""
+    pairs = pd.concat([pd.read_csv(native / "tiny_selection_pairs.csv").assign(n_lo=0),
+                       pd.read_csv(native / "selection_by_size_pairs.csv")], ignore_index=True)
+    rules = ["global", "family", "nested"]
+    t = pairs.groupby(["n_lo", "dataset", "key"])[rules].median().reset_index()
+    labels = dict(zip(sorted(t.n_lo.unique()), ["< 50", "50–100", "100–200", "200–500", "> 500"], strict=True))
+    groups = []
+    for g, lab in labels.items():
+        tg = t[t.n_lo == g]
+        groups.append({"n_lo": int(g), "label": lab, "n": len(tg),
+                       "median": {r: round(float(100 * (np.exp(np.median(tg[r])) - 1)), 2) for r in rules},
+                       "worse": {r: round(float(100 * (tg[r] > 0).mean())) for r in rules}})
+    pts = [{"g": int(r["n_lo"]), "key": r["key"], "dataset": r["dataset"],
+            **{k: round(float(100 * (np.exp(r[k]) - 1)), 2) for k in rules}} for _, r in t.iterrows()]
+    assert [g["n"] for g in groups] == [15, 13, 28, 29, 21]  # Fig. 6 axis labels
+    assert [g["worse"]["global"] for g in groups] == [27, 54, 7, 10, 14]
+    return {"groups": groups, "targets": pts, "n_models": int(pairs.model.nunique())}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--paper", type=Path, required=True)
     ap.add_argument("--native", type=Path, required=True)
     a = ap.parse_args()
+    analysis = a.native.parent
     t1 = table1()
     check_table1(a.paper, t1)
     out = {"table1": t1, "table2": table2(a.paper), "table4": table4(a.paper), "table5": table5(a.paper),
-           "table6": table6(a.paper), "fig1": fig1(a.native), "fig4": fig4(a.native)}
+           "table6": table6(a.paper), "fig1": fig1(a.native), "fig2": fig2(analysis), "fig3": fig3(a.native),
+           "fig4": fig4(a.native), "fig5": fig5(analysis, a.native), "fig6": fig6(a.native)}
     (ROOT / "data" / "paper.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
-    print("wrote data/paper.json:", {k: len(v) if isinstance(v, list) else len(v.get("rows", v)) for k, v in out.items()})
+    print("wrote data/paper.json:", list(out))
 
 
 if __name__ == "__main__":
