@@ -1,0 +1,77 @@
+[
+ {
+  "id": "synthetic",
+  "label": "Synthetic",
+  "kind": "synthetic",
+  "n": 100,
+  "what": "Three components with known bands, plus fluorescence background, scatter, noise and cosmic-ray spikes",
+  "targets": {
+   "analyte": "Analyte",
+   "interferent": "Interferent"
+  }
+ },
+ {
+  "id": "bioprocess",
+  "label": "Bioprocess analytes (Kaiser)",
+  "kind": "real",
+  "n": 34,
+  "n_fit": 134,
+  "what": "Mixtures of glucose, acetate and magnesium sulfate, Kaiser Raman spectrometer",
+  "dataset": "bioprocess_analytes_kaiser",
+  "channels": 5472,
+  "range": [
+   300.0,
+   1941.3
+  ],
+  "source": "https://huggingface.co/datasets/chlange/RamanSpectraBioprocessAnalystesKaiser",
+  "doi": "10.1016/j.saa.2025.125861",
+  "license": "CC BY 4.0",
+  "targets": {
+   "Glucose": "Glucose",
+   "Acetate": "Acetate",
+   "MgSO₄": "MgSO₄"
+  }
+ },
+ {
+  "id": "fuel",
+  "label": "Fuel (handheld)",
+  "kind": "real",
+  "n": 33,
+  "n_fit": 179,
+  "what": "Commercial gasoline, handheld Raman spectrometer",
+  "dataset": "fuel_handheld",
+  "channels": 1901,
+  "range": [
+   400.0,
+   2300.0
+  ],
+  "source": "https://huggingface.co/datasets/HTW-KI-Werkstatt/FuelRamanSpectraHandheld",
+  "doi": "10.1021/acs.energyfuels.9b02944",
+  "license": "CC BY 4.0",
+  "targets": {
+   "RON": "RON",
+   "Ethanol (%)": "Ethanol (%)",
+   "Aromatics": "Aromatics"
+  }
+ },
+ {
+  "id": "sers",
+  "label": "Adenine SERS (gold colloid)",
+  "kind": "real",
+  "n": 33,
+  "n_fit": 225,
+  "what": "Surface-enhanced Raman spectra of adenine on colloidal gold",
+  "dataset": "adenine_colloidal_gold",
+  "channels": 534,
+  "range": [
+   400.0,
+   1999.0
+  ],
+  "source": "https://doi.org/10.5281/zenodo.3572359",
+  "doi": "10.1021/acs.analchem.9b05658",
+  "license": "CC BY 4.0",
+  "targets": {
+   "Adenine conc.": "Adenine conc."
+  }
+ }
+]

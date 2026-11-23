@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raman Preprocessing Benchmark</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="26 preprocessing recipes, 15 models from chemometrics to tabular foundation models, 104 Raman tasks from 39 public datasets. Click through the recipes on real and synthetic spectra.">
+<meta property="og:title" content="Does machine learning on Raman spectra still need preprocessing?">
+<meta property="og:description" content="A benchmark from chemometrics to tabular foundation models: 26 recipes, 15 models, 104 tasks, 39 datasets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Raman<span>Preprocessing</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#abstract">Abstract</a>
+      <a href="#explorer">Recipe explorer</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#results">Results</a>
+      <a href="#selection">Choosing a recipe</a>
+      <a href="#use">Use it</a>
+      <a href="#cite">Cite</a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch color theme" title="Switch color theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ======================================================= hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Benchmark · Raman spectroscopy · 2026</div>
+          <h1>Does machine learning on Raman spectra still need preprocessing?</h1>
+          <p class="subtitle">A benchmark from chemometrics to tabular foundation models</p>
+          <div class="authors">
+            <div class="names">Mario Koddenbrock<sup>1</sup>, Christoph Lange<sup>2</sup>, Erik Rodner<sup>1</sup></div>
+            <div class="aff"><sup>1</sup> HTW Berlin, University of Applied Sciences &nbsp;·&nbsp; <sup>2</sup> Technische Universität Berlin</div>
+          </div>
+          <div class="links">
+            <span class="btn" aria-disabled="true" title="The link follows on publication">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Paper (coming soon)</span>
+            <a class="btn primary" href="https://github.com/ml-lab-htw/RamanPreprocessing" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Code and results</a>
+            <a class="btn" href="https://pypi.org/project/raman-bench/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>Recipes (raman-bench)</a>
+            <a class="btn" href="https://pypi.org/project/raman-data/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Datasets (raman-data)</a>
+            <a class="btn" href="#cite">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h4v4H7zM7 11c0 3-1 5-3 6M15 7h4v4h-4zM15 11c0 3-1 5-3 6"/></svg>Cite</a>
+          </div>
+        </div>
+        <div class="scope" aria-label="One synthetic spectrum passing through the recipes">
+          <div class="scope-head">
+            <span class="lbl">One spectrum, 26 recipes</span>
+            <span class="scope-recipe" id="hero-recipe">bc_snv_avgpool</span>
+          </div>
+          <div class="scope-steps" id="hero-steps">AsLS baseline → SNV → average pooling</div>
+          <svg id="hero-svg" role="img" aria-label="Spectrum after the current recipe"></svg>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b data-count="26">26</b><span>preprocessing recipes</span></div>
+        <div class="stat"><b data-count="15">15</b><span>models in five families</span></div>
+        <div class="stat"><b data-count="104">104</b><span>regression and classification tasks</span></div>
+        <div class="stat"><b data-count="39">39</b><span>public Raman datasets</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= abstract -->
+  <section class="block" id="abstract">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Abstract</div>
+        <h2>Model first, then the recipe for that model</h2>
+      </div>
+      <div class="abstract">
+        <p>Raman models now monitor bioreactors, identify bacteria and screen body fluids for disease, and each of them depends on a preprocessing choice made before training.
+        Most evidence for that choice comes from studies of few datasets and few models, and tabular foundation models (TFMs) have rarely been tested on Raman spectra.
+        In a large-scale benchmark, we apply 26 preprocessing recipes, fixed sequences of steps such as smoothing, baseline correction and normalization, to 15 models, from partial least squares (PLS) to TFMs, on 104 regression and classification tasks from 39 public datasets.</p>
+        <p>The choice of model changes the error more than the choice of recipe, and which recipe helps depends on the model.
+        In regression a recipe fixed per model family is a sound default, and choosing the recipe per task by CV within the training data lowers the error further, by a median of 16% against no preprocessing.
+        Descriptors of the dataset did not predict which recipe would help.
+        Preprocessing can therefore be chosen without inspecting the spectra: from the model's family, or by CV, which on small datasets also avoids most of the large errors that a global recipe causes.
+        The 26 recipes are available in an open-source Python package with a scikit-learn interface, together with all code and the scores of every configuration.</p>
+      </div>
+      <div class="keys">
+        <div class="key reveal"><b>71%</b><p>of the variance in regression RMSE across a target's configurations comes from the model, against 9% from the recipe (medians over targets).</p></div>
+        <div class="key reveal"><b>−16%</b><p>median change in RMSE against no preprocessing when the recipe is chosen per task by CV inside the training folds.</p></div>
+        <div class="key reveal"><b>−8%</b><p>median change in RMSE from plain SNV over all (model, target) pairs, at almost no extra training time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= explorer -->
+  <section class="block" id="explorer">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Recipe explorer</div>
+        <h2>Click through the 26 recipes</h2>
+        <p class="lede">Pick a recipe and see what it does to a spectrum. The synthetic spectra mix three components with known bands and add a fluorescence background, scatter, noise and, in some, cosmic-ray spikes. The real ones come from three benchmark datasets. Each recipe also shows its result in the benchmark.</p>
+      </div>
+      <div class="explorer">
+        <div class="recipe-list" id="recipe-list" role="group" aria-label="Recipes"></div>
+        <div class="ex-main">
+          <div class="ex-controls">
+            <div class="seg" id="set-seg" role="group" aria-label="Spectra"></div>
+            <span class="spacer"></span>
+            <span class="counter" id="ex-counter">spectrum 1 of 100</span>
+            <button class="btn primary" id="gen-btn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>Generate new</button>
+          </div>
+          <div class="stage-strip" id="stage-strip" aria-label="Processing stages of the recipe"></div>
+          <div class="chart-card">
+            <div class="chart-title">
+              <h3>Measured spectrum</h3>
+              <div class="chips" id="meta-chips"></div>
+            </div>
+            <svg class="chart" id="raw-chart" role="img" aria-label="Measured spectrum"></svg>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">
+              <h3>After <span class="mono" id="proc-name">bc_snv_avgpool</span></h3>
+              <div class="ex-controls">
+                <label class="toggle" id="clean-toggle-wrap"><input type="checkbox" id="clean-toggle"> Show clean signal</label>
+                <label class="toggle"><input type="checkbox" id="overlay-toggle"> Overlay 24 spectra</label>
+              </div>
+            </div>
+            <svg class="chart" id="proc-chart" role="img" aria-label="Spectrum after the selected recipe"></svg>
+          </div>
+          <div class="recipe-card" id="recipe-card" aria-live="polite"></div>
+          <p class="source-note" id="set-note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= benchmark -->
+  <section class="block" id="benchmark">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Benchmark</div>
+        <h2>Every recipe for every model, on 104 targets</h2>
+        <p class="lede">Every model is fitted with each of the 26 recipes on every target of its task type, in 3-fold cross-validation. Regression is scored by RMSE and classification by balanced accuracy, always as the change against the unprocessed spectrum.</p>
+      </div>
+
+      <figure class="fig reveal" id="tab1">
+        <div class="fig-head"><span class="fig-num">Table 1</span>
+          <span class="fig-claim">Earlier studies fixed preprocessing, tuned it, or varied it on few datasets or model families; this work reports the effect of each of 26 recipes for 15 models from all 5 families on 104 targets.</span></div>
+        <div class="panel scroll-x"><table class="data" id="t1"></table></div>
+        <figcaption class="fig-desc">Models with varied preprocessing: how many models of each family (chemometric and other linear models, kernel methods, tree ensembles, deep networks, foundation models) have their preprocessing varied. Recipe effects: whether the effect of each preprocessing option is reported, not only the result after tuning. For RamanBench the counts are those of its preprocessing sensitivity check.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="tab2">
+        <div class="fig-head"><span class="fig-num">Table 2</span>
+          <span class="fig-claim">Four filters take the 162 targets of RamanBench v1 to the 104 targets of the benchmark; the targets with fewer than 50 labeled spectra form a separate ablation.</span></div>
+        <div class="panel scroll-x"><table class="data" id="t2"></table></div>
+        <figcaption class="fig-desc">The filters apply from top to bottom, each to what the filters above it leave. The second and third are RamanBench's own exclusions, decided on its model sweep. A dataset counts as removed once all of its targets are gone.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="tab3">
+        <div class="fig-head"><span class="fig-num">Table 3</span>
+          <span class="fig-claim">The 26 recipes range from single steps to multi-step pipelines and learned low-dimensional representations, with the unprocessed spectrum (none) as reference.</span></div>
+        <div class="panel scroll-x"><table class="data matrix" id="t3"></table></div>
+        <figcaption class="fig-desc">Columns are the processing stages in the order in which they run, whatever the recipe's name. SG: Savitzky–Golay; AsLS, airPLS, arPLS: baseline correction; MSC, EMSC: (extended) multiplicative scatter correction; SNV: standard normal variate. GCU and LVSE are the RamanPFN-style representations, which replace the spectrum with low-dimensional features. Pooling takes the mean of each run of five channels, or every fifth channel. Click a recipe to open it in the explorer.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================================================= results -->
+  <section class="block" id="results">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Results</div>
+        <h2>What each recipe does, model by model</h2>
+      </div>
+
+      <figure class="fig reveal" id="fig1">
+        <div class="fig-head"><span class="fig-num">Fig. 1</span>
+          <span class="fig-claim">Recipes that end in SNV improve the chemometric models, the SVM and the tree ensembles in both task types; the TFMs change much less, and the deep networks gain mainly from pooling.</span></div>
+        <div class="toolbar">
+          <div class="seg" id="fig1-seg" role="group" aria-label="Task type">
+            <button type="button" data-task="regression" aria-pressed="true">Regression · RMSE</button>
+            <button type="button" data-task="classification" aria-pressed="false">Classification · balanced accuracy</button>
+          </div>
+          <span class="spacer"></span>
+          <div class="legend" id="fig1-legend"></div>
+        </div>
+        <div class="panel scroll-x"><svg class="chart" id="fig1-svg" role="img" aria-label="Effect map: change against no preprocessing per recipe and model family"></svg></div>
+        <figcaption class="fig-desc">Cells: median change against <code>none</code> over the (model, target) pairs of a family, in RMSE (%, 91 targets) or balanced accuracy (pp, 13 targets); blue is better, numbers mark changes of at least 5% or 2 pp. Whiskers: median over the pairs of all models with dataset-clustered 95% bootstrap interval, colored where it excludes zero. Right: median training time relative to <code>none</code>. Rows sorted by the regression median. Hover a cell for its numbers, click a row to open the recipe in the explorer.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="tab4">
+        <div class="fig-head"><span class="fig-num">Table 4</span>
+          <span class="fig-claim">Most recipes lower the regression error significantly, few raise balanced accuracy.</span></div>
+        <div class="panel scroll-x"><table class="data" id="t4"></table></div>
+        <figcaption class="fig-desc">ΔRMSE, ΔBA: median change against <code>none</code> over (model, target) pairs; the bar spans the 25th to 75th percentile of the pairs. Gray where the 95% bootstrap interval of the median includes zero. Worse: share of pairs at least 5% or 2 pp worse than <code>none</code>. Click a column header to sort.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="fig2">
+        <div class="fig-head"><span class="fig-num">Fig. 2</span>
+          <span class="fig-claim">In regression 21 of the 25 recipes rank significantly above no preprocessing, in classification eight, all containing SNV, and in neither task type can the leading recipes be ordered further.</span></div>
+        <div class="toolbar">
+          <div class="seg" id="fig2-seg" role="group" aria-label="Task type">
+            <button type="button" data-src="assets/figures/cd_diagram_regression.svg" aria-pressed="true">Regression</button>
+            <button type="button" data-src="assets/figures/cd_diagram_classification.svg" aria-pressed="false">Classification</button>
+          </div>
+        </div>
+        <button class="paper-fig narrow" type="button" data-zoom><img id="fig2-img" src="assets/figures/cd_diagram_regression.svg" alt="Critical-difference diagram of the recipes" loading="lazy"></button>
+        <figcaption class="fig-desc">Critical-difference diagrams: each recipe sits at its mean rank over the (model, target) pairs (1 = best). Recipes joined by a bar are not significantly different at the 5% level (Nemenyi test), and bars that include <code>none</code> are gray. N: number of (model, target) pairs. Click to enlarge.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="fig3">
+        <div class="fig-head"><span class="fig-num">Fig. 3</span>
+          <span class="fig-claim">The choice of model changes the score far more than the choice of recipe, but among the TFMs the recipe is the larger remaining decision.</span></div>
+        <button class="paper-fig narrow" type="button" data-zoom><img src="assets/figures/variance_shares.svg" alt="Variance shares of model, recipe and interaction" loading="lazy"></button>
+        <figcaption class="fig-desc">Shares of the variance in log RMSE (regression) or balanced accuracy (classification) across a target's configurations explained by the model, the recipe and their interaction, from a two-way ANOVA per target. The part of the interaction that fold-to-fold noise alone would produce is shown separately. Medians over targets (they need not add up to 100%), for all models and for the four TFMs alone; N: number of models.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="fig4">
+        <div class="fig-head"><span class="fig-num">Fig. 4</span>
+          <span class="fig-claim">Even with its best recipe per target, PLS stays far from the best configuration of a regression target, whereas Kumo comes close without any preprocessing.</span></div>
+        <div class="toolbar">
+          <div class="seg" id="fig4-seg" role="group" aria-label="Recipe choice">
+            <button type="button" data-rule="all" aria-pressed="true">All four</button>
+            <button type="button" data-rule="none" aria-pressed="false">No preprocessing</button>
+            <button type="button" data-rule="global" aria-pressed="false">Global recipe</button>
+            <button type="button" data-rule="cv" aria-pressed="false">Per-task CV</button>
+            <button type="button" data-rule="oracle" aria-pressed="false">Oracle</button>
+          </div>
+          <button class="btn" id="fig4-play" type="button">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"/></svg>Step through</button>
+        </div>
+        <div class="panel scroll-x"><svg class="chart" id="fig4-svg" role="img" aria-label="Median RMSE above the best configuration per model"></svg></div>
+        <figcaption class="fig-desc">Median RMSE of each model above the best of the 364 configurations of each regression target: without preprocessing, with the global recipe <code>bc_snv_avgpool</code>, with the recipe chosen per task by CV on the training folds, and with the oracle, the model's best recipe for each target chosen on the test folds (an upper bound). Model names colored by family.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="selection">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Choosing a recipe</div>
+        <h2>Fixed per family, or chosen per task by CV</h2>
+        <p class="lede">A recipe can be fixed for all models (global), fixed per model family or per model on other datasets, or chosen for each task by cross-validation inside its training folds. The oracle picks the best recipe on the test folds and only bounds what a choice could gain.</p>
+      </div>
+
+      <figure class="fig reveal" id="tab5">
+        <div class="fig-head"><span class="fig-num">Table 5</span>
+          <span class="fig-claim">In regression choosing per task by CV beats both fixed recipes in every family except the deep networks, where the global recipe (bc_snv_avgpool) does better.</span></div>
+        <div class="panel scroll-x"><table class="data" id="t5"></table></div>
+        <figcaption class="fig-desc">Median change in RMSE against no preprocessing (%, negative = better) over the family's (model, target) pairs, with its 95% bootstrap interval; gray where the interval includes zero; bold: the largest gain among the three rules left of the oracle. Worse: share of pairs with higher RMSE than no preprocessing. The family recipe shown is chosen on all datasets; each dataset is scored with the choice made on all other datasets.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="fig5">
+        <div class="fig-head"><span class="fig-num">Fig. 5</span>
+          <span class="fig-claim">The gain of a fixed recipe shrinks on datasets that were not used to choose it, yet for most models it still improves on no preprocessing there.</span></div>
+        <button class="paper-fig" type="button" data-zoom><img src="assets/figures/sensitivity_vs_heldout.svg" alt="In-sample against held-out gain of each model's best recipe" loading="lazy"></button>
+        <figcaption class="fig-desc">Each model's best recipe, median change against <code>none</code> over the targets: chosen and scored on all datasets (tick), and chosen on a random half of the dataset families and scored on the others (point: median over 200 splits; line: 95% dataset-clustered bootstrap interval, filled when it excludes zero). (a) RMSE, (b) balanced accuracy. Click to enlarge.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="tab6">
+        <div class="fig-head"><span class="fig-num">Table 6</span>
+          <span class="fig-claim">Per-task CV gains most among the selection rules and is worse than none on the fewest (model, target) pairs.</span></div>
+        <div class="panel scroll-x"><table class="data" id="t6"></table></div>
+        <figcaption class="fig-desc">Change against <code>none</code> pooled over models: median over (model, target) pairs with its 95% bootstrap interval (drawn as the bar; RMSE: negative = better), gray where it includes zero; bold: largest gain without the oracle. Worse: pairs worse than <code>none</code> (%). Other families: the target's dataset family is held out as well.</figcaption>
+      </figure>
+
+      <figure class="fig reveal" id="fig6">
+        <div class="fig-head"><span class="fig-num">Fig. 6</span>
+          <span class="fig-claim">From 50 spectra per-task CV gains more than a fixed recipe; below 50 spectra it is no better than the family recipe.</span></div>
+        <button class="paper-fig" type="button" data-zoom><img src="assets/figures/selection_by_size.svg" alt="Selection rules by number of labeled spectra" loading="lazy"></button>
+        <figcaption class="fig-desc">Regression, 13 models (all but GBM, which predicts a constant on the small-data targets). Groups by number of labeled spectra: the small-data ablation (&lt;50) and four groups of benchmark targets; two of them come from only four datasets each, so the boundaries are not thresholds. Points: targets, median change in RMSE against <code>none</code> over the models; bars: group medians; numbers on top: share of targets worse than <code>none</code> (%). Click to enlarge.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================================================= use -->
+  <section class="block" id="use">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Use it</div>
+        <h2>Four rules for a new Raman dataset</h2>
+      </div>
+      <div class="rules">
+        <div class="rule reveal"><h3>Choose the model first</h3><p>It moves the error most: the model explains a median of 71% of the variance in regression RMSE, the recipe 9%.</p></div>
+        <div class="rule reveal"><h3>In regression, start from the family recipe</h3><p><code>snv</code> for the chemometric models, <code>all</code> for the SVM at its default hyperparameters (<code>sg_rubberband_snv</code> when they are tuned), <code>prep_ensemble</code> for the tree ensembles and <code>bc_snv_avgpool</code> for the deep networks. For the TFMs no fixed recipe gains much; their family recipe, <code>msc</code>, lowers the error by about 5%.</p></div>
+        <div class="rule reveal"><h3>Where the compute allows, choose per task by CV</h3><p>Inside the training folds. In regression this roughly doubled the gain of SNV without seeing any test fold.</p></div>
+        <div class="rule reveal"><h3>Check a fixed recipe against the unprocessed spectrum</h3><p>The per-task choice already includes it; its failures became rarer with more data but did not disappear.</p></div>
+      </div>
+      <div class="two" style="margin-top:28px">
+        <div>
+          <h3>Every recipe is a scikit-learn transformer</h3>
+          <p class="fig-desc">A recipe runs the code the benchmark's models ran, so its output is exactly what they received.</p>
+          <pre class="code" id="code1"><button class="copy" type="button" data-copy="code1">Copy</button><span class="c"># pip install "raman-bench>=1.6.0"</span>
+<span class="k">from</span> raman_bench.preprocessing <span class="k">import</span> recipe
+<span class="k">from</span> sklearn.cross_decomposition <span class="k">import</span> PLSRegression
+<span class="k">from</span> sklearn.pipeline <span class="k">import</span> make_pipeline
+
+model = make_pipeline(recipe(<span class="s">"snv"</span>), PLSRegression(<span class="s">10</span>, scale=<span class="k">False</span>))
+model.fit(X_train, y_train)   <span class="c"># one spectrum per row</span></pre>
+        </div>
+        <div>
+          <h3>Or let cross-validation choose</h3>
+          <p class="fig-desc">Try every recipe inside the training data; an exact tie goes to <code>none</code>.</p>
+          <pre class="code" id="code2"><button class="copy" type="button" data-copy="code2">Copy</button><span class="k">from</span> raman_bench.preprocessing <span class="k">import</span> recipe, recipe_names
+<span class="k">from</span> sklearn.model_selection <span class="k">import</span> GridSearchCV
+<span class="k">from</span> sklearn.pipeline <span class="k">import</span> Pipeline
+
+names = [<span class="s">"none"</span>] + [n <span class="k">for</span> n <span class="k">in</span> recipe_names() <span class="k">if</span> n != <span class="s">"none"</span>]
+search = GridSearchCV(
+    Pipeline([(<span class="s">"prep"</span>, recipe(<span class="s">"none"</span>)), (<span class="s">"model"</span>, PLSRegression(<span class="s">10</span>, scale=<span class="k">False</span>))]),
+    {<span class="s">"prep"</span>: [recipe(n) <span class="k">for</span> n <span class="k">in</span> names]}, cv=<span class="s">3</span>,
+    scoring=<span class="s">"neg_root_mean_squared_error"</span>)
+search.fit(X_train, y_train)</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= cite -->
+  <section class="block" id="cite">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Cite</div>
+        <h2>BibTeX</h2>
+      </div>
+      <pre class="code" id="bibtex"><button class="copy" type="button" data-copy="bibtex">Copy</button>@article{koddenbrock2026preprocessing,
+  title   = {Does machine learning on Raman spectra still need preprocessing?
+             A benchmark from chemometrics to tabular foundation models},
+  author  = {Koddenbrock, Mario and Lange, Christoph and Rodner, Erik},
+  year    = {2026}
+}</pre>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <h4>Data in the explorer</h4>
+      <ul id="credits"></ul>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://github.com/ml-lab-htw/RamanPreprocessing" target="_blank" rel="noopener">Code, configurations and scores</a></li>
+        <li><a href="https://github.com/ml-lab-htw/RamanBench" target="_blank" rel="noopener">RamanBench</a> · <a href="https://pypi.org/project/raman-bench/" target="_blank" rel="noopener">raman-bench on PyPI</a></li>
+        <li><a href="https://pypi.org/project/raman-data/" target="_blank" rel="noopener">raman-data on PyPI</a></li>
+        <li>HTW Berlin, University of Applied Sciences · Technische Universität Berlin</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="tip" id="tip" role="tooltip"></div>
+<dialog class="lightbox" id="lightbox"><div class="lb-inner"><button class="close" type="button" aria-label="Close">✕</button><img alt=""></div></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/explorer.js"></script>
+<script src="assets/js/figures.js"></script>
+<script src="assets/js/tables.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

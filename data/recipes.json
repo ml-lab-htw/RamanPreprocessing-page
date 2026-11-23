@@ -1,0 +1,295 @@
+{
+ "stages": [
+  "Cosmic rays",
+  "Denoising",
+  "Baseline",
+  "Scatter",
+  "Derivative",
+  "SNV",
+  "Pooling",
+  "Column scaling",
+  "Features"
+ ],
+ "recipes": [
+  {
+   "key": "none",
+   "group": "Reference",
+   "steps": "no preprocessing",
+   "stages": {},
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "sg",
+   "group": "Single steps",
+   "steps": "Savitzky-Golay smoothing",
+   "stages": {
+    "Denoising": "SG"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "bc",
+   "group": "Single steps",
+   "steps": "AsLS baseline",
+   "stages": {
+    "Baseline": "AsLS"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "snv",
+   "group": "Single steps",
+   "steps": "SNV",
+   "stages": {
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "msc",
+   "group": "Single steps",
+   "steps": "MSC",
+   "stages": {
+    "Scatter": "MSC"
+   },
+   "kind": "spectrum",
+   "batch_fitted": true
+  },
+  {
+   "key": "emsc",
+   "group": "Single steps",
+   "steps": "EMSC",
+   "stages": {
+    "Scatter": "EMSC"
+   },
+   "kind": "spectrum",
+   "batch_fitted": true
+  },
+  {
+   "key": "stdscale",
+   "group": "Single steps",
+   "steps": "standard scaling",
+   "stages": {
+    "Column scaling": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": true
+  },
+  {
+   "key": "bc_sg",
+   "group": "Baseline correction with other steps",
+   "steps": "Savitzky-Golay smoothing -> AsLS baseline",
+   "stages": {
+    "Denoising": "SG",
+    "Baseline": "AsLS"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "bc_snv",
+   "group": "Baseline correction with other steps",
+   "steps": "AsLS baseline -> SNV",
+   "stages": {
+    "Baseline": "AsLS",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "bc_sg_snv",
+   "group": "Baseline correction with other steps",
+   "steps": "Savitzky-Golay smoothing -> AsLS baseline -> SNV",
+   "stages": {
+    "Denoising": "SG",
+    "Baseline": "AsLS",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "bc_sg_msc",
+   "group": "Baseline correction with other steps",
+   "steps": "Savitzky-Golay smoothing -> AsLS baseline -> MSC",
+   "stages": {
+    "Denoising": "SG",
+    "Baseline": "AsLS",
+    "Scatter": "MSC"
+   },
+   "kind": "spectrum",
+   "batch_fitted": true
+  },
+  {
+   "key": "airpls_snv",
+   "group": "Baseline correction with other steps",
+   "steps": "airPLS baseline -> SNV",
+   "stages": {
+    "Baseline": "airPLS",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "arpls_snv",
+   "group": "Baseline correction with other steps",
+   "steps": "arPLS baseline -> SNV",
+   "stages": {
+    "Baseline": "arPLS",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "sg_rubberband_snv",
+   "group": "Baseline correction with other steps",
+   "steps": "Savitzky-Golay smoothing -> rubberband baseline -> SNV",
+   "stages": {
+    "Denoising": "SG",
+    "Baseline": "rubberband",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "wavelet_bc_snv",
+   "group": "Baseline correction with other steps",
+   "steps": "wavelet denoising -> AsLS baseline -> SNV",
+   "stages": {
+    "Denoising": "wavelet",
+    "Baseline": "AsLS",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "crr_snv",
+   "group": "Other steps followed by SNV",
+   "steps": "cosmic-ray removal -> SNV",
+   "stages": {
+    "Cosmic rays": "•",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "sg_d1_snv",
+   "group": "Other steps followed by SNV",
+   "steps": "Savitzky-Golay first derivative -> SNV",
+   "stages": {
+    "Derivative": "SG, 1st",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "sg_d2_snv",
+   "group": "Other steps followed by SNV",
+   "steps": "Savitzky-Golay second derivative -> SNV",
+   "stages": {
+    "Derivative": "SG, 2nd",
+    "SNV": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": false
+  },
+  {
+   "key": "avgpool",
+   "group": "Pooling",
+   "steps": "average pooling",
+   "stages": {
+    "Pooling": "mean of 5"
+   },
+   "kind": "pooled",
+   "batch_fitted": false
+  },
+  {
+   "key": "bc_snv_avgpool",
+   "group": "Pooling",
+   "steps": "AsLS baseline -> SNV -> average pooling",
+   "stages": {
+    "Baseline": "AsLS",
+    "SNV": "•",
+    "Pooling": "mean of 5"
+   },
+   "kind": "pooled",
+   "batch_fitted": false
+  },
+  {
+   "key": "decimate",
+   "group": "Pooling",
+   "steps": "decimation",
+   "stages": {
+    "Pooling": "every 5th"
+   },
+   "kind": "pooled",
+   "batch_fitted": false
+  },
+  {
+   "key": "all",
+   "group": "Full pipeline",
+   "steps": "cosmic-ray removal -> Savitzky-Golay smoothing -> AsLS baseline -> MSC -> SNV -> standard scaling",
+   "stages": {
+    "Cosmic rays": "•",
+    "Denoising": "SG",
+    "Baseline": "AsLS",
+    "Scatter": "MSC",
+    "SNV": "•",
+    "Column scaling": "•"
+   },
+   "kind": "spectrum",
+   "batch_fitted": true
+  },
+  {
+   "key": "gcu",
+   "group": "Learned representations",
+   "steps": "GCU",
+   "stages": {
+    "Features": "GCU"
+   },
+   "kind": "features",
+   "batch_fitted": true
+  },
+  {
+   "key": "lvse",
+   "group": "Learned representations",
+   "steps": "LVSE",
+   "stages": {
+    "Features": "LVSE"
+   },
+   "kind": "features",
+   "batch_fitted": true
+  },
+  {
+   "key": "gcu_lvse",
+   "group": "Concatenated recipes",
+   "steps": "GCU + LVSE (concatenated)",
+   "stages": {
+    "Features": "GCU + LVSE"
+   },
+   "kind": "features",
+   "batch_fitted": true
+  },
+  {
+   "key": "prep_ensemble",
+   "group": "Concatenated recipes",
+   "steps": "ensemble of SNV, EMSC, airPLS baseline -> SNV, and no preprocessing, concatenated",
+   "stages": {
+    "Features": "4 blocks"
+   },
+   "kind": "blocks",
+   "batch_fitted": true
+  }
+ ]
+}

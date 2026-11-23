@@ -1,0 +1,4419 @@
+{
+ "table1": {
+  "columns": [
+   "Study",
+   "Datasets (targets)",
+   "Recipes",
+   "Chemo.",
+   "Kernel",
+   "Trees",
+   "Deep",
+   "Found.",
+   "Recipe effects",
+   "Tasks",
+   "Modality",
+   "Open?"
+  ],
+  "rows": [
+   [
+    "Poth et al. 2022",
+    "2 (19)",
+    "248",
+    "9",
+    "2",
+    "4",
+    "1",
+    "–",
+    "Yes",
+    "Regression",
+    "Raman",
+    "No"
+   ],
+   [
+    "Sutliff et al. 2024",
+    "1 (1)",
+    "1152",
+    "5",
+    "2",
+    "2",
+    "1",
+    "–",
+    "Yes",
+    "Classification",
+    "NIR",
+    "Yes"
+   ],
+   [
+    "Gariso et al. 2025",
+    "2 (2)",
+    "18",
+    "4",
+    "–",
+    "–",
+    "1",
+    "–",
+    "Yes",
+    "Both",
+    "NIR, MIR",
+    "Yes"
+   ],
+   [
+    "Sineesh and Kamsali 2026",
+    "3 (3)",
+    "1",
+    "–",
+    "–",
+    "–",
+    "–",
+    "–",
+    "No",
+    "Classification",
+    "Raman",
+    "Yes"
+   ],
+   [
+    "Innocente et al. 2026",
+    "3 (3)",
+    "12",
+    "–",
+    "1",
+    "–",
+    "–",
+    "–",
+    "Yes",
+    "Classification",
+    "Raman",
+    "Yes"
+   ],
+   [
+    "Khanam et al. 2026",
+    "1 (1)",
+    "1",
+    "–",
+    "–",
+    "–",
+    "–",
+    "–",
+    "No",
+    "Classification",
+    "FTIR",
+    "Yes"
+   ],
+   [
+    "Lange et al. 2026",
+    "1 (8)",
+    "1",
+    "1",
+    "–",
+    "2",
+    "–",
+    "–",
+    "No",
+    "Regression",
+    "Raman",
+    "Yes"
+   ],
+   [
+    "Reiter et al. 2026",
+    "66 (66)",
+    "30–60",
+    "2",
+    "–",
+    "1",
+    "1",
+    "1",
+    "Yes",
+    "Both",
+    "NIR",
+    "–"
+   ],
+   [
+    "Deng et al. 2026",
+    "6 (6)",
+    "12",
+    "1",
+    "1",
+    "1",
+    "2",
+    "–",
+    "Yes",
+    "Regression",
+    "NIR",
+    "Data only"
+   ],
+   [
+    "Koddenbrock et al. 2026 (RamanBench)",
+    "60 (140)",
+    "11",
+    "3",
+    "–",
+    "–",
+    "7",
+    "–",
+    "Yes",
+    "Both",
+    "Raman",
+    "Yes"
+   ]
+  ],
+  "ours": [
+   [
+    "This work",
+    "39 (104)",
+    "26",
+    "5",
+    "1",
+    "3",
+    "2",
+    "4",
+    "Yes",
+    "Both",
+    "Raman",
+    "Yes"
+   ],
+   [
+    "small-data ablation",
+    "10 (15)",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  ]
+ },
+ "table2": [
+  {
+   "step": "RamanBench v1",
+   "criterion": "Public Raman datasets and their targets",
+   "removed": [
+    null,
+    null
+   ],
+   "datasets": 70,
+   "targets": 162,
+   "classification": 27,
+   "regression": 135
+  },
+  {
+   "step": "Provider preprocessing",
+   "criterion": "Only provider-preprocessed spectra published",
+   "removed": [
+    19,
+    31
+   ],
+   "datasets": 51,
+   "targets": 131,
+   "classification": 16,
+   "regression": 115
+  },
+  {
+   "step": "Trivial",
+   "criterion": "Perfect or tied best score in every sweep run",
+   "removed": [
+    3,
+    5
+   ],
+   "datasets": 48,
+   "targets": 126,
+   "classification": 13,
+   "regression": 113
+  },
+  {
+   "step": "Not learnable",
+   "criterion": "No model beats the mean or majority-class baseline",
+   "removed": [
+    1,
+    7
+   ],
+   "datasets": 47,
+   "targets": 119,
+   "classification": 13,
+   "regression": 106
+  },
+  {
+   "step": "Small data",
+   "criterion": "Fewer than 50 labeled spectra",
+   "removed": [
+    8,
+    15
+   ],
+   "datasets": 39,
+   "targets": 104,
+   "classification": 13,
+   "regression": 91
+  },
+  {
+   "step": "Main benchmark",
+   "criterion": "",
+   "removed": [
+    null,
+    null
+   ],
+   "datasets": 39,
+   "targets": 104,
+   "classification": 13,
+   "regression": 91
+  }
+ ],
+ "table4": [
+  {
+   "recipe": "bc_snv_avgpool",
+   "reg": {
+    "median": -11.0,
+    "text": "-11",
+    "iqr": [
+     -29.0,
+     2.0
+    ],
+    "worse": 20,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.3,
+    "text": "+1.3",
+    "iqr": [
+     -0.9,
+     8.9
+    ],
+    "worse": 19,
+    "significant": true
+   }
+  },
+  {
+   "recipe": "bc_sg_snv",
+   "reg": {
+    "median": -10.0,
+    "text": "-10",
+    "iqr": [
+     -27.0,
+     1.0
+    ],
+    "worse": 20,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.4,
+    "text": "+1.4",
+    "iqr": [
+     -1.0,
+     8.3
+    ],
+    "worse": 20,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "wavelet_bc_snv",
+   "reg": {
+    "median": -10.0,
+    "text": "-10",
+    "iqr": [
+     -27.0,
+     2.0
+    ],
+    "worse": 21,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.1,
+    "text": "+1.1",
+    "iqr": [
+     -0.9,
+     8.7
+    ],
+    "worse": 17,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "bc_sg_msc",
+   "reg": {
+    "median": -8.0,
+    "text": "-8",
+    "iqr": [
+     -25.0,
+     2.0
+    ],
+    "worse": 22,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.0,
+    "text": "+0.0",
+    "iqr": [
+     -3.1,
+     5.0
+    ],
+    "worse": 31,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "sg_rubberband_snv",
+   "reg": {
+    "median": -8.0,
+    "text": "-8",
+    "iqr": [
+     -25.0,
+     1.0
+    ],
+    "worse": 19,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.6,
+    "text": "+1.6",
+    "iqr": [
+     -0.1,
+     6.9
+    ],
+    "worse": 13,
+    "significant": true
+   }
+  },
+  {
+   "recipe": "snv",
+   "reg": {
+    "median": -8.0,
+    "text": "-8",
+    "iqr": [
+     -23.0,
+     -0.0
+    ],
+    "worse": 13,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.3,
+    "text": "+1.3",
+    "iqr": [
+     -0.2,
+     6.2
+    ],
+    "worse": 11,
+    "significant": true
+   }
+  },
+  {
+   "recipe": "bc_snv",
+   "reg": {
+    "median": -8.0,
+    "text": "-8",
+    "iqr": [
+     -24.0,
+     2.0
+    ],
+    "worse": 21,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.3,
+    "text": "+1.3",
+    "iqr": [
+     -1.4,
+     8.0
+    ],
+    "worse": 22,
+    "significant": true
+   }
+  },
+  {
+   "recipe": "msc",
+   "reg": {
+    "median": -8.0,
+    "text": "-8",
+    "iqr": [
+     -21.0,
+     0.0
+    ],
+    "worse": 14,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.0,
+    "text": "+0.0",
+    "iqr": [
+     -2.8,
+     3.0
+    ],
+    "worse": 30,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "sg_d1_snv",
+   "reg": {
+    "median": -7.0,
+    "text": "-7",
+    "iqr": [
+     -23.0,
+     5.0
+    ],
+    "worse": 25,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.5,
+    "text": "+1.5",
+    "iqr": [
+     -0.9,
+     8.4
+    ],
+    "worse": 21,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "emsc",
+   "reg": {
+    "median": -7.0,
+    "text": "-7",
+    "iqr": [
+     -23.0,
+     1.0
+    ],
+    "worse": 18,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.2,
+    "text": "+0.2",
+    "iqr": [
+     -2.3,
+     3.3
+    ],
+    "worse": 28,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "all",
+   "reg": {
+    "median": -6.0,
+    "text": "-6",
+    "iqr": [
+     -24.0,
+     10.0
+    ],
+    "worse": 31,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.6,
+    "text": "+0.6",
+    "iqr": [
+     -3.3,
+     7.1
+    ],
+    "worse": 31,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "airpls_snv",
+   "reg": {
+    "median": -6.0,
+    "text": "-6",
+    "iqr": [
+     -21.0,
+     5.0
+    ],
+    "worse": 25,
+    "significant": true
+   },
+   "cls": {
+    "median": 1.3,
+    "text": "+1.3",
+    "iqr": [
+     -0.9,
+     7.7
+    ],
+    "worse": 14,
+    "significant": true
+   }
+  },
+  {
+   "recipe": "gcu_lvse",
+   "reg": {
+    "median": -5.0,
+    "text": "-5",
+    "iqr": [
+     -21.0,
+     5.0
+    ],
+    "worse": 26,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.4,
+    "text": "+0.4",
+    "iqr": [
+     -1.1,
+     3.5
+    ],
+    "worse": 18,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "arpls_snv",
+   "reg": {
+    "median": -5.0,
+    "text": "-5",
+    "iqr": [
+     -20.0,
+     5.0
+    ],
+    "worse": 26,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.8,
+    "text": "+0.8",
+    "iqr": [
+     -1.8,
+     6.9
+    ],
+    "worse": 25,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "prep_ensemble",
+   "reg": {
+    "median": -5.0,
+    "text": "-5",
+    "iqr": [
+     -20.0,
+     2.0
+    ],
+    "worse": 20,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.3,
+    "text": "+0.3",
+    "iqr": [
+     -1.3,
+     2.6
+    ],
+    "worse": 21,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "crr_snv",
+   "reg": {
+    "median": -4.0,
+    "text": "-4",
+    "iqr": [
+     -18.0,
+     5.0
+    ],
+    "worse": 25,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.8,
+    "text": "+0.8",
+    "iqr": [
+     -1.1,
+     5.4
+    ],
+    "worse": 15,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "gcu",
+   "reg": {
+    "median": -3.0,
+    "text": "-3",
+    "iqr": [
+     -18.0,
+     8.0
+    ],
+    "worse": 30,
+    "significant": true
+   },
+   "cls": {
+    "median": -0.1,
+    "text": "-0.1",
+    "iqr": [
+     -2.4,
+     3.6
+    ],
+    "worse": 30,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "bc_sg",
+   "reg": {
+    "median": -2.0,
+    "text": "-2",
+    "iqr": [
+     -15.0,
+     3.0
+    ],
+    "worse": 21,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.5,
+    "text": "+0.5",
+    "iqr": [
+     -1.2,
+     2.3
+    ],
+    "worse": 23,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "bc",
+   "reg": {
+    "median": -2.0,
+    "text": "-2",
+    "iqr": [
+     -12.0,
+     3.0
+    ],
+    "worse": 22,
+    "significant": true
+   },
+   "cls": {
+    "median": 0.2,
+    "text": "+0.2",
+    "iqr": [
+     -1.2,
+     2.3
+    ],
+    "worse": 20,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "sg_d2_snv",
+   "reg": {
+    "median": -1.0,
+    "text": "-1",
+    "iqr": [
+     -16.0,
+     21.0
+    ],
+    "worse": 37,
+    "significant": false
+   },
+   "cls": {
+    "median": 1.0,
+    "text": "+1.0",
+    "iqr": [
+     -4.1,
+     6.1
+    ],
+    "worse": 33,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "lvse",
+   "reg": {
+    "median": -0.0,
+    "text": "-0",
+    "iqr": [
+     -15.0,
+     12.0
+    ],
+    "worse": 38,
+    "significant": false
+   },
+   "cls": {
+    "median": -0.0,
+    "text": "-0.0",
+    "iqr": [
+     -1.5,
+     1.7
+    ],
+    "worse": 21,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "avgpool",
+   "reg": {
+    "median": -0.0,
+    "text": "-0",
+    "iqr": [
+     -5.0,
+     2.0
+    ],
+    "worse": 14,
+    "significant": false
+   },
+   "cls": {
+    "median": 0.0,
+    "text": "+0.0",
+    "iqr": [
+     -0.4,
+     1.1
+    ],
+    "worse": 10,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "sg",
+   "reg": {
+    "median": 0.0,
+    "text": "+0",
+    "iqr": [
+     -2.0,
+     1.0
+    ],
+    "worse": 10,
+    "significant": false
+   },
+   "cls": {
+    "median": -0.0,
+    "text": "-0.0",
+    "iqr": [
+     -0.2,
+     0.5
+    ],
+    "worse": 4,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "stdscale",
+   "reg": {
+    "median": 0.0,
+    "text": "+0",
+    "iqr": [
+     -0.0,
+     5.0
+    ],
+    "worse": 25,
+    "significant": false
+   },
+   "cls": {
+    "median": -0.0,
+    "text": "-0.0",
+    "iqr": [
+     -0.7,
+     0.2
+    ],
+    "worse": 13,
+    "significant": false
+   }
+  },
+  {
+   "recipe": "decimate",
+   "reg": {
+    "median": 0.0,
+    "text": "+0",
+    "iqr": [
+     -2.0,
+     5.0
+    ],
+    "worse": 25,
+    "significant": false
+   },
+   "cls": {
+    "median": -0.1,
+    "text": "-0.1",
+    "iqr": [
+     -1.3,
+     0.5
+    ],
+    "worse": 17,
+    "significant": false
+   }
+  }
+ ],
+ "table5": [
+  {
+   "family": "Chemometric (4)",
+   "global": {
+    "median": "-10.7",
+    "ci": [
+     -17.6,
+     -3.5
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 33
+   },
+   "family_recipe": {
+    "recipe": "snv",
+    "median": "-10.3",
+    "ci": [
+     -17.6,
+     -2.1
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 31
+   },
+   "per_task_cv": {
+    "median": "-16.6",
+    "ci": [
+     -22.2,
+     -10.7
+    ],
+    "gray": false,
+    "bold": true,
+    "worse": 16
+   },
+   "oracle": {
+    "median": "-23.0",
+    "ci": [
+     -28.9,
+     -19.1
+    ],
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "family": "SVM (1)",
+   "global": {
+    "median": "-7.9",
+    "ci": [
+     -19.0,
+     -1.3
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 18
+   },
+   "family_recipe": {
+    "recipe": "all",
+    "median": "-18.8",
+    "ci": [
+     -28.7,
+     -9.4
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 15
+   },
+   "per_task_cv": {
+    "median": "-27.0",
+    "ci": [
+     -34.2,
+     -19.6
+    ],
+    "gray": false,
+    "bold": true,
+    "worse": 0
+   },
+   "oracle": {
+    "median": "-27.1",
+    "ci": [
+     -36.9,
+     -22.0
+    ],
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "family": "Tree ensembles (3)",
+   "global": {
+    "median": "-23.2",
+    "ci": [
+     -31.9,
+     -16.7
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 8
+   },
+   "family_recipe": {
+    "recipe": "prep_ensemble",
+    "median": "-24.2",
+    "ci": [
+     -32.8,
+     -18.1
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 4
+   },
+   "per_task_cv": {
+    "median": "-32.4",
+    "ci": [
+     -39.6,
+     -25.3
+    ],
+    "gray": false,
+    "bold": true,
+    "worse": 3
+   },
+   "oracle": {
+    "median": "-38.5",
+    "ci": [
+     -46.7,
+     -29.9
+    ],
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "family": "Deep networks (2)",
+   "global": {
+    "median": "-11.7",
+    "ci": [
+     -20.2,
+     -4.2
+    ],
+    "gray": false,
+    "bold": true,
+    "worse": 27
+   },
+   "family_recipe": {
+    "recipe": "bc_snv_avgpool",
+    "median": "-11.7",
+    "ci": [
+     -20.2,
+     -4.2
+    ],
+    "gray": false,
+    "bold": true,
+    "worse": 27
+   },
+   "per_task_cv": {
+    "median": "-10.7",
+    "ci": [
+     -21.0,
+     -4.1
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 22
+   },
+   "oracle": {
+    "median": "-20.8",
+    "ci": [
+     -31.6,
+     -13.2
+    ],
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "family": "TFMs (4)",
+   "global": {
+    "median": "-3.0",
+    "ci": [
+     -8.2,
+     0.7
+    ],
+    "gray": true,
+    "bold": false,
+    "worse": 43
+   },
+   "family_recipe": {
+    "recipe": "msc",
+    "median": "-5.4",
+    "ci": [
+     -8.6,
+     -3.1
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 29
+   },
+   "per_task_cv": {
+    "median": "-6.1",
+    "ci": [
+     -10.7,
+     -3.2
+    ],
+    "gray": false,
+    "bold": true,
+    "worse": 31
+   },
+   "oracle": {
+    "median": "-16.1",
+    "ci": [
+     -25.4,
+     -11.6
+    ],
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "family": "All models (14)",
+   "global": {
+    "median": "-10.7",
+    "ci": [
+     -15.9,
+     -6.9
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 29
+   },
+   "family_recipe": {
+    "recipe": "per family",
+    "median": "-11.8",
+    "ci": [
+     -17.4,
+     -8.1
+    ],
+    "gray": false,
+    "bold": false,
+    "worse": 23
+   },
+   "per_task_cv": {
+    "median": "-15.9",
+    "ci": [
+     -21.3,
+     -11.4
+    ],
+    "gray": false,
+    "bold": true,
+    "worse": 17
+   },
+   "oracle": {
+    "median": "-23.8",
+    "ci": [
+     -30.3,
+     -19.8
+    ],
+    "gray": false,
+    "bold": false
+   }
+  }
+ ],
+ "table6": [
+  {
+   "rule": "Global",
+   "chosen_on": "all datasets",
+   "rmse": {
+    "median": "-11",
+    "ci": [
+     -16.0,
+     -7.0
+    ],
+    "worse": 29,
+    "gray": false,
+    "bold": false
+   },
+   "ba": {
+    "median": "+1.6",
+    "ci": [
+     0.6,
+     4.2
+    ],
+    "worse": 28,
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "rule": "Family",
+   "chosen_on": "other datasets",
+   "rmse": {
+    "median": "-12",
+    "ci": [
+     -17.0,
+     -8.0
+    ],
+    "worse": 23,
+    "gray": false,
+    "bold": false
+   },
+   "ba": {
+    "median": "+0.4",
+    "ci": [
+     -0.3,
+     1.5
+    ],
+    "worse": 43,
+    "gray": true,
+    "bold": false
+   }
+  },
+  {
+   "rule": "Family",
+   "chosen_on": "other families",
+   "rmse": {
+    "median": "-11",
+    "ci": [
+     -16.0,
+     -8.0
+    ],
+    "worse": 25,
+    "gray": false,
+    "bold": false
+   },
+   "ba": {
+    "median": "+0.4",
+    "ci": [
+     -0.3,
+     1.9
+    ],
+    "worse": 42,
+    "gray": true,
+    "bold": false
+   }
+  },
+  {
+   "rule": "Per-model",
+   "chosen_on": "other datasets",
+   "rmse": {
+    "median": "-11",
+    "ci": [
+     -17.0,
+     -7.0
+    ],
+    "worse": 26,
+    "gray": false,
+    "bold": false
+   },
+   "ba": {
+    "median": "+1.3",
+    "ci": [
+     0.4,
+     3.4
+    ],
+    "worse": 31,
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "rule": "Per-model",
+   "chosen_on": "other families",
+   "rmse": {
+    "median": "-10",
+    "ci": [
+     -15.0,
+     -7.0
+    ],
+    "worse": 25,
+    "gray": false,
+    "bold": false
+   },
+   "ba": {
+    "median": "+1.2",
+    "ci": [
+     0.4,
+     3.4
+    ],
+    "worse": 32,
+    "gray": false,
+    "bold": false
+   }
+  },
+  {
+   "rule": "Per-task CV",
+   "chosen_on": "training folds",
+   "rmse": {
+    "median": "-16",
+    "ci": [
+     -21.0,
+     -11.0
+    ],
+    "worse": 17,
+    "gray": false,
+    "bold": true
+   },
+   "ba": {
+    "median": "+1.8",
+    "ci": [
+     1.1,
+     3.8
+    ],
+    "worse": 16,
+    "gray": false,
+    "bold": true
+   }
+  },
+  {
+   "rule": "Oracle",
+   "chosen_on": "test folds",
+   "rmse": {
+    "median": "-24",
+    "ci": [
+     -30.0,
+     -20.0
+    ],
+    "worse": 1,
+    "gray": false,
+    "bold": false
+   },
+   "ba": {
+    "median": "+3.9",
+    "ci": [
+     2.2,
+     6.8
+    ],
+    "worse": 1,
+    "gray": false,
+    "bold": false
+   }
+  }
+ ],
+ "fig1": {
+  "order": [
+   "bc_snv_avgpool",
+   "bc_sg_snv",
+   "wavelet_bc_snv",
+   "bc_sg_msc",
+   "sg_rubberband_snv",
+   "snv",
+   "bc_snv",
+   "msc",
+   "sg_d1_snv",
+   "emsc",
+   "all",
+   "airpls_snv",
+   "gcu_lvse",
+   "arpls_snv",
+   "prep_ensemble",
+   "crr_snv",
+   "gcu",
+   "bc_sg",
+   "bc",
+   "sg_d2_snv",
+   "lvse",
+   "avgpool",
+   "sg",
+   "stdscale",
+   "decimate"
+  ],
+  "families": [
+   "Chemometric",
+   "Kernel methods",
+   "Tree ensembles",
+   "Deep learning",
+   "Tabular foundation"
+  ],
+  "cells": [
+   {
+    "task": "regression",
+    "recipe": "airpls_snv",
+    "median": -7.84,
+    "lo": -14.99,
+    "hi": -0.01,
+    "worse": 35.4,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "all",
+    "median": -5.14,
+    "lo": -13.05,
+    "hi": 4.81,
+    "worse": 42.6,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "arpls_snv",
+    "median": -6.48,
+    "lo": -13.86,
+    "hi": 2.65,
+    "worse": 38.2,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "avgpool",
+    "median": 0.38,
+    "lo": 0.0,
+    "hi": 1.11,
+    "worse": 61.0,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc",
+    "median": -0.77,
+    "lo": -3.03,
+    "hi": 0.51,
+    "worse": 43.4,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg",
+    "median": -0.84,
+    "lo": -3.28,
+    "hi": 0.39,
+    "worse": 44.2,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_msc",
+    "median": -7.54,
+    "lo": -12.35,
+    "hi": 3.11,
+    "worse": 36.3,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_snv",
+    "median": -10.63,
+    "lo": -18.49,
+    "hi": -5.14,
+    "worse": 28.8,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv",
+    "median": -9.44,
+    "lo": -16.88,
+    "hi": -2.07,
+    "worse": 31.3,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv_avgpool",
+    "median": -10.67,
+    "lo": -17.84,
+    "hi": -3.73,
+    "worse": 32.7,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "crr_snv",
+    "median": -3.57,
+    "lo": -14.72,
+    "hi": 5.14,
+    "worse": 43.1,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "decimate",
+    "median": 0.31,
+    "lo": 0.0,
+    "hi": 1.58,
+    "worse": 58.2,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "emsc",
+    "median": -9.94,
+    "lo": -15.03,
+    "hi": -2.04,
+    "worse": 29.9,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu",
+    "median": -0.35,
+    "lo": -3.05,
+    "hi": 1.71,
+    "worse": 48.6,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu_lvse",
+    "median": 1.26,
+    "lo": -1.63,
+    "hi": 5.26,
+    "worse": 53.6,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "lvse",
+    "median": 5.66,
+    "lo": 2.12,
+    "hi": 10.36,
+    "worse": 66.8,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "msc",
+    "median": -9.8,
+    "lo": -14.94,
+    "hi": -1.31,
+    "worse": 31.9,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "prep_ensemble",
+    "median": -4.63,
+    "lo": -7.58,
+    "hi": -1.65,
+    "worse": 27.2,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg",
+    "median": 0.17,
+    "lo": 0.0,
+    "hi": 0.44,
+    "worse": 56.9,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d1_snv",
+    "median": -6.33,
+    "lo": -12.23,
+    "hi": 2.06,
+    "worse": 36.0,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d2_snv",
+    "median": -0.32,
+    "lo": -5.36,
+    "hi": 21.3,
+    "worse": 49.7,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_rubberband_snv",
+    "median": -8.93,
+    "lo": -16.79,
+    "hi": -2.99,
+    "worse": 29.4,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "snv",
+    "median": -11.66,
+    "lo": -17.94,
+    "hi": -3.99,
+    "worse": 27.2,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "stdscale",
+    "median": 3.74,
+    "lo": 0.02,
+    "hi": 9.99,
+    "worse": 61.0,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "wavelet_bc_snv",
+    "median": -10.5,
+    "lo": -17.76,
+    "hi": -2.88,
+    "worse": 30.2,
+    "pairs": 364,
+    "family": "Chemometric"
+   },
+   {
+    "task": "regression",
+    "recipe": "airpls_snv",
+    "median": -2.88,
+    "lo": -5.58,
+    "hi": 0.15,
+    "worse": 36.8,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "all",
+    "median": -0.41,
+    "lo": -7.44,
+    "hi": 3.09,
+    "worse": 46.7,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "arpls_snv",
+    "median": -2.24,
+    "lo": -5.26,
+    "hi": 2.13,
+    "worse": 39.6,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "avgpool",
+    "median": -9.82,
+    "lo": -15.66,
+    "hi": -5.1,
+    "worse": 24.7,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc",
+    "median": -0.34,
+    "lo": -1.99,
+    "hi": 0.44,
+    "worse": 44.5,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg",
+    "median": -1.2,
+    "lo": -4.69,
+    "hi": -0.08,
+    "worse": 36.3,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_msc",
+    "median": -3.52,
+    "lo": -7.67,
+    "hi": -0.03,
+    "worse": 35.2,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_snv",
+    "median": -5.6,
+    "lo": -9.5,
+    "hi": -0.89,
+    "worse": 32.4,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv",
+    "median": -3.46,
+    "lo": -6.51,
+    "hi": 0.33,
+    "worse": 40.1,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv_avgpool",
+    "median": -11.7,
+    "lo": -20.12,
+    "hi": -4.27,
+    "worse": 27.5,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "crr_snv",
+    "median": -0.37,
+    "lo": -3.36,
+    "hi": 1.01,
+    "worse": 47.3,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "decimate",
+    "median": -2.76,
+    "lo": -7.71,
+    "hi": 1.67,
+    "worse": 42.9,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "emsc",
+    "median": -0.93,
+    "lo": -2.86,
+    "hi": 1.12,
+    "worse": 42.9,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu",
+    "median": -0.7,
+    "lo": -9.99,
+    "hi": 2.99,
+    "worse": 46.7,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu_lvse",
+    "median": -0.56,
+    "lo": -8.17,
+    "hi": 5.98,
+    "worse": 48.4,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "lvse",
+    "median": 3.8,
+    "lo": -3.24,
+    "hi": 10.11,
+    "worse": 56.6,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "msc",
+    "median": -1.14,
+    "lo": -3.43,
+    "hi": 1.15,
+    "worse": 41.8,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "prep_ensemble",
+    "median": 2.68,
+    "lo": 0.59,
+    "hi": 8.85,
+    "worse": 66.5,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg",
+    "median": -1.45,
+    "lo": -2.28,
+    "hi": -0.9,
+    "worse": 34.6,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d1_snv",
+    "median": -3.76,
+    "lo": -7.57,
+    "hi": 0.07,
+    "worse": 36.8,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d2_snv",
+    "median": 0.05,
+    "lo": -1.24,
+    "hi": 4.71,
+    "worse": 50.5,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_rubberband_snv",
+    "median": -4.03,
+    "lo": -9.73,
+    "hi": -0.13,
+    "worse": 34.6,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "snv",
+    "median": -3.44,
+    "lo": -5.66,
+    "hi": -0.63,
+    "worse": 31.3,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "stdscale",
+    "median": 2.72,
+    "lo": -1.44,
+    "hi": 7.72,
+    "worse": 58.8,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "wavelet_bc_snv",
+    "median": -4.51,
+    "lo": -8.87,
+    "hi": -0.11,
+    "worse": 35.7,
+    "pairs": 182,
+    "family": "Deep learning"
+   },
+   {
+    "task": "regression",
+    "recipe": "airpls_snv",
+    "median": -5.72,
+    "lo": -17.48,
+    "hi": -2.04,
+    "worse": 16.9,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "all",
+    "median": -18.8,
+    "lo": -29.03,
+    "hi": -9.53,
+    "worse": 14.6,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "arpls_snv",
+    "median": -3.98,
+    "lo": -13.42,
+    "hi": -1.56,
+    "worse": 13.5,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "avgpool",
+    "median": 0.04,
+    "lo": 0.01,
+    "hi": 0.21,
+    "worse": 73.0,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc",
+    "median": -2.3,
+    "lo": -8.93,
+    "hi": -0.05,
+    "worse": 25.8,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg",
+    "median": -1.14,
+    "lo": -8.53,
+    "hi": -0.05,
+    "worse": 25.8,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_msc",
+    "median": -4.81,
+    "lo": -14.92,
+    "hi": -0.79,
+    "worse": 18.0,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_snv",
+    "median": -6.68,
+    "lo": -19.47,
+    "hi": -0.88,
+    "worse": 13.5,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv",
+    "median": -4.99,
+    "lo": -18.31,
+    "hi": -1.97,
+    "worse": 11.2,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv_avgpool",
+    "median": -7.89,
+    "lo": -18.37,
+    "hi": -0.9,
+    "worse": 18.0,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "crr_snv",
+    "median": -0.35,
+    "lo": -1.88,
+    "hi": 0.17,
+    "worse": 37.1,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "decimate",
+    "median": 0.01,
+    "lo": -0.0,
+    "hi": 0.1,
+    "worse": 64.0,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "emsc",
+    "median": -0.18,
+    "lo": -1.55,
+    "hi": 0.37,
+    "worse": 43.8,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu",
+    "median": -12.74,
+    "lo": -19.68,
+    "hi": -7.6,
+    "worse": 13.5,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu_lvse",
+    "median": -10.41,
+    "lo": -16.93,
+    "hi": -5.44,
+    "worse": 15.7,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "lvse",
+    "median": -3.09,
+    "lo": -8.51,
+    "hi": 0.35,
+    "worse": 36.0,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "msc",
+    "median": -1.0,
+    "lo": -2.24,
+    "hi": -0.11,
+    "worse": 30.3,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "prep_ensemble",
+    "median": 0.26,
+    "lo": -0.12,
+    "hi": 2.56,
+    "worse": 62.9,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg",
+    "median": 0.0,
+    "lo": 0.0,
+    "hi": 0.09,
+    "worse": 69.7,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d1_snv",
+    "median": -6.88,
+    "lo": -19.86,
+    "hi": -2.94,
+    "worse": 14.6,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d2_snv",
+    "median": -5.56,
+    "lo": -16.08,
+    "hi": -2.65,
+    "worse": 20.2,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_rubberband_snv",
+    "median": -5.58,
+    "lo": -10.58,
+    "hi": -1.17,
+    "worse": 16.9,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "snv",
+    "median": -0.96,
+    "lo": -2.63,
+    "hi": -0.19,
+    "worse": 28.1,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "stdscale",
+    "median": -2.92,
+    "lo": -7.36,
+    "hi": 0.49,
+    "worse": 37.1,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "wavelet_bc_snv",
+    "median": -7.22,
+    "lo": -18.79,
+    "hi": -3.07,
+    "worse": 9.0,
+    "pairs": 89,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "regression",
+    "recipe": "airpls_snv",
+    "median": 0.32,
+    "lo": -2.29,
+    "hi": 5.67,
+    "worse": 51.4,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "all",
+    "median": 2.34,
+    "lo": -4.26,
+    "hi": 6.82,
+    "worse": 55.2,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "arpls_snv",
+    "median": -0.17,
+    "lo": -2.55,
+    "hi": 6.15,
+    "worse": 49.5,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "avgpool",
+    "median": -1.65,
+    "lo": -3.67,
+    "hi": -0.52,
+    "worse": 36.8,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc",
+    "median": -0.34,
+    "lo": -2.47,
+    "hi": 2.68,
+    "worse": 48.1,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg",
+    "median": -0.53,
+    "lo": -3.19,
+    "hi": 1.96,
+    "worse": 47.5,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_msc",
+    "median": -2.23,
+    "lo": -6.23,
+    "hi": 0.12,
+    "worse": 41.2,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_snv",
+    "median": -2.55,
+    "lo": -6.96,
+    "hi": 1.0,
+    "worse": 41.5,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv",
+    "median": -2.32,
+    "lo": -5.16,
+    "hi": 2.13,
+    "worse": 43.1,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv_avgpool",
+    "median": -3.04,
+    "lo": -8.15,
+    "hi": 0.59,
+    "worse": 42.9,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "crr_snv",
+    "median": -1.18,
+    "lo": -5.08,
+    "hi": 1.09,
+    "worse": 44.2,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "decimate",
+    "median": 1.16,
+    "lo": -0.03,
+    "hi": 2.7,
+    "worse": 58.0,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "emsc",
+    "median": -4.25,
+    "lo": -8.58,
+    "hi": -1.03,
+    "worse": 34.6,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu",
+    "median": 2.47,
+    "lo": -0.87,
+    "hi": 6.57,
+    "worse": 58.0,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu_lvse",
+    "median": -1.94,
+    "lo": -8.11,
+    "hi": -0.18,
+    "worse": 39.6,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "lvse",
+    "median": 0.18,
+    "lo": -6.07,
+    "hi": 5.05,
+    "worse": 50.5,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "msc",
+    "median": -5.39,
+    "lo": -8.7,
+    "hi": -3.18,
+    "worse": 28.8,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "prep_ensemble",
+    "median": -2.79,
+    "lo": -5.97,
+    "hi": -1.27,
+    "worse": 37.4,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg",
+    "median": -0.14,
+    "lo": -0.61,
+    "hi": 0.16,
+    "worse": 46.4,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d1_snv",
+    "median": -1.5,
+    "lo": -5.02,
+    "hi": 3.96,
+    "worse": 46.2,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d2_snv",
+    "median": 8.36,
+    "lo": 1.94,
+    "hi": 24.75,
+    "worse": 66.8,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_rubberband_snv",
+    "median": -3.36,
+    "lo": -8.03,
+    "hi": 1.04,
+    "worse": 42.0,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "snv",
+    "median": -4.95,
+    "lo": -8.47,
+    "hi": -2.98,
+    "worse": 26.6,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "stdscale",
+    "median": 0.02,
+    "lo": 0.0,
+    "hi": 0.03,
+    "worse": 58.2,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "wavelet_bc_snv",
+    "median": -2.25,
+    "lo": -7.11,
+    "hi": 1.61,
+    "worse": 43.1,
+    "pairs": 364,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "regression",
+    "recipe": "airpls_snv",
+    "median": -19.15,
+    "lo": -27.63,
+    "hi": -13.81,
+    "worse": 8.8,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "all",
+    "median": -19.56,
+    "lo": -27.85,
+    "hi": -13.45,
+    "worse": 13.8,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "arpls_snv",
+    "median": -17.71,
+    "lo": -24.61,
+    "hi": -12.8,
+    "worse": 8.8,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "avgpool",
+    "median": -0.48,
+    "lo": -1.45,
+    "hi": 0.8,
+    "worse": 46.4,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc",
+    "median": -13.07,
+    "lo": -18.73,
+    "hi": -4.28,
+    "worse": 20.3,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg",
+    "median": -15.55,
+    "lo": -23.32,
+    "hi": -4.33,
+    "worse": 20.3,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_msc",
+    "median": -23.87,
+    "lo": -32.15,
+    "hi": -17.4,
+    "worse": 7.3,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_snv",
+    "median": -24.04,
+    "lo": -33.44,
+    "hi": -18.16,
+    "worse": 7.3,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv",
+    "median": -22.74,
+    "lo": -30.62,
+    "hi": -16.46,
+    "worse": 7.3,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv_avgpool",
+    "median": -23.23,
+    "lo": -32.15,
+    "hi": -16.73,
+    "worse": 8.0,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "crr_snv",
+    "median": -16.04,
+    "lo": -21.64,
+    "hi": -9.96,
+    "worse": 10.0,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "decimate",
+    "median": 0.63,
+    "lo": -0.17,
+    "hi": 2.67,
+    "worse": 57.9,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "emsc",
+    "median": -23.53,
+    "lo": -34.78,
+    "hi": -17.1,
+    "worse": 7.3,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu",
+    "median": -19.54,
+    "lo": -26.55,
+    "hi": -10.52,
+    "worse": 14.2,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu_lvse",
+    "median": -23.56,
+    "lo": -32.08,
+    "hi": -14.71,
+    "worse": 7.7,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "lvse",
+    "median": -16.21,
+    "lo": -25.98,
+    "hi": -6.46,
+    "worse": 19.5,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "msc",
+    "median": -22.08,
+    "lo": -27.21,
+    "hi": -15.37,
+    "worse": 3.4,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "prep_ensemble",
+    "median": -26.01,
+    "lo": -34.27,
+    "hi": -20.65,
+    "worse": 3.4,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg",
+    "median": -0.0,
+    "lo": -0.91,
+    "hi": 0.76,
+    "worse": 49.4,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d1_snv",
+    "median": -21.02,
+    "lo": -27.13,
+    "hi": -16.51,
+    "worse": 12.3,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d2_snv",
+    "median": -15.32,
+    "lo": -20.67,
+    "hi": -9.95,
+    "worse": 19.5,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_rubberband_snv",
+    "median": -22.57,
+    "lo": -28.37,
+    "hi": -15.24,
+    "worse": 7.7,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "snv",
+    "median": -21.48,
+    "lo": -26.74,
+    "hi": -15.42,
+    "worse": 4.2,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "stdscale",
+    "median": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "worse": 33.0,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "regression",
+    "recipe": "wavelet_bc_snv",
+    "median": -24.14,
+    "lo": -31.94,
+    "hi": -19.24,
+    "worse": 6.9,
+    "pairs": 261,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "airpls_snv",
+    "median": 1.75,
+    "lo": 0.4,
+    "hi": 7.23,
+    "worse": 30.8,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "all",
+    "median": 2.18,
+    "lo": -0.68,
+    "hi": 7.67,
+    "worse": 35.4,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "arpls_snv",
+    "median": 1.31,
+    "lo": -0.98,
+    "hi": 5.75,
+    "worse": 40.0,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "avgpool",
+    "median": -0.04,
+    "lo": -0.19,
+    "hi": 0.17,
+    "worse": 52.3,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc",
+    "median": -0.0,
+    "lo": -1.07,
+    "hi": 0.59,
+    "worse": 47.7,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg",
+    "median": -0.0,
+    "lo": -0.93,
+    "hi": 0.68,
+    "worse": 49.2,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_msc",
+    "median": 0.56,
+    "lo": -2.03,
+    "hi": 2.11,
+    "worse": 46.2,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_snv",
+    "median": 2.76,
+    "lo": 0.56,
+    "hi": 8.79,
+    "worse": 30.8,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv",
+    "median": 2.05,
+    "lo": 0.03,
+    "hi": 7.54,
+    "worse": 30.8,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv_avgpool",
+    "median": 2.62,
+    "lo": 0.52,
+    "hi": 10.26,
+    "worse": 26.2,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "crr_snv",
+    "median": 1.77,
+    "lo": -0.09,
+    "hi": 7.22,
+    "worse": 35.4,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "decimate",
+    "median": -0.04,
+    "lo": -0.31,
+    "hi": 0.15,
+    "worse": 53.8,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "emsc",
+    "median": -0.4,
+    "lo": -2.06,
+    "hi": 1.11,
+    "worse": 56.9,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu",
+    "median": -0.37,
+    "lo": -3.06,
+    "hi": 0.67,
+    "worse": 55.4,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu_lvse",
+    "median": -0.21,
+    "lo": -1.42,
+    "hi": 0.69,
+    "worse": 53.8,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "lvse",
+    "median": -0.15,
+    "lo": -1.53,
+    "hi": 0.29,
+    "worse": 55.4,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "msc",
+    "median": -0.0,
+    "lo": -3.33,
+    "hi": 1.7,
+    "worse": 49.2,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "prep_ensemble",
+    "median": 0.45,
+    "lo": -1.09,
+    "hi": 1.74,
+    "worse": 41.5,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg",
+    "median": -0.0,
+    "lo": -0.02,
+    "hi": 0.02,
+    "worse": 44.6,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d1_snv",
+    "median": 1.7,
+    "lo": -0.19,
+    "hi": 8.29,
+    "worse": 33.8,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d2_snv",
+    "median": 1.34,
+    "lo": -1.4,
+    "hi": 5.88,
+    "worse": 43.1,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_rubberband_snv",
+    "median": 3.07,
+    "lo": 1.65,
+    "hi": 8.11,
+    "worse": 15.4,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "snv",
+    "median": 2.67,
+    "lo": 1.11,
+    "hi": 6.91,
+    "worse": 23.1,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "stdscale",
+    "median": -0.29,
+    "lo": -1.13,
+    "hi": 0.21,
+    "worse": 60.0,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "wavelet_bc_snv",
+    "median": 1.74,
+    "lo": 0.56,
+    "hi": 10.16,
+    "worse": 27.7,
+    "pairs": 65,
+    "family": "Chemometric"
+   },
+   {
+    "task": "classification",
+    "recipe": "airpls_snv",
+    "median": -0.0,
+    "lo": -0.88,
+    "hi": 1.7,
+    "worse": 46.2,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "all",
+    "median": -0.83,
+    "lo": -2.81,
+    "hi": -0.16,
+    "worse": 73.1,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "arpls_snv",
+    "median": -0.0,
+    "lo": -2.41,
+    "hi": 1.62,
+    "worse": 46.2,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "avgpool",
+    "median": 0.15,
+    "lo": -0.87,
+    "hi": 1.81,
+    "worse": 46.2,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc",
+    "median": -0.64,
+    "lo": -1.04,
+    "hi": 0.12,
+    "worse": 65.4,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg",
+    "median": -0.15,
+    "lo": -1.36,
+    "hi": 0.71,
+    "worse": 53.8,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_msc",
+    "median": -0.87,
+    "lo": -2.91,
+    "hi": 2.51,
+    "worse": 57.7,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_snv",
+    "median": -0.03,
+    "lo": -2.24,
+    "hi": 1.77,
+    "worse": 50.0,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv",
+    "median": 0.1,
+    "lo": -2.46,
+    "hi": 1.99,
+    "worse": 42.3,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv_avgpool",
+    "median": -0.05,
+    "lo": -1.75,
+    "hi": 2.29,
+    "worse": 50.0,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "crr_snv",
+    "median": 0.01,
+    "lo": -1.14,
+    "hi": 0.56,
+    "worse": 50.0,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "decimate",
+    "median": -0.36,
+    "lo": -2.09,
+    "hi": 0.27,
+    "worse": 57.7,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "emsc",
+    "median": -0.34,
+    "lo": -2.6,
+    "hi": 1.04,
+    "worse": 53.8,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu",
+    "median": -1.66,
+    "lo": -3.6,
+    "hi": -0.53,
+    "worse": 76.9,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu_lvse",
+    "median": -1.0,
+    "lo": -4.44,
+    "hi": 0.37,
+    "worse": 69.2,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "lvse",
+    "median": -1.31,
+    "lo": -3.89,
+    "hi": -0.0,
+    "worse": 73.1,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "msc",
+    "median": -0.94,
+    "lo": -1.94,
+    "hi": 0.77,
+    "worse": 57.7,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "prep_ensemble",
+    "median": -0.45,
+    "lo": -1.36,
+    "hi": 0.68,
+    "worse": 53.8,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg",
+    "median": 0.06,
+    "lo": -0.37,
+    "hi": 0.56,
+    "worse": 38.5,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d1_snv",
+    "median": -0.07,
+    "lo": -0.99,
+    "hi": 1.49,
+    "worse": 57.7,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d2_snv",
+    "median": -0.78,
+    "lo": -3.21,
+    "hi": 1.33,
+    "worse": 65.4,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_rubberband_snv",
+    "median": -0.0,
+    "lo": -1.76,
+    "hi": 0.96,
+    "worse": 50.0,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "snv",
+    "median": 0.03,
+    "lo": -0.64,
+    "hi": 0.55,
+    "worse": 46.2,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "stdscale",
+    "median": -1.59,
+    "lo": -2.2,
+    "hi": 0.6,
+    "worse": 69.2,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "wavelet_bc_snv",
+    "median": -0.04,
+    "lo": -1.1,
+    "hi": 0.85,
+    "worse": 57.7,
+    "pairs": 26,
+    "family": "Deep learning"
+   },
+   {
+    "task": "classification",
+    "recipe": "airpls_snv",
+    "median": 3.64,
+    "lo": 1.29,
+    "hi": 18.83,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "all",
+    "median": 13.03,
+    "lo": 2.25,
+    "hi": 29.46,
+    "worse": 7.7,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "arpls_snv",
+    "median": 2.53,
+    "lo": 0.8,
+    "hi": 14.57,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "avgpool",
+    "median": -0.01,
+    "lo": -0.15,
+    "hi": -0.0,
+    "worse": 53.8,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc",
+    "median": 0.53,
+    "lo": -0.17,
+    "hi": 7.37,
+    "worse": 30.8,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg",
+    "median": 0.66,
+    "lo": 0.04,
+    "hi": 7.38,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_msc",
+    "median": -4.2,
+    "lo": -9.44,
+    "hi": 5.15,
+    "worse": 61.5,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_snv",
+    "median": 4.0,
+    "lo": 0.45,
+    "hi": 18.37,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv",
+    "median": 5.28,
+    "lo": 0.96,
+    "hi": 18.21,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv_avgpool",
+    "median": 3.72,
+    "lo": 0.66,
+    "hi": 18.03,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "crr_snv",
+    "median": 3.1,
+    "lo": 0.67,
+    "hi": 15.84,
+    "worse": 15.4,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "decimate",
+    "median": -0.0,
+    "lo": -0.17,
+    "hi": 0.04,
+    "worse": 46.2,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "emsc",
+    "median": -3.78,
+    "lo": -5.77,
+    "hi": -0.97,
+    "worse": 76.9,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu",
+    "median": 3.82,
+    "lo": 2.78,
+    "hi": 5.25,
+    "worse": 15.4,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu_lvse",
+    "median": 3.52,
+    "lo": -0.0,
+    "hi": 4.51,
+    "worse": 30.8,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "lvse",
+    "median": -0.0,
+    "lo": -0.7,
+    "hi": 1.83,
+    "worse": 46.2,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "msc",
+    "median": -0.81,
+    "lo": -10.46,
+    "hi": 2.18,
+    "worse": 61.5,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "prep_ensemble",
+    "median": -2.78,
+    "lo": -5.2,
+    "hi": -0.0,
+    "worse": 69.2,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg",
+    "median": -0.0,
+    "lo": -0.0,
+    "hi": -0.0,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d1_snv",
+    "median": 12.63,
+    "lo": 2.6,
+    "hi": 20.08,
+    "worse": 23.1,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d2_snv",
+    "median": 10.96,
+    "lo": 2.25,
+    "hi": 16.18,
+    "worse": 15.4,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_rubberband_snv",
+    "median": 5.46,
+    "lo": 1.21,
+    "hi": 15.48,
+    "worse": 15.4,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "snv",
+    "median": 3.1,
+    "lo": 1.04,
+    "hi": 14.82,
+    "worse": 7.7,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "stdscale",
+    "median": 0.28,
+    "lo": -0.55,
+    "hi": 2.73,
+    "worse": 30.8,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "wavelet_bc_snv",
+    "median": 4.61,
+    "lo": -0.07,
+    "hi": 18.41,
+    "worse": 30.8,
+    "pairs": 13,
+    "family": "Kernel methods"
+   },
+   {
+    "task": "classification",
+    "recipe": "airpls_snv",
+    "median": 0.18,
+    "lo": -1.57,
+    "hi": 1.23,
+    "worse": 46.2,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "all",
+    "median": -1.35,
+    "lo": -4.2,
+    "hi": 0.84,
+    "worse": 61.5,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "arpls_snv",
+    "median": -0.11,
+    "lo": -2.2,
+    "hi": 0.92,
+    "worse": 50.0,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "avgpool",
+    "median": 0.42,
+    "lo": 0.02,
+    "hi": 0.83,
+    "worse": 26.9,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc",
+    "median": 0.23,
+    "lo": -1.42,
+    "hi": 0.77,
+    "worse": 46.2,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg",
+    "median": 0.04,
+    "lo": -2.15,
+    "hi": 1.05,
+    "worse": 50.0,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_msc",
+    "median": -0.93,
+    "lo": -2.53,
+    "hi": 0.61,
+    "worse": 55.8,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_snv",
+    "median": 0.1,
+    "lo": -2.47,
+    "hi": 1.14,
+    "worse": 46.2,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv",
+    "median": 0.11,
+    "lo": -3.13,
+    "hi": 1.18,
+    "worse": 46.2,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv_avgpool",
+    "median": -0.17,
+    "lo": -2.16,
+    "hi": 1.4,
+    "worse": 51.9,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "crr_snv",
+    "median": -0.1,
+    "lo": -1.26,
+    "hi": 0.56,
+    "worse": 57.7,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "decimate",
+    "median": 0.01,
+    "lo": -1.49,
+    "hi": 0.41,
+    "worse": 50.0,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "emsc",
+    "median": -0.3,
+    "lo": -1.9,
+    "hi": 0.81,
+    "worse": 53.8,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu",
+    "median": -0.54,
+    "lo": -2.18,
+    "hi": 0.05,
+    "worse": 65.4,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu_lvse",
+    "median": 0.32,
+    "lo": 0.03,
+    "hi": 0.78,
+    "worse": 32.7,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "lvse",
+    "median": 0.03,
+    "lo": -0.29,
+    "hi": 0.56,
+    "worse": 46.2,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "msc",
+    "median": -0.28,
+    "lo": -1.67,
+    "hi": -0.0,
+    "worse": 65.4,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "prep_ensemble",
+    "median": 0.0,
+    "lo": -0.49,
+    "hi": 0.64,
+    "worse": 48.1,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg",
+    "median": 0.08,
+    "lo": -0.0,
+    "hi": 0.32,
+    "worse": 36.5,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d1_snv",
+    "median": 0.43,
+    "lo": -2.0,
+    "hi": 1.47,
+    "worse": 42.3,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d2_snv",
+    "median": -1.43,
+    "lo": -5.09,
+    "hi": 0.69,
+    "worse": 63.5,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_rubberband_snv",
+    "median": 0.32,
+    "lo": -0.49,
+    "hi": 1.3,
+    "worse": 42.3,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "snv",
+    "median": 0.01,
+    "lo": -0.24,
+    "hi": 0.73,
+    "worse": 46.2,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "stdscale",
+    "median": -0.0,
+    "lo": -0.0,
+    "hi": -0.0,
+    "worse": 36.5,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "wavelet_bc_snv",
+    "median": 0.06,
+    "lo": -1.2,
+    "hi": 1.32,
+    "worse": 48.1,
+    "pairs": 52,
+    "family": "Tabular foundation"
+   },
+   {
+    "task": "classification",
+    "recipe": "airpls_snv",
+    "median": 7.23,
+    "lo": 0.77,
+    "hi": 12.2,
+    "worse": 20.5,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "all",
+    "median": 6.67,
+    "lo": -0.4,
+    "hi": 10.95,
+    "worse": 28.2,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "arpls_snv",
+    "median": 6.93,
+    "lo": 0.23,
+    "hi": 11.25,
+    "worse": 23.1,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "avgpool",
+    "median": 0.11,
+    "lo": -0.28,
+    "hi": 0.72,
+    "worse": 41.0,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc",
+    "median": 2.67,
+    "lo": 0.19,
+    "hi": 10.03,
+    "worse": 23.1,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg",
+    "median": 5.22,
+    "lo": 1.01,
+    "hi": 10.66,
+    "worse": 15.4,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_msc",
+    "median": 8.89,
+    "lo": -0.35,
+    "hi": 11.94,
+    "worse": 30.8,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_snv",
+    "median": 8.09,
+    "lo": 0.52,
+    "hi": 12.09,
+    "worse": 20.5,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv",
+    "median": 7.82,
+    "lo": 0.79,
+    "hi": 11.34,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv_avgpool",
+    "median": 8.51,
+    "lo": 0.82,
+    "hi": 12.04,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "crr_snv",
+    "median": 4.44,
+    "lo": 0.49,
+    "hi": 9.67,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "decimate",
+    "median": -0.16,
+    "lo": -0.56,
+    "hi": 0.01,
+    "worse": 61.5,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "emsc",
+    "median": 7.2,
+    "lo": 1.19,
+    "hi": 10.42,
+    "worse": 7.7,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu",
+    "median": 6.44,
+    "lo": 1.03,
+    "hi": 10.84,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu_lvse",
+    "median": 5.23,
+    "lo": 1.35,
+    "hi": 14.21,
+    "worse": 12.8,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "lvse",
+    "median": 5.04,
+    "lo": -0.04,
+    "hi": 13.17,
+    "worse": 28.2,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "msc",
+    "median": 5.68,
+    "lo": 0.48,
+    "hi": 8.49,
+    "worse": 10.3,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "prep_ensemble",
+    "median": 8.33,
+    "lo": 0.32,
+    "hi": 13.25,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg",
+    "median": 0.28,
+    "lo": -0.08,
+    "hi": 0.5,
+    "worse": 41.0,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d1_snv",
+    "median": 7.52,
+    "lo": 1.55,
+    "hi": 12.37,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d2_snv",
+    "median": 5.7,
+    "lo": 1.12,
+    "hi": 10.37,
+    "worse": 23.1,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_rubberband_snv",
+    "median": 5.84,
+    "lo": 0.31,
+    "hi": 12.68,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "snv",
+    "median": 5.29,
+    "lo": 0.69,
+    "hi": 9.44,
+    "worse": 15.4,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "stdscale",
+    "median": -0.0,
+    "lo": -0.0,
+    "hi": -0.0,
+    "worse": 20.5,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   },
+   {
+    "task": "classification",
+    "recipe": "wavelet_bc_snv",
+    "median": 8.68,
+    "lo": 0.82,
+    "hi": 10.81,
+    "worse": 17.9,
+    "pairs": 39,
+    "family": "Tree ensembles"
+   }
+  ],
+  "all_models": [
+   {
+    "task": "regression",
+    "recipe": "airpls_snv",
+    "median": -5.72,
+    "lo": -9.65,
+    "hi": -2.55,
+    "worse": 33.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "all",
+    "median": -6.32,
+    "lo": -13.08,
+    "hi": -1.47,
+    "worse": 38.9,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "arpls_snv",
+    "median": -5.31,
+    "lo": -9.01,
+    "hi": -1.54,
+    "worse": 33.8,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "avgpool",
+    "median": -0.09,
+    "lo": -0.97,
+    "hi": 0.13,
+    "worse": 46.6,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "bc",
+    "median": -1.81,
+    "lo": -4.18,
+    "hi": -0.55,
+    "worse": 38.9,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg",
+    "median": -2.06,
+    "lo": -5.7,
+    "hi": -0.67,
+    "worse": 37.8,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_msc",
+    "median": -8.32,
+    "lo": -12.18,
+    "hi": -4.03,
+    "worse": 30.2,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_sg_snv",
+    "median": -9.88,
+    "lo": -14.47,
+    "hi": -6.38,
+    "worse": 27.5,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv",
+    "median": -7.74,
+    "lo": -12.4,
+    "hi": -4.45,
+    "worse": 29.6,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "bc_snv_avgpool",
+    "median": -10.74,
+    "lo": -15.91,
+    "hi": -6.85,
+    "worse": 28.7,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "crr_snv",
+    "median": -3.93,
+    "lo": -7.71,
+    "hi": -0.49,
+    "worse": 36.7,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "decimate",
+    "median": 0.23,
+    "lo": -0.01,
+    "hi": 1.28,
+    "worse": 56.3,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "emsc",
+    "median": -7.08,
+    "lo": -10.47,
+    "hi": -3.61,
+    "worse": 29.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu",
+    "median": -3.36,
+    "lo": -7.69,
+    "hi": -0.78,
+    "worse": 41.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "gcu_lvse",
+    "median": -5.4,
+    "lo": -10.54,
+    "hi": -1.89,
+    "worse": 36.6,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "lvse",
+    "median": -0.28,
+    "lo": -5.19,
+    "hi": 3.11,
+    "worse": 48.7,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "msc",
+    "median": -7.7,
+    "lo": -10.28,
+    "hi": -4.76,
+    "worse": 26.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "prep_ensemble",
+    "median": -4.52,
+    "lo": -7.17,
+    "hi": -2.59,
+    "worse": 33.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "sg",
+    "median": 0.0,
+    "lo": -0.11,
+    "hi": 0.11,
+    "worse": 50.0,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d1_snv",
+    "median": -7.22,
+    "lo": -10.91,
+    "hi": -3.31,
+    "worse": 32.6,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_d2_snv",
+    "median": -1.0,
+    "lo": -4.06,
+    "hi": 4.74,
+    "worse": 46.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "sg_rubberband_snv",
+    "median": -8.21,
+    "lo": -12.02,
+    "hi": -5.12,
+    "worse": 28.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "snv",
+    "median": -7.91,
+    "lo": -11.55,
+    "hi": -5.46,
+    "worse": 22.9,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "stdscale",
+    "median": 0.01,
+    "lo": 0.0,
+    "hi": 0.03,
+    "worse": 52.4,
+    "pairs": 1260
+   },
+   {
+    "task": "regression",
+    "recipe": "wavelet_bc_snv",
+    "median": -9.52,
+    "lo": -14.11,
+    "hi": -5.9,
+    "worse": 28.4,
+    "pairs": 1260
+   },
+   {
+    "task": "classification",
+    "recipe": "airpls_snv",
+    "median": 1.3,
+    "lo": 0.01,
+    "hi": 3.33,
+    "worse": 34.4,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "all",
+    "median": 0.64,
+    "lo": -1.06,
+    "hi": 3.62,
+    "worse": 44.1,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "arpls_snv",
+    "median": 0.8,
+    "lo": -0.82,
+    "hi": 3.22,
+    "worse": 39.0,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "avgpool",
+    "median": 0.03,
+    "lo": -0.0,
+    "hi": 0.21,
+    "worse": 42.6,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "bc",
+    "median": 0.21,
+    "lo": -0.43,
+    "hi": 0.83,
+    "worse": 43.6,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg",
+    "median": 0.48,
+    "lo": -0.3,
+    "hi": 0.91,
+    "worse": 41.5,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_msc",
+    "median": 0.02,
+    "lo": -1.67,
+    "hi": 1.95,
+    "worse": 48.2,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_sg_snv",
+    "median": 1.35,
+    "lo": -0.0,
+    "hi": 4.38,
+    "worse": 34.9,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv",
+    "median": 1.28,
+    "lo": 0.09,
+    "hi": 3.75,
+    "worse": 33.3,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "bc_snv_avgpool",
+    "median": 1.28,
+    "lo": 0.0,
+    "hi": 4.2,
+    "worse": 34.4,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "crr_snv",
+    "median": 0.8,
+    "lo": -0.02,
+    "hi": 2.3,
+    "worse": 38.5,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "decimate",
+    "median": -0.07,
+    "lo": -0.49,
+    "hi": 0.0,
+    "worse": 54.4,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "emsc",
+    "median": 0.17,
+    "lo": -0.92,
+    "hi": 1.11,
+    "worse": 47.2,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu",
+    "median": -0.1,
+    "lo": -1.38,
+    "hi": 1.05,
+    "worse": 50.8,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "gcu_lvse",
+    "median": 0.4,
+    "lo": -0.04,
+    "hi": 1.29,
+    "worse": 40.5,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "lvse",
+    "median": -0.0,
+    "lo": -0.35,
+    "hi": 0.49,
+    "worse": 49.2,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "msc",
+    "median": 0.04,
+    "lo": -0.7,
+    "hi": 1.36,
+    "worse": 47.7,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "prep_ensemble",
+    "median": 0.28,
+    "lo": -0.4,
+    "hi": 1.26,
+    "worse": 42.1,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "sg",
+    "median": -0.0,
+    "lo": -0.0,
+    "hi": 0.11,
+    "worse": 39.5,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d1_snv",
+    "median": 1.53,
+    "lo": -0.02,
+    "hi": 3.54,
+    "worse": 35.4,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_d2_snv",
+    "median": 0.97,
+    "lo": -1.37,
+    "hi": 2.15,
+    "worse": 45.6,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "sg_rubberband_snv",
+    "median": 1.65,
+    "lo": 0.56,
+    "hi": 4.21,
+    "worse": 27.7,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "snv",
+    "median": 1.31,
+    "lo": 0.39,
+    "hi": 3.16,
+    "worse": 29.7,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "stdscale",
+    "median": -0.0,
+    "lo": -0.0,
+    "hi": -0.0,
+    "worse": 45.1,
+    "pairs": 195
+   },
+   {
+    "task": "classification",
+    "recipe": "wavelet_bc_snv",
+    "median": 1.11,
+    "lo": -0.05,
+    "hi": 3.59,
+    "worse": 35.4,
+    "pairs": 195
+   }
+  ],
+  "time": {
+   "airpls_snv": 1.98,
+   "all": 3.21,
+   "arpls_snv": 3.45,
+   "avgpool": 0.87,
+   "bc": 3.23,
+   "bc_sg": 2.62,
+   "bc_sg_msc": 2.94,
+   "bc_sg_snv": 2.72,
+   "bc_snv": 2.68,
+   "bc_snv_avgpool": 1.05,
+   "crr_snv": 1.4,
+   "decimate": 0.85,
+   "emsc": 1.27,
+   "gcu": 1.29,
+   "gcu_lvse": 1.38,
+   "lvse": 0.68,
+   "msc": 1.18,
+   "prep_ensemble": 4.25,
+   "sg": 1.09,
+   "sg_d1_snv": 1.07,
+   "sg_d2_snv": 1.08,
+   "sg_rubberband_snv": 1.77,
+   "snv": 1.08,
+   "stdscale": 1.05,
+   "wavelet_bc_snv": 2.75
+  }
+ },
+ "fig4": {
+  "global_recipe": "bc_snv_avgpool",
+  "rows": [
+   {
+    "model": "Kumo",
+    "family": "Tabular foundation",
+    "none": 19.0,
+    "global": 19.0,
+    "cv": 12.7,
+    "oracle": 2.0,
+    "targets": 91
+   },
+   {
+    "model": "RamanPFN",
+    "family": "Tabular foundation",
+    "none": 26.5,
+    "global": 34.4,
+    "cv": 21.5,
+    "oracle": 11.2,
+    "targets": 91
+   },
+   {
+    "model": "TabPFN-3.5",
+    "family": "Tabular foundation",
+    "none": 33.6,
+    "global": 22.8,
+    "cv": 22.6,
+    "oracle": 4.8,
+    "targets": 91
+   },
+   {
+    "model": "TabICLv2",
+    "family": "Tabular foundation",
+    "none": 59.4,
+    "global": 28.4,
+    "cv": 27.4,
+    "oracle": 9.8,
+    "targets": 91
+   },
+   {
+    "model": "ReZeroNet",
+    "family": "Deep learning",
+    "none": 75.3,
+    "global": 49.7,
+    "cv": 40.9,
+    "oracle": 30.7,
+    "targets": 91
+   },
+   {
+    "model": "DeepCNN",
+    "family": "Deep learning",
+    "none": 95.5,
+    "global": 56.7,
+    "cv": 52.6,
+    "oracle": 35.7,
+    "targets": 91
+   },
+   {
+    "model": "PLS",
+    "family": "Chemometric",
+    "none": 99.9,
+    "global": 85.9,
+    "cv": 51.7,
+    "oracle": 39.2,
+    "targets": 91
+   },
+   {
+    "model": "PCR",
+    "family": "Chemometric",
+    "none": 104.6,
+    "global": 85.4,
+    "cv": 58.6,
+    "oracle": 46.2,
+    "targets": 91
+   },
+   {
+    "model": "Ridge",
+    "family": "Chemometric",
+    "none": 108.5,
+    "global": 106.7,
+    "cv": 56.3,
+    "oracle": 42.0,
+    "targets": 91
+   },
+   {
+    "model": "GBM",
+    "family": "Tree ensembles",
+    "none": 152.5,
+    "global": 67.1,
+    "cv": 61.9,
+    "oracle": 43.5,
+    "targets": 79
+   },
+   {
+    "model": "XGB",
+    "family": "Tree ensembles",
+    "none": 162.6,
+    "global": 85.0,
+    "cv": 75.0,
+    "oracle": 51.0,
+    "targets": 91
+   },
+   {
+    "model": "RF",
+    "family": "Tree ensembles",
+    "none": 169.5,
+    "global": 86.1,
+    "cv": 63.3,
+    "oracle": 51.3,
+    "targets": 91
+   },
+   {
+    "model": "kNN",
+    "family": "Chemometric",
+    "none": 221.6,
+    "global": 139.7,
+    "cv": 116.3,
+    "oracle": 100.1,
+    "targets": 91
+   },
+   {
+    "model": "SVM",
+    "family": "Kernel methods",
+    "none": 284.2,
+    "global": 216.5,
+    "cv": 140.8,
+    "oracle": 134.0,
+    "targets": 89
+   }
+  ]
+ }
+}
