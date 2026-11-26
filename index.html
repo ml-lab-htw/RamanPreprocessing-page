@@ -89,9 +89,11 @@
         Most evidence for that choice comes from studies of few datasets and few models, and tabular foundation models (TFMs) have rarely been tested on Raman spectra.
         In a large-scale benchmark, we apply 26 preprocessing recipes, fixed sequences of steps such as smoothing, baseline correction and normalization, to 15 models, from partial least squares (PLS) to TFMs, on 104 regression and classification tasks from 39 public datasets.</p>
         <p>The choice of model changes the error more than the choice of recipe, and which recipe helps depends on the model.
-        In regression a recipe fixed per model family is a sound default, and choosing the recipe per task by CV within the training data lowers the error further, by a median of 16% against no preprocessing.
-        Descriptors of the dataset did not predict which recipe would help.
-        Preprocessing can therefore be chosen without inspecting the spectra: from the model's family, or by CV, which on small datasets also avoids most of the large errors that a global recipe causes.
+        On unprocessed spectra a TFM is the best model for most regression tasks; preprocessing narrows the gap of PLS and the other classical models but does not close it.
+        Choosing the recipe per task by cross-validation (CV) within the training data lowers the error most, by a median of 16% against no preprocessing, and rarely makes a model much worse, also on small datasets.
+        A recipe fixed per model family is a cheaper default that gains less, and descriptors of the dataset did not improve on it.
+        Recipes with SNV or a scatter correction help most, whereas the second derivative often makes a model worse.
+        Preprocessing can therefore be chosen without inspecting the spectra.
         The 26 recipes are available in an open-source Python package with a scikit-learn interface, together with all code and the scores of every configuration.</p>
       </div>
       <div class="keys">
@@ -187,7 +189,7 @@
 
       <figure class="fig reveal" id="fig1">
         <div class="fig-head"><span class="fig-num">Fig. 1</span>
-          <span class="fig-claim">Recipes that end in SNV improve the chemometric models, the SVM and the tree ensembles in both task types; the TFMs change much less, and the deep networks gain mainly from pooling.</span></div>
+          <span class="fig-claim">Recipes that contain SNV improve the chemometric models, the SVM and the tree ensembles in both task types; the TFMs change much less, and the deep networks gain mainly from pooling.</span></div>
         <div class="toolbar">
           <div class="seg" id="fig1-seg" role="group" aria-label="Task type">
             <button type="button" data-task="regression" aria-pressed="true">Regression · RMSE</button>
@@ -225,7 +227,7 @@
 
       <figure class="fig reveal" id="fig3">
         <div class="fig-head"><span class="fig-num">Fig. 3</span>
-          <span class="fig-claim">The choice of model changes the score far more than the choice of recipe, but among the TFMs the recipe is the larger remaining decision.</span></div>
+          <span class="fig-claim">The choice of model changes the score far more than the choice of recipe.</span></div>
         <div class="toolbar">
           <div class="seg align" id="fig3-legend" role="group" aria-label="Align a component"></div>
           <span class="spacer"></span>
