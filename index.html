@@ -92,7 +92,8 @@
         Choosing the recipe per task by cross-validation (CV) within the training data lowers the error most, by a median of 16% against no preprocessing, and rarely makes a model much worse, also on small datasets.
         A recipe fixed per model family is a cheaper default that gains less, and descriptors of the dataset did not improve on it.
         Recipes with SNV or a scatter correction help most, whereas the second derivative often makes a model worse.
-        Machine learning on Raman spectra still benefits from preprocessing, but a TFM without it is at least as good as the other models with it, better in regression and on par in classification.
+        Machine learning on Raman spectra still benefits from preprocessing, but the TFMs benefit least, and without it they are at least as good as the other models with it, better in regression and on par in classification.
+        We therefore recommend a TFM on the raw spectra as the default.
         The 26 recipes are available in an open-source Python package with a scikit-learn interface, together with all code and the scores of every configuration.</p>
       </div>
       <div class="keys">
