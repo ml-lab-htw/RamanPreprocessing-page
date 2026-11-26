@@ -89,11 +89,11 @@
         Most evidence for that choice comes from studies of few datasets and few models, and tabular foundation models (TFMs) have rarely been tested on Raman spectra.
         In a large-scale benchmark, we apply 26 preprocessing recipes, fixed sequences of steps such as smoothing, baseline correction and normalization, to 15 models, from partial least squares (PLS) to TFMs, on 104 regression and classification tasks from 39 public datasets.</p>
         <p>The choice of model changes the error more than the choice of recipe, and which recipe helps depends on the model.
-        On unprocessed spectra a TFM is the best model for most regression tasks; preprocessing narrows the gap of PLS and the other classical models but does not close it.
+        On unprocessed spectra a TFM is the best model for most regression tasks, and it stays ahead of the other models even when their recipe is chosen per task.
         Choosing the recipe per task by cross-validation (CV) within the training data lowers the error most, by a median of 16% against no preprocessing, and rarely makes a model much worse, also on small datasets.
         A recipe fixed per model family is a cheaper default that gains less, and descriptors of the dataset did not improve on it.
         Recipes with SNV or a scatter correction help most, whereas the second derivative often makes a model worse.
-        Preprocessing can therefore be chosen without inspecting the spectra.
+        Machine learning on Raman spectra therefore still benefits from preprocessing, but in regression a TFM needs none to outperform the other models, and the recipe can be chosen without inspecting the spectra.
         The 26 recipes are available in an open-source Python package with a scikit-learn interface, together with all code and the scores of every configuration.</p>
       </div>
       <div class="keys">
