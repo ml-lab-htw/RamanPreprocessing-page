@@ -52,12 +52,12 @@ def test_every_sample_has_every_recipe_with_the_axis_length(s):
 
 def test_paper_json_shapes():
     p = load("paper.json")
-    assert len(p["table4"]) == 25 and len(p["table5"]) == 6 and len(p["table6"]) == 7
+    assert len(p["table4"]) == 25 and len(p["table5"]) == 6 and len(p["table6"]) == 5
     assert len(p["fig4"]["rows"]) == 14 and len(p["fig1"]["order"]) == 25
     assert {r["recipe"] for r in p["table4"]} == set(p["fig1"]["order"])
     # numbers stated in the paper's captions and text
-    assert [sum(r["vs_none"] == "better" for r in p["fig2"][t]["ranks"]) for t in ("regression", "classification")] == [21, 8]
-    assert round(p["fig3"][0]["shares"]["model"]) == 71 and round(p["fig3"][0]["shares"]["recipe"]) == 9
+    assert [sum(r["vs_none"] == "better" for r in p["fig2"][t]["ranks"]) for t in ("regression", "classification")] == [10, 7]
+    assert round(p["fig3"][0]["shares"]["model"]) == 69 and round(p["fig3"][0]["shares"]["recipe"]) == 10
     assert [g["n"] for g in p["fig6"]["groups"]] == [15, 13, 28, 29, 21] and p["fig6"]["n_models"] == 13
     assert len(p["fig5"]["regression"]) == 14 and len(p["fig5"]["classification"]) == 15
 

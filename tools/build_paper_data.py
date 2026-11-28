@@ -72,7 +72,7 @@ def table2(paper: Path):
         out.append({"step": t[0], "criterion": t[1], "removed": [_int(t[2]), _int(t[3])],
                     "datasets": int(t[4]), "targets": int(t[5]), "classification": int(t[6]),
                     "regression": int(t[7])})
-    assert out[0]["targets"] == 162 and out[-1]["targets"] == 104, out
+    assert out[0]["targets"] == 162 and out[-1]["targets"] == 103, out
     return out
 
 
@@ -120,7 +120,7 @@ def table6(paper: Path):
                              "gray": r[2]["gray"], "bold": r[2]["bold"]},
                     "ba": {"median": num(r[6], r[7]), "ci": interval(r[8]), "worse": int(r[9]["text"]),
                            "gray": r[6]["gray"], "bold": r[6]["bold"]}})
-    assert len(out) == 7, len(out)
+    assert len(out) == 5, len(out)  # per-model recipe dropped 2026-11-27
     return out
 
 
@@ -139,7 +139,7 @@ def table1():
         ["Deng et al. 2026", "6 (6)", "12", "1", "1", "1", "2", "–", "Yes", "Regression", "NIR", "Data only"],
         ["Koddenbrock et al. 2026 (RamanBench)", "60 (140)", "11", "3", "–", "–", "7", "–", "Yes", "Both", "Raman", "Yes"],
     ]
-    ours = [["This work", "39 (104)", "26", "5", "1", "3", "2", "4", "Yes", "Both", "Raman", "Yes"],
+    ours = [["This work", "38 (103)", "26", "5", "1", "3", "2", "4", "Yes", "Both", "Raman", "Yes"],
             ["small-data ablation", "10 (15)", "", "", "", "", "", "", "", "", "", ""]]
     return {"columns": cols, "rows": rows, "ours": ours}
 
@@ -203,15 +203,15 @@ def fig2(analysis: Path):
     summ = pd.read_csv(analysis / "cd_friedman_nemenyi.csv")
     out = {}
     for task in ("regression", "classification"):
-        s = summ[(summ.task_type == task) & (summ.blocking == "model_target")].iloc[0]
-        r = ranks[(ranks.task_type == task) & (ranks.blocking == "model_target")].sort_values("avg_rank")
+        s = summ[(summ.task_type == task) & (summ.blocking == "model_family")].iloc[0]
+        r = ranks[(ranks.task_type == task) & (ranks.blocking == "model_family")].sort_values("avg_rank")
         vals = r.avg_rank.tolist()
         out[task] = {"cd": round(float(s.cd), 4), "n_blocks": int(s.n_blocks),
                      "ranks": [{"recipe": x.recipe, "rank": round(float(x.avg_rank), 4), "vs_none": x.vs_none}
                                for x in r.itertuples()],
                      "cliques": cd_cliques(vals, float(s.cd))}
     n_better = {t: sum(x["vs_none"] == "better" for x in out[t]["ranks"]) for t in out}
-    assert n_better == {"regression": 21, "classification": 8}, n_better  # Fig. 2 caption
+    assert n_better == {"regression": 10, "classification": 7}, n_better  # Fig. 2 caption
     return out
 
 
@@ -226,7 +226,7 @@ def fig3(native: Path):
                      "shares": {"model": round(100 * v.median_share_model, 2), "recipe": round(100 * v.median_share_recipe, 2),
                                 "interaction": round(100 * v.median_share_interaction_net, 2),
                                 "noise": round(100 * v.median_share_noise, 2)}})
-    assert round(rows[0]["shares"]["model"]) == 71 and round(rows[0]["shares"]["recipe"]) == 9  # Conclusions
+    assert round(rows[0]["shares"]["model"]) == 69 and round(rows[0]["shares"]["recipe"]) == 10  # Conclusions
     return rows
 
 
@@ -271,7 +271,7 @@ def fig6(native: Path):
     pts = [{"g": int(r["n_lo"]), "key": r["key"], "dataset": r["dataset"],
             **{k: round(float(100 * (np.exp(r[k]) - 1)), 2) for k in rules}} for _, r in t.iterrows()]
     assert [g["n"] for g in groups] == [15, 13, 28, 29, 21]  # Fig. 6 axis labels
-    assert [g["worse"]["global"] for g in groups] == [27, 54, 7, 10, 14]
+    assert [g["worse"]["global"] for g in groups] == [27, 54, 7, 10, 19], [g["worse"] for g in groups]
     return {"groups": groups, "targets": pts, "n_models": int(pairs.model.nunique())}
 
 

@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Raman Preprocessing Benchmark</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="26 preprocessing recipes, 15 models from chemometrics to tabular foundation models, 104 Raman tasks from 39 public datasets. Click through the recipes on real and synthetic spectra.">
+<meta name="description" content="26 preprocessing recipes, 15 models from chemometrics to tabular foundation models, 103 Raman tasks from 38 public datasets. Click through the recipes on real and synthetic spectra.">
 <meta property="og:title" content="Does machine learning on Raman spectra still need preprocessing?">
-<meta property="og:description" content="A benchmark from chemometrics to tabular foundation models: 26 recipes, 15 models, 104 tasks, 39 datasets.">
+<meta property="og:description" content="A benchmark from chemometrics to tabular foundation models: 26 recipes, 15 models, 103 tasks, 38 datasets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
@@ -71,8 +71,8 @@
       <div class="stats">
         <div class="stat"><b data-count="26">26</b><span>preprocessing recipes</span></div>
         <div class="stat"><b data-count="15">15</b><span>models in five families</span></div>
-        <div class="stat"><b data-count="104">104</b><span>regression and classification tasks</span></div>
-        <div class="stat"><b data-count="39">39</b><span>public Raman datasets</span></div>
+        <div class="stat"><b data-count="103">103</b><span>regression and classification tasks</span></div>
+        <div class="stat"><b data-count="38">38</b><span>public Raman datasets</span></div>
       </div>
     </div>
   </section>
@@ -87,7 +87,7 @@
       <div class="abstract">
         <p>Raman models now monitor bioreactors, identify bacteria and screen body fluids for disease, and each of them depends on a preprocessing choice made before training.
         Most evidence for that choice comes from studies of few datasets and few models, and tabular foundation models (TFMs) have rarely been tested on Raman spectra.
-        In a large-scale benchmark, we apply 26 preprocessing recipes, fixed sequences of steps such as smoothing, baseline correction and normalization, to 15 models, from partial least squares (PLS) to TFMs, on 104 regression and classification tasks from 39 public datasets.</p>
+        In a large-scale benchmark, we apply 26 preprocessing recipes, fixed sequences of steps such as smoothing, baseline correction and normalization, to 15 models, from partial least squares (PLS) to TFMs, on 103 regression and classification tasks from 38 public datasets.</p>
         <p>The choice of model changes the error more than the choice of recipe, and which recipe helps depends on the model.
         Choosing the recipe per task by cross-validation (CV) within the training data lowers the error most, by a median of 16% against no preprocessing, and rarely makes a model much worse, also on small datasets.
         A recipe fixed per model family is a cheaper default that gains less, and descriptors of the dataset did not improve on it.
@@ -97,7 +97,7 @@
         The 26 recipes are available in an open-source Python package with a scikit-learn interface, together with all code and the scores of every configuration.</p>
       </div>
       <div class="keys">
-        <div class="key reveal"><b>71%</b><p>of the variance in regression RMSE across a target's configurations comes from the model, against 9% from the recipe (medians over targets).</p></div>
+        <div class="key reveal"><b>69%</b><p>of the variance in regression RMSE across a target's configurations comes from the model, against 10% from the recipe (medians over targets).</p></div>
         <div class="key reveal"><b>−16%</b><p>median change in RMSE against no preprocessing when the recipe is chosen per task by CV inside the training folds.</p></div>
         <div class="key reveal"><b>−8%</b><p>median change in RMSE from plain SNV over all (model, target) pairs, at almost no extra training time.</p></div>
       </div>
@@ -152,20 +152,20 @@
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Benchmark</div>
-        <h2>Every recipe for every model, on 104 targets</h2>
+        <h2>Every recipe for every model, on 103 targets</h2>
         <p class="lede">Every model is fitted with each of the 26 recipes on every target of its task type, in 3-fold cross-validation. Regression is scored by RMSE and classification by balanced accuracy, always as the change against the unprocessed spectrum.</p>
       </div>
 
       <figure class="fig reveal" id="tab1">
         <div class="fig-head"><span class="fig-num">Table 1</span>
-          <span class="fig-claim">Earlier studies fixed preprocessing, tuned it, or varied it on few datasets or model families; this work reports the effect of each of 26 recipes for 15 models from all 5 families on 104 targets.</span></div>
+          <span class="fig-claim">Earlier studies fixed preprocessing, tuned it, or varied it on few datasets or model families; this work reports the effect of each of 26 recipes for 15 models from all 5 families on 103 targets.</span></div>
         <div class="panel scroll-x"><table class="data" id="t1"></table></div>
         <figcaption class="fig-desc">Models with varied preprocessing: how many models of each family (chemometric and other linear models, kernel methods, tree ensembles, deep networks, foundation models) have their preprocessing varied. Recipe effects: whether the effect of each preprocessing option is reported, not only the result after tuning. For RamanBench the counts are those of its preprocessing sensitivity check.</figcaption>
       </figure>
 
       <figure class="fig reveal" id="tab2">
         <div class="fig-head"><span class="fig-num">Table 2</span>
-          <span class="fig-claim">Four filters take the 162 targets of RamanBench v1 to the 104 targets of the benchmark; the targets with fewer than 50 labeled spectra form a separate ablation.</span></div>
+          <span class="fig-claim">Four filters take the 162 targets of RamanBench v1 to the 103 targets of the benchmark; the targets with fewer than 50 labeled spectra form a separate ablation.</span></div>
         <div class="panel scroll-x"><table class="data" id="t2"></table></div>
         <figcaption class="fig-desc">The filters apply from top to bottom, each to what the filters above it leave. The second and third are RamanBench's own exclusions, decided on its model sweep. A dataset counts as removed once all of its targets are gone.</figcaption>
       </figure>
@@ -317,8 +317,8 @@
         <h2>Four rules for a new Raman dataset</h2>
       </div>
       <div class="rules">
-        <div class="rule reveal"><h3>Choose the model first</h3><p>It moves the error most: the model explains a median of 71% of the variance in regression RMSE, the recipe 9%.</p></div>
-        <div class="rule reveal"><h3>In regression, start from the family recipe</h3><p><code>snv</code> for the chemometric models, <code>all</code> for the SVM at its default hyperparameters (<code>sg_rubberband_snv</code> when they are tuned), <code>prep_ensemble</code> for the tree ensembles and <code>bc_snv_avgpool</code> for the deep networks. For the TFMs no fixed recipe gains much; their family recipe, <code>msc</code>, lowers the error by about 5%.</p></div>
+        <div class="rule reveal"><h3>Choose the model first</h3><p>It moves the error most: the model explains a median of 69% of the variance in regression RMSE, the recipe 10%.</p></div>
+        <div class="rule reveal"><h3>In regression, start from the family recipe</h3><p><code>snv</code> for the chemometric models, <code>all</code> for the SVM at its default hyperparameters (<code>bc_sg_msc</code> when they are tuned), <code>prep_ensemble</code> for the tree ensembles and <code>bc_snv_avgpool</code> for the deep networks. For the TFMs no fixed recipe gains much; their family recipe, <code>msc</code>, lowers the error by about 5%.</p></div>
         <div class="rule reveal"><h3>Where the compute allows, choose per task by CV</h3><p>Inside the training folds. In regression this roughly doubled the gain of SNV without seeing any test fold.</p></div>
         <div class="rule reveal"><h3>Check a fixed recipe against the unprocessed spectrum</h3><p>The per-task choice already includes it; its failures became rarer with more data but did not disappear.</p></div>
       </div>

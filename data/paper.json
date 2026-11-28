@@ -159,7 +159,7 @@
   "ours": [
    [
     "This work",
-    "39 (104)",
+    "38 (103)",
     "26",
     "5",
     "1",
@@ -228,12 +228,12 @@
    "step": "Not learnable",
    "criterion": "No model beats the mean or majority-class baseline",
    "removed": [
-    1,
-    7
+    2,
+    8
    ],
-   "datasets": 47,
-   "targets": 119,
-   "classification": 13,
+   "datasets": 46,
+   "targets": 118,
+   "classification": 12,
    "regression": 106
   },
   {
@@ -243,9 +243,9 @@
     8,
     15
    ],
-   "datasets": 39,
-   "targets": 104,
-   "classification": 13,
+   "datasets": 38,
+   "targets": 103,
+   "classification": 12,
    "regression": 91
   },
   {
@@ -255,9 +255,9 @@
     null,
     null
    ],
-   "datasets": 39,
-   "targets": 104,
-   "classification": 13,
+   "datasets": 38,
+   "targets": 103,
+   "classification": 12,
    "regression": 91
   }
  ],
@@ -265,24 +265,24 @@
   {
    "recipe": "bc_snv_avgpool",
    "reg": {
-    "median": -10.7,
-    "text": "-10.7",
+    "median": -10.8,
+    "text": "-10.8",
     "iqr": [
      -29.0,
      2.0
     ],
-    "worse": 20,
+    "worse": 21,
     "significant": true
    },
    "cls": {
-    "median": 1.3,
-    "text": "+1.3",
+    "median": 1.2,
+    "text": "+1.2",
     "iqr": [
      -0.9,
-     8.9
+     9.7
     ],
     "worse": 19,
-    "significant": true
+    "significant": false
    }
   },
   {
@@ -292,78 +292,55 @@
     "text": "-9.9",
     "iqr": [
      -27.0,
-     1.0
-    ],
-    "worse": 20,
-    "significant": true
-   },
-   "cls": {
-    "median": 1.4,
-    "text": "+1.4",
-    "iqr": [
-     -1.0,
-     8.3
-    ],
-    "worse": 20,
-    "significant": false
-   }
-  },
-  {
-   "recipe": "wavelet_bc_snv",
-   "reg": {
-    "median": -9.5,
-    "text": "-9.5",
-    "iqr": [
-     -27.0,
      2.0
     ],
     "worse": 21,
     "significant": true
    },
    "cls": {
-    "median": 1.1,
-    "text": "+1.1",
+    "median": 1.2,
+    "text": "+1.2",
     "iqr": [
-     -0.9,
-     8.7
+     -1.0,
+     9.3
     ],
-    "worse": 17,
+    "worse": 21,
     "significant": false
    }
   },
   {
-   "recipe": "bc_sg_msc",
+   "recipe": "wavelet_bc_snv",
    "reg": {
-    "median": -8.3,
-    "text": "-8.3",
+    "median": -9.6,
+    "text": "-9.6",
     "iqr": [
-     -25.0,
+     -27.0,
      2.0
     ],
     "worse": 22,
     "significant": true
    },
    "cls": {
-    "median": 0.0,
-    "text": "+0.0",
+    "median": 1.0,
+    "text": "+1.0",
     "iqr": [
-     -3.1,
-     5.0
+     -0.8,
+     9.4
     ],
-    "worse": 31,
+    "worse": 18,
     "significant": false
    }
   },
   {
    "recipe": "sg_rubberband_snv",
    "reg": {
-    "median": -8.2,
-    "text": "-8.2",
+    "median": -8.4,
+    "text": "-8.4",
     "iqr": [
-     -25.0,
-     1.0
+     -26.0,
+     2.0
     ],
-    "worse": 19,
+    "worse": 20,
     "significant": true
    },
    "cls": {
@@ -371,10 +348,33 @@
     "text": "+1.6",
     "iqr": [
      -0.1,
-     6.9
+     8.3
     ],
     "worse": 13,
     "significant": true
+   }
+  },
+  {
+   "recipe": "bc_sg_msc",
+   "reg": {
+    "median": -8.4,
+    "text": "-8.4",
+    "iqr": [
+     -25.0,
+     3.0
+    ],
+    "worse": 23,
+    "significant": true
+   },
+   "cls": {
+    "median": -0.3,
+    "text": "-0.3",
+    "iqr": [
+     -3.2,
+     5.1
+    ],
+    "worse": 32,
+    "significant": false
    }
   },
   {
@@ -386,15 +386,15 @@
      -23.0,
      -0.0
     ],
-    "worse": 13,
+    "worse": 14,
     "significant": true
    },
    "cls": {
-    "median": 1.3,
-    "text": "+1.3",
+    "median": 1.1,
+    "text": "+1.1",
     "iqr": [
      -0.2,
-     6.2
+     6.8
     ],
     "worse": 11,
     "significant": true
@@ -403,8 +403,8 @@
   {
    "recipe": "bc_snv",
    "reg": {
-    "median": -7.7,
-    "text": "-7.7",
+    "median": -7.8,
+    "text": "-7.8",
     "iqr": [
      -24.0,
      2.0
@@ -413,14 +413,14 @@
     "significant": true
    },
    "cls": {
-    "median": 1.3,
-    "text": "+1.3",
+    "median": 1.1,
+    "text": "+1.1",
     "iqr": [
-     -1.4,
-     8.0
+     -1.5,
+     8.4
     ],
-    "worse": 22,
-    "significant": true
+    "worse": 23,
+    "significant": false
    }
   },
   {
@@ -429,18 +429,18 @@
     "median": -7.7,
     "text": "-7.7",
     "iqr": [
-     -21.0,
+     -22.0,
      0.0
     ],
-    "worse": 14,
+    "worse": 15,
     "significant": true
    },
    "cls": {
-    "median": 0.0,
-    "text": "+0.0",
+    "median": -0.0,
+    "text": "-0.0",
     "iqr": [
-     -2.8,
-     3.0
+     -3.0,
+     3.1
     ],
     "worse": 30,
     "significant": false
@@ -449,13 +449,13 @@
   {
    "recipe": "sg_d1_snv",
    "reg": {
-    "median": -7.2,
-    "text": "-7.2",
+    "median": -7.5,
+    "text": "-7.5",
     "iqr": [
      -23.0,
-     5.0
+     6.0
     ],
-    "worse": 25,
+    "worse": 26,
     "significant": true
    },
    "cls": {
@@ -463,30 +463,30 @@
     "text": "+1.5",
     "iqr": [
      -0.9,
-     8.4
+     9.4
     ],
-    "worse": 21,
+    "worse": 20,
     "significant": false
    }
   },
   {
    "recipe": "emsc",
    "reg": {
-    "median": -7.1,
-    "text": "-7.1",
+    "median": -7.2,
+    "text": "-7.2",
     "iqr": [
-     -23.0,
-     1.0
+     -24.0,
+     2.0
     ],
-    "worse": 18,
+    "worse": 19,
     "significant": true
    },
    "cls": {
-    "median": 0.2,
-    "text": "+0.2",
+    "median": 0.0,
+    "text": "+0.0",
     "iqr": [
      -2.3,
-     3.3
+     3.5
     ],
     "worse": 28,
     "significant": false
@@ -495,8 +495,8 @@
   {
    "recipe": "all",
    "reg": {
-    "median": -6.3,
-    "text": "-6.3",
+    "median": -6.4,
+    "text": "-6.4",
     "iqr": [
      -24.0,
      10.0
@@ -508,87 +508,87 @@
     "median": 0.6,
     "text": "+0.6",
     "iqr": [
-     -3.3,
-     7.1
+     -3.6,
+     8.0
     ],
-    "worse": 31,
+    "worse": 32,
     "significant": false
    }
   },
   {
    "recipe": "airpls_snv",
    "reg": {
-    "median": -5.7,
-    "text": "-5.7",
+    "median": -5.8,
+    "text": "-5.8",
     "iqr": [
      -21.0,
      5.0
     ],
-    "worse": 25,
+    "worse": 26,
     "significant": true
    },
    "cls": {
-    "median": 1.3,
-    "text": "+1.3",
+    "median": 1.1,
+    "text": "+1.1",
     "iqr": [
-     -0.9,
-     7.7
+     -1.1,
+     8.9
     ],
     "worse": 14,
-    "significant": true
+    "significant": false
    }
   },
   {
    "recipe": "gcu_lvse",
    "reg": {
-    "median": -5.4,
-    "text": "-5.4",
+    "median": -5.5,
+    "text": "-5.5",
     "iqr": [
-     -21.0,
+     -22.0,
      5.0
     ],
     "worse": 26,
     "significant": true
    },
    "cls": {
-    "median": 0.4,
-    "text": "+0.4",
+    "median": 0.6,
+    "text": "+0.6",
     "iqr": [
-     -1.1,
-     3.5
+     -0.9,
+     3.9
     ],
     "worse": 18,
-    "significant": false
+    "significant": true
    }
   },
   {
    "recipe": "arpls_snv",
    "reg": {
-    "median": -5.3,
-    "text": "-5.3",
+    "median": -5.5,
+    "text": "-5.5",
     "iqr": [
-     -20.0,
-     5.0
+     -21.0,
+     6.0
     ],
-    "worse": 26,
+    "worse": 27,
     "significant": true
    },
    "cls": {
-    "median": 0.8,
-    "text": "+0.8",
+    "median": 0.6,
+    "text": "+0.6",
     "iqr": [
-     -1.8,
-     6.9
+     -2.1,
+     7.2
     ],
-    "worse": 25,
+    "worse": 26,
     "significant": false
    }
   },
   {
    "recipe": "prep_ensemble",
    "reg": {
-    "median": -4.5,
-    "text": "-4.5",
+    "median": -4.6,
+    "text": "-4.6",
     "iqr": [
      -20.0,
      2.0
@@ -600,10 +600,10 @@
     "median": 0.3,
     "text": "+0.3",
     "iqr": [
-     -1.3,
+     -1.2,
      2.6
     ],
-    "worse": 21,
+    "worse": 20,
     "significant": false
    }
   },
@@ -616,27 +616,27 @@
      -18.0,
      5.0
     ],
-    "worse": 25,
+    "worse": 26,
     "significant": true
    },
    "cls": {
-    "median": 0.8,
-    "text": "+0.8",
+    "median": 0.7,
+    "text": "+0.7",
     "iqr": [
      -1.1,
-     5.4
+     6.3
     ],
-    "worse": 15,
+    "worse": 16,
     "significant": false
    }
   },
   {
    "recipe": "gcu",
    "reg": {
-    "median": -3.4,
-    "text": "-3.4",
+    "median": -3.5,
+    "text": "-3.5",
     "iqr": [
-     -18.0,
+     -19.0,
      8.0
     ],
     "worse": 30,
@@ -646,10 +646,10 @@
     "median": -0.1,
     "text": "-0.1",
     "iqr": [
-     -2.4,
-     3.6
+     -2.8,
+     3.7
     ],
-    "worse": 30,
+    "worse": 31,
     "significant": false
    }
   },
@@ -659,18 +659,18 @@
     "median": -2.1,
     "text": "-2.1",
     "iqr": [
-     -15.0,
-     3.0
+     -16.0,
+     4.0
     ],
     "worse": 21,
     "significant": true
    },
    "cls": {
-    "median": 0.5,
-    "text": "+0.5",
+    "median": 0.4,
+    "text": "+0.4",
     "iqr": [
-     -1.2,
-     2.3
+     -1.5,
+     3.3
     ],
     "worse": 23,
     "significant": false
@@ -679,23 +679,23 @@
   {
    "recipe": "bc",
    "reg": {
-    "median": -1.8,
-    "text": "-1.8",
+    "median": -1.9,
+    "text": "-1.9",
     "iqr": [
-     -12.0,
+     -13.0,
      3.0
     ],
     "worse": 22,
     "significant": true
    },
    "cls": {
-    "median": 0.2,
-    "text": "+0.2",
+    "median": 0.4,
+    "text": "+0.4",
     "iqr": [
      -1.2,
-     2.3
+     2.7
     ],
-    "worse": 20,
+    "worse": 22,
     "significant": false
    }
   },
@@ -706,17 +706,17 @@
     "text": "-1.0",
     "iqr": [
      -16.0,
-     21.0
+     22.0
     ],
-    "worse": 37,
+    "worse": 38,
     "significant": false
    },
    "cls": {
-    "median": 1.0,
-    "text": "+1.0",
+    "median": 0.6,
+    "text": "+0.6",
     "iqr": [
-     -4.1,
-     6.1
+     -4.0,
+     6.8
     ],
     "worse": 33,
     "significant": false
@@ -728,20 +728,20 @@
     "median": -0.3,
     "text": "-0.3",
     "iqr": [
-     -15.0,
+     -16.0,
      12.0
     ],
     "worse": 38,
     "significant": false
    },
    "cls": {
-    "median": -0.0,
-    "text": "-0.0",
+    "median": 0.0,
+    "text": "+0.0",
     "iqr": [
-     -1.5,
-     1.7
+     -1.4,
+     1.9
     ],
-    "worse": 21,
+    "worse": 20,
     "significant": false
    }
   },
@@ -754,7 +754,7 @@
      -5.0,
      2.0
     ],
-    "worse": 14,
+    "worse": 15,
     "significant": false
    },
    "cls": {
@@ -764,7 +764,7 @@
      -0.4,
      1.1
     ],
-    "worse": 10,
+    "worse": 9,
     "significant": false
    }
   },
@@ -785,9 +785,9 @@
     "text": "-0.0",
     "iqr": [
      -0.2,
-     0.5
+     0.4
     ],
-    "worse": 4,
+    "worse": 3,
     "significant": false
    }
   },
@@ -817,13 +817,13 @@
   {
    "recipe": "decimate",
    "reg": {
-    "median": 0.2,
-    "text": "+0.2",
+    "median": 0.3,
+    "text": "+0.3",
     "iqr": [
      -2.0,
      5.0
     ],
-    "worse": 25,
+    "worse": 26,
     "significant": false
    },
    "cls": {
@@ -831,7 +831,7 @@
     "text": "-0.1",
     "iqr": [
      -1.3,
-     0.5
+     0.4
     ],
     "worse": 17,
     "significant": false
@@ -875,8 +875,8 @@
    "oracle": {
     "median": "-23.0",
     "ci": [
-     -28.9,
-     -19.1
+     -28.8,
+     -19.7
     ],
     "gray": false,
     "bold": false
@@ -885,41 +885,41 @@
   {
    "family": "SVM (1)",
    "global": {
-    "median": "-7.9",
+    "median": "-5.3",
     "ci": [
-     -19.0,
-     -1.3
+     -21.8,
+     -0.1
     ],
     "gray": false,
     "bold": false,
-    "worse": 18
+    "worse": 29
    },
    "family_recipe": {
     "recipe": "all",
-    "median": "-18.8",
+    "median": "-23.5",
     "ci": [
-     -28.7,
-     -9.4
+     -35.8,
+     -12.2
     ],
     "gray": false,
     "bold": false,
     "worse": 15
    },
    "per_task_cv": {
-    "median": "-27.0",
+    "median": "-32.1",
     "ci": [
-     -34.2,
-     -19.6
+     -41.9,
+     -22.0
     ],
     "gray": false,
     "bold": true,
-    "worse": 0
+    "worse": 8
    },
    "oracle": {
-    "median": "-27.1",
+    "median": "-34.4",
     "ci": [
-     -36.9,
-     -22.0
+     -42.5,
+     -22.9
     ],
     "gray": false,
     "bold": false
@@ -1004,7 +1004,7 @@
    "oracle": {
     "median": "-20.8",
     "ci": [
-     -31.6,
+     -30.6,
      -13.2
     ],
     "gray": false,
@@ -1057,10 +1057,10 @@
   {
    "family": "All models (14)",
    "global": {
-    "median": "-10.7",
+    "median": "-10.8",
     "ci": [
-     -15.9,
-     -6.9
+     -15.8,
+     -6.5
     ],
     "gray": false,
     "bold": false,
@@ -1068,9 +1068,9 @@
    },
    "family_recipe": {
     "recipe": "per family",
-    "median": "-11.8",
+    "median": "-12.0",
     "ci": [
-     -17.4,
+     -17.2,
      -8.1
     ],
     "gray": false,
@@ -1078,20 +1078,20 @@
     "worse": 23
    },
    "per_task_cv": {
-    "median": "-15.9",
+    "median": "-16.2",
     "ci": [
-     -21.3,
-     -11.4
+     -21.6,
+     -11.7
     ],
     "gray": false,
     "bold": true,
-    "worse": 17
+    "worse": 18
    },
    "oracle": {
-    "median": "-23.8",
+    "median": "-23.9",
     "ci": [
-     -30.3,
-     -19.8
+     -30.9,
+     -20.0
     ],
     "gray": false,
     "bold": false
@@ -1103,10 +1103,10 @@
    "rule": "Global",
    "chosen_on": "all datasets",
    "rmse": {
-    "median": "-10.7",
+    "median": "-10.8",
     "ci": [
-     -15.9,
-     -6.9
+     -15.8,
+     -6.5
     ],
     "worse": 29,
     "gray": false,
@@ -1115,8 +1115,8 @@
    "ba": {
     "median": "+1.6",
     "ci": [
-     0.6,
-     4.2
+     0.4,
+     5.0
     ],
     "worse": 28,
     "gray": false,
@@ -1127,9 +1127,9 @@
    "rule": "Family",
    "chosen_on": "other datasets",
    "rmse": {
-    "median": "-11.8",
+    "median": "-12.0",
     "ci": [
-     -17.4,
+     -17.2,
      -8.1
     ],
     "worse": 23,
@@ -1137,12 +1137,12 @@
     "bold": false
    },
    "ba": {
-    "median": "+0.4",
+    "median": "+0.6",
     "ci": [
-     -0.3,
-     1.5
+     -0.0,
+     1.9
     ],
-    "worse": 43,
+    "worse": 39,
     "gray": true,
     "bold": false
    }
@@ -1153,69 +1153,21 @@
    "rmse": {
     "median": "-10.6",
     "ci": [
-     -15.7,
-     -7.8
-    ],
-    "worse": 25,
-    "gray": false,
-    "bold": false
-   },
-   "ba": {
-    "median": "+0.4",
-    "ci": [
-     -0.3,
-     1.9
-    ],
-    "worse": 42,
-    "gray": true,
-    "bold": false
-   }
-  },
-  {
-   "rule": "Per-model",
-   "chosen_on": "other datasets",
-   "rmse": {
-    "median": "-10.7",
-    "ci": [
-     -16.6,
-     -7.2
+     -14.9,
+     -7.5
     ],
     "worse": 26,
     "gray": false,
     "bold": false
    },
    "ba": {
-    "median": "+1.3",
+    "median": "+0.8",
     "ci": [
-     0.4,
-     3.4
+     -0.0,
+     2.0
     ],
-    "worse": 31,
-    "gray": false,
-    "bold": false
-   }
-  },
-  {
-   "rule": "Per-model",
-   "chosen_on": "other families",
-   "rmse": {
-    "median": "-10.0",
-    "ci": [
-     -15.1,
-     -6.6
-    ],
-    "worse": 25,
-    "gray": false,
-    "bold": false
-   },
-   "ba": {
-    "median": "+1.2",
-    "ci": [
-     0.4,
-     3.4
-    ],
-    "worse": 32,
-    "gray": false,
+    "worse": 37,
+    "gray": true,
     "bold": false
    }
   },
@@ -1223,12 +1175,12 @@
    "rule": "Per-task CV",
    "chosen_on": "training folds",
    "rmse": {
-    "median": "-15.9",
+    "median": "-16.2",
     "ci": [
-     -21.3,
-     -11.4
+     -21.6,
+     -11.7
     ],
-    "worse": 17,
+    "worse": 18,
     "gray": false,
     "bold": true
    },
@@ -1236,9 +1188,9 @@
     "median": "+1.8",
     "ci": [
      1.1,
-     3.8
+     5.9
     ],
-    "worse": 16,
+    "worse": 14,
     "gray": false,
     "bold": true
    }
@@ -1247,22 +1199,22 @@
    "rule": "Oracle",
    "chosen_on": "test folds",
    "rmse": {
-    "median": "-23.8",
+    "median": "-23.9",
     "ci": [
-     -30.3,
-     -19.8
+     -30.9,
+     -20.0
     ],
-    "worse": 1,
+    "worse": 0,
     "gray": false,
     "bold": false
    },
    "ba": {
-    "median": "+3.9",
+    "median": "+3.6",
     "ci": [
      2.2,
-     6.8
+     7.0
     ],
-    "worse": 1,
+    "worse": 0,
     "gray": false,
     "bold": false
    }
@@ -1273,8 +1225,8 @@
    "bc_snv_avgpool",
    "bc_sg_snv",
    "wavelet_bc_snv",
-   "bc_sg_msc",
    "sg_rubberband_snv",
+   "bc_sg_msc",
    "snv",
    "bc_snv",
    "msc",
@@ -1807,251 +1759,251 @@
    {
     "task": "regression",
     "recipe": "airpls_snv",
-    "median": -5.72,
-    "lo": -17.48,
-    "hi": -2.04,
-    "worse": 16.9,
-    "pairs": 89,
+    "median": -8.12,
+    "lo": -19.79,
+    "hi": -2.27,
+    "worse": 24.2,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "all",
-    "median": -18.8,
-    "lo": -29.03,
-    "hi": -9.53,
-    "worse": 14.6,
-    "pairs": 89,
+    "median": -23.48,
+    "lo": -36.33,
+    "hi": -12.18,
+    "worse": 15.4,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "arpls_snv",
-    "median": -3.98,
-    "lo": -13.42,
-    "hi": -1.56,
-    "worse": 13.5,
-    "pairs": 89,
+    "median": -4.93,
+    "lo": -16.68,
+    "hi": -0.4,
+    "worse": 26.4,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "avgpool",
-    "median": 0.04,
-    "lo": 0.01,
-    "hi": 0.21,
-    "worse": 73.0,
-    "pairs": 89,
+    "median": 0.13,
+    "lo": 0.02,
+    "hi": 0.5,
+    "worse": 79.1,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "bc",
-    "median": -2.3,
-    "lo": -8.93,
-    "hi": -0.05,
-    "worse": 25.8,
-    "pairs": 89,
+    "median": -2.9,
+    "lo": -15.24,
+    "hi": -0.11,
+    "worse": 25.3,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "bc_sg",
-    "median": -1.14,
-    "lo": -8.53,
+    "median": -1.86,
+    "lo": -16.46,
     "hi": -0.05,
-    "worse": 25.8,
-    "pairs": 89,
+    "worse": 29.7,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "bc_sg_msc",
-    "median": -4.81,
-    "lo": -14.92,
-    "hi": -0.79,
-    "worse": 18.0,
-    "pairs": 89,
+    "median": -4.59,
+    "lo": -16.53,
+    "hi": -0.58,
+    "worse": 26.4,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "bc_sg_snv",
-    "median": -6.68,
-    "lo": -19.47,
-    "hi": -0.88,
-    "worse": 13.5,
-    "pairs": 89,
+    "median": -6.15,
+    "lo": -21.9,
+    "hi": -0.59,
+    "worse": 24.2,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "bc_snv",
-    "median": -4.99,
-    "lo": -18.31,
-    "hi": -1.97,
-    "worse": 11.2,
-    "pairs": 89,
+    "median": -7.6,
+    "lo": -22.39,
+    "hi": -2.35,
+    "worse": 19.8,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "bc_snv_avgpool",
-    "median": -7.89,
-    "lo": -18.37,
-    "hi": -0.9,
-    "worse": 18.0,
-    "pairs": 89,
+    "median": -5.3,
+    "lo": -22.11,
+    "hi": -0.26,
+    "worse": 28.6,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "crr_snv",
-    "median": -0.35,
-    "lo": -1.88,
-    "hi": 0.17,
-    "worse": 37.1,
-    "pairs": 89,
+    "median": -0.17,
+    "lo": -2.79,
+    "hi": 2.97,
+    "worse": 46.2,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "decimate",
-    "median": 0.01,
-    "lo": -0.0,
-    "hi": 0.1,
-    "worse": 64.0,
-    "pairs": 89,
+    "median": 0.06,
+    "lo": 0.01,
+    "hi": 0.55,
+    "worse": 73.6,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "emsc",
-    "median": -0.18,
-    "lo": -1.55,
-    "hi": 0.37,
-    "worse": 43.8,
-    "pairs": 89,
+    "median": -0.04,
+    "lo": -2.91,
+    "hi": 5.33,
+    "worse": 49.5,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "gcu",
-    "median": -12.74,
-    "lo": -19.68,
-    "hi": -7.6,
-    "worse": 13.5,
-    "pairs": 89,
+    "median": -17.63,
+    "lo": -22.5,
+    "hi": -8.28,
+    "worse": 14.3,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "gcu_lvse",
-    "median": -10.41,
-    "lo": -16.93,
-    "hi": -5.44,
-    "worse": 15.7,
-    "pairs": 89,
+    "median": -15.76,
+    "lo": -21.52,
+    "hi": -5.8,
+    "worse": 16.5,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "lvse",
-    "median": -3.09,
-    "lo": -8.51,
-    "hi": 0.35,
-    "worse": 36.0,
-    "pairs": 89,
+    "median": -5.11,
+    "lo": -16.6,
+    "hi": 0.9,
+    "worse": 34.1,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "msc",
-    "median": -1.0,
-    "lo": -2.24,
-    "hi": -0.11,
-    "worse": 30.3,
-    "pairs": 89,
+    "median": -0.37,
+    "lo": -3.46,
+    "hi": 1.1,
+    "worse": 41.8,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "prep_ensemble",
-    "median": 0.26,
-    "lo": -0.12,
-    "hi": 2.56,
-    "worse": 62.9,
-    "pairs": 89,
+    "median": 1.01,
+    "lo": -0.51,
+    "hi": 6.97,
+    "worse": 63.7,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "sg",
-    "median": 0.0,
+    "median": 0.01,
     "lo": 0.0,
-    "hi": 0.09,
-    "worse": 69.7,
-    "pairs": 89,
+    "hi": 0.22,
+    "worse": 71.4,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "sg_d1_snv",
-    "median": -6.88,
-    "lo": -19.86,
-    "hi": -2.94,
-    "worse": 14.6,
-    "pairs": 89,
+    "median": -10.24,
+    "lo": -24.35,
+    "hi": -3.18,
+    "worse": 23.1,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "sg_d2_snv",
-    "median": -5.56,
-    "lo": -16.08,
-    "hi": -2.65,
-    "worse": 20.2,
-    "pairs": 89,
+    "median": -8.51,
+    "lo": -18.14,
+    "hi": -0.27,
+    "worse": 27.5,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "sg_rubberband_snv",
-    "median": -5.58,
-    "lo": -10.58,
-    "hi": -1.17,
-    "worse": 16.9,
-    "pairs": 89,
+    "median": -4.94,
+    "lo": -16.72,
+    "hi": -0.53,
+    "worse": 26.4,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "snv",
-    "median": -0.96,
-    "lo": -2.63,
-    "hi": -0.19,
-    "worse": 28.1,
-    "pairs": 89,
+    "median": -0.63,
+    "lo": -4.24,
+    "hi": 0.39,
+    "worse": 35.2,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "stdscale",
-    "median": -2.92,
-    "lo": -7.36,
-    "hi": 0.49,
-    "worse": 37.1,
-    "pairs": 89,
+    "median": -4.0,
+    "lo": -14.89,
+    "hi": 1.08,
+    "worse": 38.5,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
     "task": "regression",
     "recipe": "wavelet_bc_snv",
-    "median": -7.22,
-    "lo": -18.79,
-    "hi": -3.07,
-    "worse": 9.0,
-    "pairs": 89,
+    "median": -7.32,
+    "lo": -22.13,
+    "hi": -2.8,
+    "worse": 20.9,
+    "pairs": 91,
     "family": "Kernel methods"
    },
    {
@@ -2557,851 +2509,851 @@
    {
     "task": "classification",
     "recipe": "airpls_snv",
-    "median": 1.75,
-    "lo": 0.4,
-    "hi": 7.23,
-    "worse": 30.8,
-    "pairs": 65,
+    "median": 1.5,
+    "lo": 0.33,
+    "hi": 8.24,
+    "worse": 31.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "all",
-    "median": 2.18,
-    "lo": -0.68,
-    "hi": 7.67,
-    "worse": 35.4,
-    "pairs": 65,
+    "median": 1.65,
+    "lo": -0.91,
+    "hi": 7.94,
+    "worse": 38.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "arpls_snv",
-    "median": 1.31,
-    "lo": -0.98,
-    "hi": 5.75,
-    "worse": 40.0,
-    "pairs": 65,
+    "median": 0.73,
+    "lo": -1.34,
+    "hi": 7.45,
+    "worse": 41.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "avgpool",
-    "median": -0.04,
-    "lo": -0.19,
-    "hi": 0.17,
-    "worse": 52.3,
-    "pairs": 65,
+    "median": -0.05,
+    "lo": -0.24,
+    "hi": 0.02,
+    "worse": 55.0,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "bc",
-    "median": -0.0,
-    "lo": -1.07,
-    "hi": 0.59,
-    "worse": 47.7,
-    "pairs": 65,
+    "median": 0.07,
+    "lo": -1.45,
+    "hi": 0.83,
+    "worse": 45.0,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "bc_sg",
-    "median": -0.0,
-    "lo": -0.93,
-    "hi": 0.68,
-    "worse": 49.2,
-    "pairs": 65,
+    "median": -0.21,
+    "lo": -1.78,
+    "hi": 0.75,
+    "worse": 53.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_msc",
-    "median": 0.56,
-    "lo": -2.03,
+    "median": -0.13,
+    "lo": -3.58,
     "hi": 2.11,
-    "worse": 46.2,
-    "pairs": 65,
+    "worse": 50.0,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_snv",
-    "median": 2.76,
-    "lo": 0.56,
-    "hi": 8.79,
-    "worse": 30.8,
-    "pairs": 65,
+    "median": 1.54,
+    "lo": 0.28,
+    "hi": 10.19,
+    "worse": 33.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "bc_snv",
-    "median": 2.05,
-    "lo": 0.03,
-    "hi": 7.54,
-    "worse": 30.8,
-    "pairs": 65,
+    "median": 1.67,
+    "lo": 0.01,
+    "hi": 8.51,
+    "worse": 33.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "bc_snv_avgpool",
-    "median": 2.62,
-    "lo": 0.52,
-    "hi": 10.26,
-    "worse": 26.2,
-    "pairs": 65,
+    "median": 1.92,
+    "lo": 0.42,
+    "hi": 10.88,
+    "worse": 28.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "crr_snv",
-    "median": 1.77,
-    "lo": -0.09,
-    "hi": 7.22,
-    "worse": 35.4,
-    "pairs": 65,
+    "median": 1.53,
+    "lo": -0.56,
+    "hi": 7.3,
+    "worse": 38.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "decimate",
-    "median": -0.04,
-    "lo": -0.31,
-    "hi": 0.15,
-    "worse": 53.8,
-    "pairs": 65,
+    "median": -0.09,
+    "lo": -0.33,
+    "hi": 0.0,
+    "worse": 56.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "emsc",
-    "median": -0.4,
-    "lo": -2.06,
-    "hi": 1.11,
-    "worse": 56.9,
-    "pairs": 65,
+    "median": -0.42,
+    "lo": -2.15,
+    "hi": 0.95,
+    "worse": 58.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "gcu",
-    "median": -0.37,
-    "lo": -3.06,
-    "hi": 0.67,
-    "worse": 55.4,
-    "pairs": 65,
+    "median": -0.54,
+    "lo": -3.68,
+    "hi": 1.09,
+    "worse": 55.0,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "gcu_lvse",
-    "median": -0.21,
-    "lo": -1.42,
-    "hi": 0.69,
-    "worse": 53.8,
-    "pairs": 65,
+    "median": -0.25,
+    "lo": -1.44,
+    "hi": 0.74,
+    "worse": 53.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "lvse",
-    "median": -0.15,
-    "lo": -1.53,
-    "hi": 0.29,
-    "worse": 55.4,
-    "pairs": 65,
+    "median": -0.19,
+    "lo": -1.67,
+    "hi": 0.24,
+    "worse": 56.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "msc",
-    "median": -0.0,
-    "lo": -3.33,
-    "hi": 1.7,
-    "worse": 49.2,
-    "pairs": 65,
+    "median": -0.1,
+    "lo": -3.46,
+    "hi": 1.63,
+    "worse": 50.0,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "prep_ensemble",
-    "median": 0.45,
-    "lo": -1.09,
-    "hi": 1.74,
-    "worse": 41.5,
-    "pairs": 65,
+    "median": 0.47,
+    "lo": -0.99,
+    "hi": 1.76,
+    "worse": 40.0,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "sg",
     "median": -0.0,
-    "lo": -0.02,
-    "hi": 0.02,
-    "worse": 44.6,
-    "pairs": 65,
+    "lo": -0.04,
+    "hi": 0.01,
+    "worse": 46.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "sg_d1_snv",
-    "median": 1.7,
-    "lo": -0.19,
-    "hi": 8.29,
-    "worse": 33.8,
-    "pairs": 65,
+    "median": 1.68,
+    "lo": -0.3,
+    "hi": 8.39,
+    "worse": 33.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "sg_d2_snv",
-    "median": 1.34,
+    "median": 1.33,
     "lo": -1.4,
-    "hi": 5.88,
-    "worse": 43.1,
-    "pairs": 65,
+    "hi": 6.56,
+    "worse": 43.3,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "sg_rubberband_snv",
-    "median": 3.07,
-    "lo": 1.65,
-    "hi": 8.11,
-    "worse": 15.4,
-    "pairs": 65,
+    "median": 2.5,
+    "lo": 1.59,
+    "hi": 8.71,
+    "worse": 16.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "snv",
-    "median": 2.67,
-    "lo": 1.11,
-    "hi": 6.91,
-    "worse": 23.1,
-    "pairs": 65,
+    "median": 2.42,
+    "lo": 0.94,
+    "hi": 7.31,
+    "worse": 25.0,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "stdscale",
-    "median": -0.29,
+    "median": -0.53,
     "lo": -1.13,
     "hi": 0.21,
-    "worse": 60.0,
-    "pairs": 65,
+    "worse": 61.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "wavelet_bc_snv",
-    "median": 1.74,
-    "lo": 0.56,
-    "hi": 10.16,
-    "worse": 27.7,
-    "pairs": 65,
+    "median": 1.89,
+    "lo": 0.29,
+    "hi": 11.43,
+    "worse": 26.7,
+    "pairs": 60,
     "family": "Chemometric"
    },
    {
     "task": "classification",
     "recipe": "airpls_snv",
-    "median": -0.0,
-    "lo": -0.88,
-    "hi": 1.7,
-    "worse": 46.2,
-    "pairs": 26,
+    "median": -0.03,
+    "lo": -1.11,
+    "hi": 1.69,
+    "worse": 50.0,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "all",
     "median": -0.83,
-    "lo": -2.81,
-    "hi": -0.16,
-    "worse": 73.1,
-    "pairs": 26,
+    "lo": -3.61,
+    "hi": 0.0,
+    "worse": 70.8,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "arpls_snv",
-    "median": -0.0,
-    "lo": -2.41,
-    "hi": 1.62,
-    "worse": 46.2,
-    "pairs": 26,
+    "median": -0.05,
+    "lo": -2.76,
+    "hi": 1.8,
+    "worse": 50.0,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "avgpool",
-    "median": 0.15,
-    "lo": -0.87,
+    "median": -0.01,
+    "lo": -1.46,
     "hi": 1.81,
-    "worse": 46.2,
-    "pairs": 26,
+    "worse": 50.0,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "bc",
-    "median": -0.64,
+    "median": -0.48,
     "lo": -1.04,
-    "hi": 0.12,
-    "worse": 65.4,
-    "pairs": 26,
+    "hi": 0.29,
+    "worse": 62.5,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "bc_sg",
-    "median": -0.15,
-    "lo": -1.36,
+    "median": -0.28,
+    "lo": -2.14,
     "hi": 0.71,
-    "worse": 53.8,
-    "pairs": 26,
+    "worse": 58.3,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_msc",
-    "median": -0.87,
-    "lo": -2.91,
-    "hi": 2.51,
-    "worse": 57.7,
-    "pairs": 26,
+    "median": -1.19,
+    "lo": -2.94,
+    "hi": 1.7,
+    "worse": 62.5,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_snv",
-    "median": -0.03,
+    "median": -0.13,
     "lo": -2.24,
-    "hi": 1.77,
-    "worse": 50.0,
-    "pairs": 26,
+    "hi": 1.5,
+    "worse": 54.2,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "bc_snv",
-    "median": 0.1,
-    "lo": -2.46,
+    "median": 0.01,
+    "lo": -2.61,
     "hi": 1.99,
-    "worse": 42.3,
-    "pairs": 26,
+    "worse": 45.8,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "bc_snv_avgpool",
-    "median": -0.05,
-    "lo": -1.75,
-    "hi": 2.29,
-    "worse": 50.0,
-    "pairs": 26,
+    "median": -0.18,
+    "lo": -2.22,
+    "hi": 2.21,
+    "worse": 54.2,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "crr_snv",
-    "median": 0.01,
-    "lo": -1.14,
-    "hi": 0.56,
-    "worse": 50.0,
-    "pairs": 26,
+    "median": -0.15,
+    "lo": -1.21,
+    "hi": 0.44,
+    "worse": 54.2,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "decimate",
-    "median": -0.36,
-    "lo": -2.09,
+    "median": -0.43,
+    "lo": -2.38,
     "hi": 0.27,
-    "worse": 57.7,
-    "pairs": 26,
+    "worse": 58.3,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "emsc",
-    "median": -0.34,
-    "lo": -2.6,
-    "hi": 1.04,
-    "worse": 53.8,
-    "pairs": 26,
+    "median": -0.83,
+    "lo": -2.9,
+    "hi": 0.92,
+    "worse": 58.3,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "gcu",
-    "median": -1.66,
-    "lo": -3.6,
-    "hi": -0.53,
-    "worse": 76.9,
-    "pairs": 26,
+    "median": -1.51,
+    "lo": -3.46,
+    "hi": -0.49,
+    "worse": 75.0,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "gcu_lvse",
-    "median": -1.0,
-    "lo": -4.44,
-    "hi": 0.37,
-    "worse": 69.2,
-    "pairs": 26,
+    "median": -0.64,
+    "lo": -4.38,
+    "hi": 0.72,
+    "worse": 66.7,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "lvse",
-    "median": -1.31,
-    "lo": -3.89,
+    "median": -1.06,
+    "lo": -3.14,
     "hi": -0.0,
-    "worse": 73.1,
-    "pairs": 26,
+    "worse": 70.8,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "msc",
-    "median": -0.94,
-    "lo": -1.94,
-    "hi": 0.77,
-    "worse": 57.7,
-    "pairs": 26,
+    "median": -1.22,
+    "lo": -2.23,
+    "hi": 0.22,
+    "worse": 62.5,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "prep_ensemble",
-    "median": -0.45,
-    "lo": -1.36,
+    "median": -0.52,
+    "lo": -1.88,
     "hi": 0.68,
-    "worse": 53.8,
-    "pairs": 26,
+    "worse": 54.2,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "sg",
-    "median": 0.06,
-    "lo": -0.37,
+    "median": 0.04,
+    "lo": -0.39,
     "hi": 0.56,
-    "worse": 38.5,
-    "pairs": 26,
+    "worse": 41.7,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "sg_d1_snv",
-    "median": -0.07,
-    "lo": -0.99,
-    "hi": 1.49,
-    "worse": 57.7,
-    "pairs": 26,
+    "median": -0.12,
+    "lo": -1.23,
+    "hi": 1.57,
+    "worse": 58.3,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "sg_d2_snv",
     "median": -0.78,
-    "lo": -3.21,
+    "lo": -3.31,
     "hi": 1.33,
-    "worse": 65.4,
-    "pairs": 26,
+    "worse": 66.7,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "sg_rubberband_snv",
-    "median": -0.0,
-    "lo": -1.76,
-    "hi": 0.96,
-    "worse": 50.0,
-    "pairs": 26,
+    "median": -0.11,
+    "lo": -2.13,
+    "hi": 0.7,
+    "worse": 54.2,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "snv",
     "median": 0.03,
-    "lo": -0.64,
+    "lo": -0.99,
     "hi": 0.55,
-    "worse": 46.2,
-    "pairs": 26,
+    "worse": 45.8,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "stdscale",
-    "median": -1.59,
+    "median": -1.32,
     "lo": -2.2,
-    "hi": 0.6,
-    "worse": 69.2,
-    "pairs": 26,
+    "hi": 0.84,
+    "worse": 66.7,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "wavelet_bc_snv",
-    "median": -0.04,
-    "lo": -1.1,
-    "hi": 0.85,
-    "worse": 57.7,
-    "pairs": 26,
+    "median": -0.06,
+    "lo": -1.74,
+    "hi": 0.31,
+    "worse": 62.5,
+    "pairs": 24,
     "family": "Deep learning"
    },
    {
     "task": "classification",
     "recipe": "airpls_snv",
-    "median": 3.64,
-    "lo": 1.29,
-    "hi": 18.83,
-    "worse": 23.1,
-    "pairs": 13,
+    "median": 5.83,
+    "lo": -0.47,
+    "hi": 23.12,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "all",
-    "median": 13.03,
-    "lo": 2.25,
-    "hi": 29.46,
-    "worse": 7.7,
-    "pairs": 13,
+    "median": 14.1,
+    "lo": 1.7,
+    "hi": 31.38,
+    "worse": 8.3,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "arpls_snv",
-    "median": 2.53,
-    "lo": 0.8,
-    "hi": 14.57,
-    "worse": 23.1,
-    "pairs": 13,
+    "median": 4.6,
+    "lo": -2.4,
+    "hi": 18.05,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "avgpool",
-    "median": -0.01,
-    "lo": -0.15,
+    "median": -0.04,
+    "lo": -0.27,
     "hi": -0.0,
-    "worse": 53.8,
-    "pairs": 13,
+    "worse": 58.3,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "bc",
-    "median": 0.53,
-    "lo": -0.17,
-    "hi": 7.37,
-    "worse": 30.8,
-    "pairs": 13,
+    "median": 0.64,
+    "lo": -0.81,
+    "hi": 12.81,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "bc_sg",
-    "median": 0.66,
-    "lo": 0.04,
-    "hi": 7.38,
-    "worse": 23.1,
-    "pairs": 13,
+    "median": 0.59,
+    "lo": -0.81,
+    "hi": 13.06,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_msc",
-    "median": -4.2,
-    "lo": -9.44,
-    "hi": 5.15,
-    "worse": 61.5,
-    "pairs": 13,
+    "median": -4.8,
+    "lo": -13.1,
+    "hi": 5.62,
+    "worse": 66.7,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_snv",
-    "median": 4.0,
-    "lo": 0.45,
-    "hi": 18.37,
-    "worse": 23.1,
-    "pairs": 13,
+    "median": 6.13,
+    "lo": -1.6,
+    "hi": 22.74,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "bc_snv",
-    "median": 5.28,
-    "lo": 0.96,
-    "hi": 18.21,
-    "worse": 23.1,
-    "pairs": 13,
+    "median": 6.87,
+    "lo": -1.28,
+    "hi": 22.69,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "bc_snv_avgpool",
-    "median": 3.72,
-    "lo": 0.66,
-    "hi": 18.03,
-    "worse": 23.1,
-    "pairs": 13,
+    "median": 5.62,
+    "lo": -1.54,
+    "hi": 23.18,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "crr_snv",
-    "median": 3.1,
-    "lo": 0.67,
-    "hi": 15.84,
-    "worse": 15.4,
-    "pairs": 13,
+    "median": 2.41,
+    "lo": 0.34,
+    "hi": 17.91,
+    "worse": 16.7,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "decimate",
     "median": -0.0,
-    "lo": -0.17,
-    "hi": 0.04,
-    "worse": 46.2,
-    "pairs": 13,
+    "lo": -0.09,
+    "hi": 0.05,
+    "worse": 41.7,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "emsc",
-    "median": -3.78,
-    "lo": -5.77,
-    "hi": -0.97,
-    "worse": 76.9,
-    "pairs": 13,
+    "median": -4.03,
+    "lo": -11.26,
+    "hi": -1.32,
+    "worse": 83.3,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "gcu",
-    "median": 3.82,
-    "lo": 2.78,
-    "hi": 5.25,
-    "worse": 15.4,
-    "pairs": 13,
+    "median": 3.85,
+    "lo": 3.09,
+    "hi": 8.72,
+    "worse": 8.3,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "gcu_lvse",
-    "median": 3.52,
-    "lo": -0.0,
-    "hi": 4.51,
-    "worse": 30.8,
-    "pairs": 13,
+    "median": 3.69,
+    "lo": 1.53,
+    "hi": 7.23,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "lvse",
-    "median": -0.0,
-    "lo": -0.7,
-    "hi": 1.83,
-    "worse": 46.2,
-    "pairs": 13,
+    "median": 0.05,
+    "lo": -1.39,
+    "hi": 4.48,
+    "worse": 41.7,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "msc",
-    "median": -0.81,
-    "lo": -10.46,
-    "hi": 2.18,
-    "worse": 61.5,
-    "pairs": 13,
+    "median": -1.03,
+    "lo": -12.02,
+    "hi": 1.33,
+    "worse": 66.7,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "prep_ensemble",
-    "median": -2.78,
-    "lo": -5.2,
-    "hi": -0.0,
-    "worse": 69.2,
-    "pairs": 13,
+    "median": -3.26,
+    "lo": -10.27,
+    "hi": -0.06,
+    "worse": 75.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "sg",
     "median": -0.0,
-    "lo": -0.0,
+    "lo": -0.01,
     "hi": -0.0,
-    "worse": 23.1,
-    "pairs": 13,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "sg_d1_snv",
-    "median": 12.63,
-    "lo": 2.6,
-    "hi": 20.08,
-    "worse": 23.1,
-    "pairs": 13,
+    "median": 13.26,
+    "lo": 2.39,
+    "hi": 21.68,
+    "worse": 25.0,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "sg_d2_snv",
-    "median": 10.96,
-    "lo": 2.25,
-    "hi": 16.18,
-    "worse": 15.4,
-    "pairs": 13,
+    "median": 13.23,
+    "lo": 3.06,
+    "hi": 20.31,
+    "worse": 16.7,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "sg_rubberband_snv",
-    "median": 5.46,
-    "lo": 1.21,
-    "hi": 15.48,
-    "worse": 15.4,
-    "pairs": 13,
+    "median": 7.18,
+    "lo": 0.9,
+    "hi": 18.4,
+    "worse": 16.7,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "snv",
-    "median": 3.1,
-    "lo": 1.04,
-    "hi": 14.82,
-    "worse": 7.7,
-    "pairs": 13,
+    "median": 2.36,
+    "lo": 0.81,
+    "hi": 17.4,
+    "worse": 8.3,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "stdscale",
-    "median": 0.28,
-    "lo": -0.55,
-    "hi": 2.73,
-    "worse": 30.8,
-    "pairs": 13,
+    "median": 0.49,
+    "lo": -0.63,
+    "hi": 4.94,
+    "worse": 33.3,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "wavelet_bc_snv",
-    "median": 4.61,
-    "lo": -0.07,
-    "hi": 18.41,
-    "worse": 30.8,
-    "pairs": 13,
+    "median": 6.09,
+    "lo": -1.85,
+    "hi": 22.79,
+    "worse": 33.3,
+    "pairs": 12,
     "family": "Kernel methods"
    },
    {
     "task": "classification",
     "recipe": "airpls_snv",
     "median": 0.18,
-    "lo": -1.57,
-    "hi": 1.23,
-    "worse": 46.2,
-    "pairs": 52,
+    "lo": -1.64,
+    "hi": 1.3,
+    "worse": 45.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "all",
-    "median": -1.35,
-    "lo": -4.2,
+    "median": -1.21,
+    "lo": -4.54,
     "hi": 0.84,
-    "worse": 61.5,
-    "pairs": 52,
+    "worse": 60.4,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "arpls_snv",
     "median": -0.11,
-    "lo": -2.2,
-    "hi": 0.92,
+    "lo": -2.04,
+    "hi": 1.16,
     "worse": 50.0,
-    "pairs": 52,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "avgpool",
-    "median": 0.42,
-    "lo": 0.02,
-    "hi": 0.83,
-    "worse": 26.9,
-    "pairs": 52,
+    "median": 0.59,
+    "lo": 0.11,
+    "hi": 0.84,
+    "worse": 20.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "bc",
     "median": 0.23,
-    "lo": -1.42,
-    "hi": 0.77,
-    "worse": 46.2,
-    "pairs": 52,
+    "lo": -2.11,
+    "hi": 0.9,
+    "worse": 45.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "bc_sg",
-    "median": 0.04,
-    "lo": -2.15,
-    "hi": 1.05,
-    "worse": 50.0,
-    "pairs": 52,
+    "median": 0.18,
+    "lo": -1.69,
+    "hi": 1.11,
+    "worse": 47.9,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_msc",
-    "median": -0.93,
-    "lo": -2.53,
-    "hi": 0.61,
-    "worse": 55.8,
-    "pairs": 52,
+    "median": -0.76,
+    "lo": -2.4,
+    "hi": 0.62,
+    "worse": 54.2,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_snv",
-    "median": 0.1,
-    "lo": -2.47,
-    "hi": 1.14,
-    "worse": 46.2,
-    "pairs": 52,
+    "median": 0.15,
+    "lo": -2.19,
+    "hi": 1.28,
+    "worse": 43.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "bc_snv",
     "median": 0.11,
-    "lo": -3.13,
-    "hi": 1.18,
-    "worse": 46.2,
-    "pairs": 52,
+    "lo": -3.22,
+    "hi": 1.21,
+    "worse": 45.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "bc_snv_avgpool",
-    "median": -0.17,
-    "lo": -2.16,
-    "hi": 1.4,
-    "worse": 51.9,
-    "pairs": 52,
+    "median": -0.03,
+    "lo": -2.37,
+    "hi": 2.05,
+    "worse": 50.0,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
@@ -3409,19 +3361,19 @@
     "recipe": "crr_snv",
     "median": -0.1,
     "lo": -1.26,
-    "hi": 0.56,
-    "worse": 57.7,
-    "pairs": 52,
+    "hi": 0.59,
+    "worse": 58.3,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "decimate",
-    "median": 0.01,
-    "lo": -1.49,
-    "hi": 0.41,
-    "worse": 50.0,
-    "pairs": 52,
+    "median": 0.03,
+    "lo": -1.39,
+    "hi": 0.51,
+    "worse": 47.9,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
@@ -3429,109 +3381,109 @@
     "recipe": "emsc",
     "median": -0.3,
     "lo": -1.9,
-    "hi": 0.81,
-    "worse": 53.8,
-    "pairs": 52,
+    "hi": 1.3,
+    "worse": 54.2,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "gcu",
-    "median": -0.54,
-    "lo": -2.18,
-    "hi": 0.05,
-    "worse": 65.4,
-    "pairs": 52,
+    "median": -0.82,
+    "lo": -2.29,
+    "hi": -0.15,
+    "worse": 70.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "gcu_lvse",
     "median": 0.32,
-    "lo": 0.03,
+    "lo": 0.01,
     "hi": 0.78,
-    "worse": 32.7,
-    "pairs": 52,
+    "worse": 31.2,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "lvse",
-    "median": 0.03,
-    "lo": -0.29,
-    "hi": 0.56,
-    "worse": 46.2,
-    "pairs": 52,
+    "median": 0.05,
+    "lo": -0.25,
+    "hi": 0.71,
+    "worse": 43.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "msc",
     "median": -0.28,
-    "lo": -1.67,
+    "lo": -1.48,
     "hi": -0.0,
-    "worse": 65.4,
-    "pairs": 52,
+    "worse": 66.7,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "prep_ensemble",
-    "median": 0.0,
+    "median": 0.02,
     "lo": -0.49,
-    "hi": 0.64,
-    "worse": 48.1,
-    "pairs": 52,
+    "hi": 0.87,
+    "worse": 45.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "sg",
-    "median": 0.08,
+    "median": 0.12,
     "lo": -0.0,
-    "hi": 0.32,
-    "worse": 36.5,
-    "pairs": 52,
+    "hi": 0.33,
+    "worse": 33.3,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "sg_d1_snv",
-    "median": 0.43,
-    "lo": -2.0,
-    "hi": 1.47,
-    "worse": 42.3,
-    "pairs": 52,
+    "median": 0.58,
+    "lo": -0.97,
+    "hi": 1.86,
+    "worse": 39.6,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "sg_d2_snv",
     "median": -1.43,
-    "lo": -5.09,
-    "hi": 0.69,
-    "worse": 63.5,
-    "pairs": 52,
+    "lo": -5.48,
+    "hi": 0.97,
+    "worse": 62.5,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "sg_rubberband_snv",
-    "median": 0.32,
-    "lo": -0.49,
-    "hi": 1.3,
-    "worse": 42.3,
-    "pairs": 52,
+    "median": 0.43,
+    "lo": -0.43,
+    "hi": 1.33,
+    "worse": 39.6,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "snv",
     "median": 0.01,
-    "lo": -0.24,
-    "hi": 0.73,
-    "worse": 46.2,
-    "pairs": 52,
+    "lo": -0.32,
+    "hi": 0.69,
+    "worse": 45.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
@@ -3540,248 +3492,248 @@
     "median": -0.0,
     "lo": -0.0,
     "hi": -0.0,
-    "worse": 36.5,
-    "pairs": 52,
+    "worse": 37.5,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "wavelet_bc_snv",
-    "median": 0.06,
-    "lo": -1.2,
+    "median": 0.11,
+    "lo": -1.23,
     "hi": 1.32,
-    "worse": 48.1,
-    "pairs": 52,
+    "worse": 45.8,
+    "pairs": 48,
     "family": "Tabular foundation"
    },
    {
     "task": "classification",
     "recipe": "airpls_snv",
-    "median": 7.23,
-    "lo": 0.77,
-    "hi": 12.2,
-    "worse": 20.5,
-    "pairs": 39,
+    "median": 8.98,
+    "lo": 0.73,
+    "hi": 12.22,
+    "worse": 22.2,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "all",
-    "median": 6.67,
-    "lo": -0.4,
-    "hi": 10.95,
-    "worse": 28.2,
-    "pairs": 39,
+    "median": 7.68,
+    "lo": -0.71,
+    "hi": 11.3,
+    "worse": 30.6,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "arpls_snv",
-    "median": 6.93,
-    "lo": 0.23,
-    "hi": 11.25,
-    "worse": 23.1,
-    "pairs": 39,
+    "median": 7.12,
+    "lo": 0.04,
+    "hi": 11.48,
+    "worse": 25.0,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "avgpool",
-    "median": 0.11,
-    "lo": -0.28,
-    "hi": 0.72,
-    "worse": 41.0,
-    "pairs": 39,
+    "median": 0.04,
+    "lo": -0.67,
+    "hi": 0.56,
+    "worse": 44.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "bc",
-    "median": 2.67,
-    "lo": 0.19,
-    "hi": 10.03,
-    "worse": 23.1,
-    "pairs": 39,
+    "median": 6.14,
+    "lo": 0.58,
+    "hi": 10.69,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "bc_sg",
-    "median": 5.22,
-    "lo": 1.01,
-    "hi": 10.66,
-    "worse": 15.4,
-    "pairs": 39,
+    "median": 6.19,
+    "lo": 0.99,
+    "hi": 11.67,
+    "worse": 16.7,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_msc",
-    "median": 8.89,
-    "lo": -0.35,
-    "hi": 11.94,
-    "worse": 30.8,
-    "pairs": 39,
+    "median": 9.5,
+    "lo": -0.47,
+    "hi": 12.0,
+    "worse": 33.3,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "bc_sg_snv",
-    "median": 8.09,
-    "lo": 0.52,
-    "hi": 12.09,
-    "worse": 20.5,
-    "pairs": 39,
+    "median": 8.81,
+    "lo": 0.17,
+    "hi": 12.26,
+    "worse": 22.2,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "bc_snv",
-    "median": 7.82,
-    "lo": 0.79,
-    "hi": 11.34,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 8.24,
+    "lo": 0.76,
+    "hi": 12.13,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "bc_snv_avgpool",
-    "median": 8.51,
-    "lo": 0.82,
-    "hi": 12.04,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 8.91,
+    "lo": 0.75,
+    "hi": 12.48,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "crr_snv",
-    "median": 4.44,
-    "lo": 0.49,
-    "hi": 9.67,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 4.72,
+    "lo": 0.39,
+    "hi": 9.72,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "decimate",
-    "median": -0.16,
-    "lo": -0.56,
+    "median": -0.27,
+    "lo": -1.03,
     "hi": 0.01,
-    "worse": 61.5,
-    "pairs": 39,
+    "worse": 63.9,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "emsc",
-    "median": 7.2,
-    "lo": 1.19,
-    "hi": 10.42,
-    "worse": 7.7,
-    "pairs": 39,
+    "median": 8.89,
+    "lo": 0.75,
+    "hi": 10.93,
+    "worse": 8.3,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "gcu",
-    "median": 6.44,
-    "lo": 1.03,
-    "hi": 10.84,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 6.95,
+    "lo": 0.53,
+    "hi": 11.28,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "gcu_lvse",
-    "median": 5.23,
-    "lo": 1.35,
-    "hi": 14.21,
-    "worse": 12.8,
-    "pairs": 39,
+    "median": 7.33,
+    "lo": 1.45,
+    "hi": 15.11,
+    "worse": 11.1,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "lvse",
-    "median": 5.04,
+    "median": 7.76,
     "lo": -0.04,
-    "hi": 13.17,
-    "worse": 28.2,
-    "pairs": 39,
+    "hi": 13.89,
+    "worse": 27.8,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "msc",
-    "median": 5.68,
-    "lo": 0.48,
-    "hi": 8.49,
-    "worse": 10.3,
-    "pairs": 39,
+    "median": 6.49,
+    "lo": 0.46,
+    "hi": 9.12,
+    "worse": 11.1,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "prep_ensemble",
-    "median": 8.33,
-    "lo": 0.32,
-    "hi": 13.25,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 9.39,
+    "lo": 1.25,
+    "hi": 13.79,
+    "worse": 13.9,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "sg",
-    "median": 0.28,
-    "lo": -0.08,
+    "median": 0.13,
+    "lo": -0.09,
     "hi": 0.5,
-    "worse": 41.0,
-    "pairs": 39,
+    "worse": 44.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "sg_d1_snv",
-    "median": 7.52,
-    "lo": 1.55,
-    "hi": 12.37,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 7.91,
+    "lo": 0.78,
+    "hi": 13.06,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "sg_d2_snv",
-    "median": 5.7,
-    "lo": 1.12,
-    "hi": 10.37,
-    "worse": 23.1,
-    "pairs": 39,
+    "median": 6.12,
+    "lo": 0.19,
+    "hi": 10.38,
+    "worse": 25.0,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "sg_rubberband_snv",
-    "median": 5.84,
-    "lo": 0.31,
-    "hi": 12.68,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 6.76,
+    "lo": 0.3,
+    "hi": 12.77,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "snv",
-    "median": 5.29,
-    "lo": 0.69,
-    "hi": 9.44,
-    "worse": 15.4,
-    "pairs": 39,
+    "median": 5.77,
+    "lo": 0.62,
+    "hi": 9.63,
+    "worse": 16.7,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
@@ -3790,18 +3742,18 @@
     "median": -0.0,
     "lo": -0.0,
     "hi": -0.0,
-    "worse": 20.5,
-    "pairs": 39,
+    "worse": 22.2,
+    "pairs": 36,
     "family": "Tree ensembles"
    },
    {
     "task": "classification",
     "recipe": "wavelet_bc_snv",
-    "median": 8.68,
-    "lo": 0.82,
-    "hi": 10.81,
-    "worse": 17.9,
-    "pairs": 39,
+    "median": 8.79,
+    "lo": 0.81,
+    "hi": 11.19,
+    "worse": 19.4,
+    "pairs": 36,
     "family": "Tree ensembles"
    }
   ],
@@ -3809,209 +3761,209 @@
    {
     "task": "regression",
     "recipe": "airpls_snv",
-    "median": -5.72,
-    "lo": -9.65,
-    "hi": -2.55,
-    "worse": 33.4,
-    "pairs": 1260
+    "median": -5.82,
+    "lo": -9.99,
+    "hi": -2.39,
+    "worse": 33.9,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "all",
-    "median": -6.32,
-    "lo": -13.08,
-    "hi": -1.47,
+    "median": -6.43,
+    "lo": -13.1,
+    "hi": -1.52,
     "worse": 38.9,
-    "pairs": 1260
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "arpls_snv",
-    "median": -5.31,
-    "lo": -9.01,
-    "hi": -1.54,
-    "worse": 33.8,
-    "pairs": 1260
+    "median": -5.47,
+    "lo": -9.51,
+    "hi": -0.88,
+    "worse": 34.7,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "avgpool",
-    "median": -0.09,
-    "lo": -0.97,
-    "hi": 0.13,
-    "worse": 46.6,
-    "pairs": 1260
+    "median": -0.07,
+    "lo": -0.95,
+    "hi": 0.17,
+    "worse": 47.1,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "bc",
-    "median": -1.81,
-    "lo": -4.18,
-    "hi": -0.55,
-    "worse": 38.9,
-    "pairs": 1260
+    "median": -1.9,
+    "lo": -4.22,
+    "hi": -0.59,
+    "worse": 38.8,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "bc_sg",
-    "median": -2.06,
-    "lo": -5.7,
-    "hi": -0.67,
-    "worse": 37.8,
-    "pairs": 1260
+    "median": -2.07,
+    "lo": -5.93,
+    "hi": -0.7,
+    "worse": 38.0,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "bc_sg_msc",
-    "median": -8.32,
-    "lo": -12.18,
-    "hi": -4.03,
-    "worse": 30.2,
-    "pairs": 1260
+    "median": -8.35,
+    "lo": -11.93,
+    "hi": -3.45,
+    "worse": 30.8,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "bc_sg_snv",
     "median": -9.88,
-    "lo": -14.47,
-    "hi": -6.38,
-    "worse": 27.5,
-    "pairs": 1260
+    "lo": -14.44,
+    "hi": -6.32,
+    "worse": 28.2,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "bc_snv",
-    "median": -7.74,
-    "lo": -12.4,
-    "hi": -4.45,
-    "worse": 29.6,
-    "pairs": 1260
+    "median": -7.79,
+    "lo": -12.57,
+    "hi": -4.36,
+    "worse": 30.2,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "bc_snv_avgpool",
-    "median": -10.74,
-    "lo": -15.91,
-    "hi": -6.85,
-    "worse": 28.7,
-    "pairs": 1260
+    "median": -10.8,
+    "lo": -15.83,
+    "hi": -6.46,
+    "worse": 29.5,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "crr_snv",
     "median": -3.93,
-    "lo": -7.71,
-    "hi": -0.49,
-    "worse": 36.7,
-    "pairs": 1260
+    "lo": -7.92,
+    "hi": -0.47,
+    "worse": 37.4,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "decimate",
-    "median": 0.23,
+    "median": 0.3,
     "lo": -0.01,
-    "hi": 1.28,
-    "worse": 56.3,
-    "pairs": 1260
+    "hi": 1.77,
+    "worse": 57.0,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "emsc",
-    "median": -7.08,
-    "lo": -10.47,
-    "hi": -3.61,
-    "worse": 29.4,
-    "pairs": 1260
+    "median": -7.25,
+    "lo": -10.43,
+    "hi": -3.39,
+    "worse": 29.9,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "gcu",
-    "median": -3.36,
-    "lo": -7.69,
-    "hi": -0.78,
+    "median": -3.45,
+    "lo": -8.21,
+    "hi": -0.82,
     "worse": 41.4,
-    "pairs": 1260
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "gcu_lvse",
-    "median": -5.4,
-    "lo": -10.54,
-    "hi": -1.89,
+    "median": -5.48,
+    "lo": -10.95,
+    "hi": -2.11,
     "worse": 36.6,
-    "pairs": 1260
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "lvse",
     "median": -0.28,
-    "lo": -5.19,
-    "hi": 3.11,
-    "worse": 48.7,
-    "pairs": 1260
+    "lo": -5.21,
+    "hi": 2.93,
+    "worse": 48.5,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "msc",
     "median": -7.7,
-    "lo": -10.28,
-    "hi": -4.76,
-    "worse": 26.4,
-    "pairs": 1260
+    "lo": -10.51,
+    "hi": -4.98,
+    "worse": 27.3,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "prep_ensemble",
-    "median": -4.52,
-    "lo": -7.17,
-    "hi": -2.59,
-    "worse": 33.4,
-    "pairs": 1260
+    "median": -4.57,
+    "lo": -7.22,
+    "hi": -2.57,
+    "worse": 33.5,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "sg",
     "median": 0.0,
     "lo": -0.11,
-    "hi": 0.11,
-    "worse": 50.0,
-    "pairs": 1260
+    "hi": 0.16,
+    "worse": 50.2,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "sg_d1_snv",
-    "median": -7.22,
-    "lo": -10.91,
-    "hi": -3.31,
-    "worse": 32.6,
-    "pairs": 1260
+    "median": -7.46,
+    "lo": -11.69,
+    "hi": -2.82,
+    "worse": 33.2,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "sg_d2_snv",
-    "median": -1.0,
-    "lo": -4.06,
-    "hi": 4.74,
-    "worse": 46.4,
-    "pairs": 1260
+    "median": -0.95,
+    "lo": -4.13,
+    "hi": 5.11,
+    "worse": 46.9,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "sg_rubberband_snv",
-    "median": -8.21,
-    "lo": -12.02,
-    "hi": -5.12,
-    "worse": 28.4,
-    "pairs": 1260
+    "median": -8.38,
+    "lo": -12.72,
+    "hi": -4.69,
+    "worse": 29.1,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "snv",
-    "median": -7.91,
-    "lo": -11.55,
-    "hi": -5.46,
-    "worse": 22.9,
-    "pairs": 1260
+    "median": -7.93,
+    "lo": -11.34,
+    "hi": -5.44,
+    "worse": 23.5,
+    "pairs": 1262
    },
    {
     "task": "regression",
@@ -4019,224 +3971,224 @@
     "median": 0.01,
     "lo": 0.0,
     "hi": 0.03,
-    "worse": 52.4,
-    "pairs": 1260
+    "worse": 52.5,
+    "pairs": 1262
    },
    {
     "task": "regression",
     "recipe": "wavelet_bc_snv",
-    "median": -9.52,
-    "lo": -14.11,
-    "hi": -5.9,
-    "worse": 28.4,
-    "pairs": 1260
+    "median": -9.59,
+    "lo": -14.46,
+    "hi": -5.67,
+    "worse": 29.2,
+    "pairs": 1262
    },
    {
     "task": "classification",
     "recipe": "airpls_snv",
-    "median": 1.3,
-    "lo": 0.01,
-    "hi": 3.33,
-    "worse": 34.4,
-    "pairs": 195
+    "median": 1.14,
+    "lo": -0.08,
+    "hi": 3.14,
+    "worse": 35.6,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "all",
-    "median": 0.64,
-    "lo": -1.06,
-    "hi": 3.62,
-    "worse": 44.1,
-    "pairs": 195
+    "median": 0.57,
+    "lo": -1.58,
+    "hi": 4.51,
+    "worse": 45.0,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "arpls_snv",
-    "median": 0.8,
-    "lo": -0.82,
-    "hi": 3.22,
-    "worse": 39.0,
-    "pairs": 195
+    "median": 0.6,
+    "lo": -0.89,
+    "hi": 3.24,
+    "worse": 40.6,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "avgpool",
-    "median": 0.03,
+    "median": 0.01,
     "lo": -0.0,
-    "hi": 0.21,
-    "worse": 42.6,
-    "pairs": 195
+    "hi": 0.18,
+    "worse": 43.3,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "bc",
-    "median": 0.21,
-    "lo": -0.43,
-    "hi": 0.83,
-    "worse": 43.6,
-    "pairs": 195
+    "median": 0.41,
+    "lo": -0.48,
+    "hi": 1.04,
+    "worse": 41.1,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "bc_sg",
-    "median": 0.48,
-    "lo": -0.3,
-    "hi": 0.91,
-    "worse": 41.5,
-    "pairs": 195
+    "median": 0.35,
+    "lo": -0.38,
+    "hi": 1.02,
+    "worse": 43.3,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "bc_sg_msc",
-    "median": 0.02,
-    "lo": -1.67,
-    "hi": 1.95,
-    "worse": 48.2,
-    "pairs": 195
+    "median": -0.29,
+    "lo": -2.19,
+    "hi": 1.61,
+    "worse": 50.6,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "bc_sg_snv",
-    "median": 1.35,
-    "lo": -0.0,
-    "hi": 4.38,
-    "worse": 34.9,
-    "pairs": 195
+    "median": 1.18,
+    "lo": -0.18,
+    "hi": 5.05,
+    "worse": 36.1,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "bc_snv",
-    "median": 1.28,
-    "lo": 0.09,
-    "hi": 3.75,
-    "worse": 33.3,
-    "pairs": 195
+    "median": 1.1,
+    "lo": -0.16,
+    "hi": 4.36,
+    "worse": 35.0,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "bc_snv_avgpool",
-    "median": 1.28,
-    "lo": 0.0,
-    "hi": 4.2,
-    "worse": 34.4,
-    "pairs": 195
+    "median": 1.15,
+    "lo": -0.0,
+    "hi": 5.0,
+    "worse": 35.6,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "crr_snv",
-    "median": 0.8,
-    "lo": -0.02,
-    "hi": 2.3,
-    "worse": 38.5,
-    "pairs": 195
+    "median": 0.66,
+    "lo": -0.12,
+    "hi": 2.25,
+    "worse": 40.6,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "decimate",
     "median": -0.07,
-    "lo": -0.49,
+    "lo": -0.56,
     "hi": 0.0,
-    "worse": 54.4,
-    "pairs": 195
+    "worse": 55.0,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "emsc",
-    "median": 0.17,
-    "lo": -0.92,
-    "hi": 1.11,
-    "worse": 47.2,
-    "pairs": 195
+    "median": 0.05,
+    "lo": -1.04,
+    "hi": 0.92,
+    "worse": 48.9,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "gcu",
-    "median": -0.1,
-    "lo": -1.38,
-    "hi": 1.05,
-    "worse": 50.8,
-    "pairs": 195
+    "median": -0.13,
+    "lo": -1.67,
+    "hi": 1.07,
+    "worse": 51.7,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "gcu_lvse",
-    "median": 0.4,
-    "lo": -0.04,
-    "hi": 1.29,
-    "worse": 40.5,
-    "pairs": 195
+    "median": 0.56,
+    "lo": 0.05,
+    "hi": 1.36,
+    "worse": 38.9,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "lvse",
-    "median": -0.0,
-    "lo": -0.35,
-    "hi": 0.49,
-    "worse": 49.2,
-    "pairs": 195
+    "median": 0.01,
+    "lo": -0.4,
+    "hi": 0.53,
+    "worse": 48.3,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "msc",
-    "median": 0.04,
-    "lo": -0.7,
-    "hi": 1.36,
-    "worse": 47.7,
-    "pairs": 195
+    "median": -0.0,
+    "lo": -1.2,
+    "hi": 0.97,
+    "worse": 49.4,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "prep_ensemble",
-    "median": 0.28,
-    "lo": -0.4,
-    "hi": 1.26,
-    "worse": 42.1,
-    "pairs": 195
+    "median": 0.3,
+    "lo": -0.49,
+    "hi": 1.42,
+    "worse": 40.6,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "sg",
     "median": -0.0,
     "lo": -0.0,
-    "hi": 0.11,
-    "worse": 39.5,
-    "pairs": 195
+    "hi": 0.03,
+    "worse": 40.6,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "sg_d1_snv",
-    "median": 1.53,
-    "lo": -0.02,
-    "hi": 3.54,
-    "worse": 35.4,
-    "pairs": 195
+    "median": 1.49,
+    "lo": -0.07,
+    "hi": 4.41,
+    "worse": 35.0,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "sg_d2_snv",
-    "median": 0.97,
-    "lo": -1.37,
-    "hi": 2.15,
-    "worse": 45.6,
-    "pairs": 195
+    "median": 0.64,
+    "lo": -2.15,
+    "hi": 2.41,
+    "worse": 46.1,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "sg_rubberband_snv",
-    "median": 1.65,
-    "lo": 0.56,
-    "hi": 4.21,
-    "worse": 27.7,
-    "pairs": 195
+    "median": 1.58,
+    "lo": 0.4,
+    "hi": 5.02,
+    "worse": 28.3,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "snv",
-    "median": 1.31,
-    "lo": 0.39,
-    "hi": 3.16,
-    "worse": 29.7,
-    "pairs": 195
+    "median": 1.09,
+    "lo": 0.23,
+    "hi": 3.88,
+    "worse": 30.6,
+    "pairs": 180
    },
    {
     "task": "classification",
@@ -4244,374 +4196,350 @@
     "median": -0.0,
     "lo": -0.0,
     "hi": -0.0,
-    "worse": 45.1,
-    "pairs": 195
+    "worse": 46.1,
+    "pairs": 180
    },
    {
     "task": "classification",
     "recipe": "wavelet_bc_snv",
-    "median": 1.11,
-    "lo": -0.05,
-    "hi": 3.59,
-    "worse": 35.4,
-    "pairs": 195
+    "median": 1.01,
+    "lo": -0.07,
+    "hi": 4.66,
+    "worse": 35.6,
+    "pairs": 180
    }
   ],
   "time": {
-   "airpls_snv": 1.98,
-   "all": 3.21,
-   "arpls_snv": 3.45,
-   "avgpool": 0.87,
-   "bc": 3.23,
-   "bc_sg": 2.62,
-   "bc_sg_msc": 2.94,
-   "bc_sg_snv": 2.72,
-   "bc_snv": 2.68,
-   "bc_snv_avgpool": 1.05,
-   "crr_snv": 1.4,
-   "decimate": 0.85,
-   "emsc": 1.27,
-   "gcu": 1.29,
-   "gcu_lvse": 1.38,
+   "airpls_snv": 2.03,
+   "all": 3.43,
+   "arpls_snv": 3.66,
+   "avgpool": 0.84,
+   "bc": 3.34,
+   "bc_sg": 2.71,
+   "bc_sg_msc": 3.11,
+   "bc_sg_snv": 2.96,
+   "bc_snv": 2.81,
+   "bc_snv_avgpool": 1.1,
+   "crr_snv": 1.42,
+   "decimate": 0.83,
+   "emsc": 1.29,
+   "gcu": 1.3,
+   "gcu_lvse": 1.42,
    "lvse": 0.68,
    "msc": 1.18,
-   "prep_ensemble": 4.25,
+   "prep_ensemble": 4.33,
    "sg": 1.09,
    "sg_d1_snv": 1.07,
-   "sg_d2_snv": 1.08,
-   "sg_rubberband_snv": 1.77,
+   "sg_d2_snv": 1.07,
+   "sg_rubberband_snv": 1.84,
    "snv": 1.08,
-   "stdscale": 1.05,
-   "wavelet_bc_snv": 2.75
+   "stdscale": 1.04,
+   "wavelet_bc_snv": 2.86
   }
  },
  "fig2": {
   "regression": {
-   "cd": 1.1206,
-   "n_blocks": 1260,
+   "cd": 3.2372,
+   "n_blocks": 151,
    "ranks": [
     {
      "recipe": "bc_snv_avgpool",
-     "rank": 9.746,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "bc_sg_snv",
-     "rank": 9.9877,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "wavelet_bc_snv",
-     "rank": 10.3437,
+     "rank": 9.6755,
      "vs_none": "better"
     },
     {
      "recipe": "snv",
-     "rank": 10.8444,
+     "rank": 10.0894,
      "vs_none": "better"
     },
     {
-     "recipe": "sg_rubberband_snv",
-     "rank": 11.1282,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "bc_sg_msc",
-     "rank": 11.2397,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "bc_snv",
-     "rank": 11.3877,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "emsc",
-     "rank": 11.4659,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "msc",
-     "rank": 11.648,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "prep_ensemble",
-     "rank": 12.4444,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "sg_d1_snv",
-     "rank": 12.5849,
+     "recipe": "bc_sg_snv",
+     "rank": 10.0927,
      "vs_none": "better"
     },
     {
      "recipe": "gcu_lvse",
-     "rank": 12.6718,
+     "rank": 10.5629,
      "vs_none": "better"
     },
     {
-     "recipe": "all",
-     "rank": 13.4659,
+     "recipe": "wavelet_bc_snv",
+     "rank": 10.7583,
      "vs_none": "better"
     },
     {
-     "recipe": "airpls_snv",
-     "rank": 13.4885,
+     "recipe": "sg_rubberband_snv",
+     "rank": 11.5563,
      "vs_none": "better"
     },
     {
-     "recipe": "arpls_snv",
-     "rank": 13.7127,
+     "recipe": "msc",
+     "rank": 11.6821,
      "vs_none": "better"
     },
     {
-     "recipe": "gcu",
-     "rank": 14.219,
+     "recipe": "prep_ensemble",
+     "rank": 11.7219,
      "vs_none": "better"
     },
     {
-     "recipe": "bc_sg",
-     "rank": 14.2683,
+     "recipe": "bc_snv",
+     "rank": 11.8742,
      "vs_none": "better"
     },
     {
-     "recipe": "crr_snv",
-     "rank": 14.3437,
+     "recipe": "bc_sg_msc",
+     "rank": 11.9305,
      "vs_none": "better"
     },
     {
-     "recipe": "bc",
-     "rank": 15.0167,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "avgpool",
-     "rank": 15.5028,
-     "vs_none": "better"
+     "recipe": "emsc",
+     "rank": 12.3576,
+     "vs_none": "not_separated"
     },
     {
      "recipe": "lvse",
-     "rank": 15.6099,
-     "vs_none": "better"
+     "rank": 13.0099,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "gcu",
+     "rank": 13.8411,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "avgpool",
+     "rank": 13.8709,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "sg_d1_snv",
+     "rank": 14.0099,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "bc_sg",
+     "rank": 14.3245,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "crr_snv",
+     "rank": 14.5397,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "all",
+     "rank": 14.7119,
+     "vs_none": "not_separated"
     },
     {
      "recipe": "sg",
-     "rank": 16.4456,
+     "rank": 15.1722,
      "vs_none": "not_separated"
     },
     {
      "recipe": "none",
-     "rank": 16.7933,
+     "rank": 15.5596,
      "vs_none": "not_separated"
     },
     {
-     "recipe": "sg_d2_snv",
-     "rank": 17.3246,
+     "recipe": "airpls_snv",
+     "rank": 15.6556,
      "vs_none": "not_separated"
     },
     {
-     "recipe": "decimate",
-     "rank": 17.6496,
+     "recipe": "bc",
+     "rank": 15.9404,
      "vs_none": "not_separated"
     },
     {
      "recipe": "stdscale",
-     "rank": 17.6671,
+     "rank": 16.1093,
      "vs_none": "not_separated"
+    },
+    {
+     "recipe": "arpls_snv",
+     "rank": 16.1556,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "decimate",
+     "rank": 16.6921,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "sg_d2_snv",
+     "rank": 19.106,
+     "vs_none": "worse"
     }
    ],
    "cliques": [
     [
      0,
-     3
-    ],
-    [
-     2,
-     6
-    ],
-    [
-     3,
-     8
-    ],
-    [
-     6,
-     9
-    ],
-    [
-     7,
      10
     ],
     [
-     8,
+     1,
      11
     ],
     [
-     9,
+     4,
      13
     ],
     [
-     11,
-     14
-    ],
-    [
-     12,
+     5,
      17
     ],
     [
-     15,
-     18
+     10,
+     19
     ],
     [
-     18,
-     20
-    ],
-    [
-     19,
-     21
-    ],
-    [
-     21,
+     11,
      23
     ],
     [
-     22,
+     12,
+     24
+    ],
+    [
+     21,
      25
     ]
    ]
   },
   "classification": {
-   "cd": 2.8486,
-   "n_blocks": 195,
+   "cd": 3.0968,
+   "n_blocks": 165,
    "ranks": [
     {
      "recipe": "sg_rubberband_snv",
-     "rank": 10.3718,
+     "rank": 10.2788,
      "vs_none": "better"
     },
     {
      "recipe": "bc_snv_avgpool",
-     "rank": 10.8205,
+     "rank": 10.8818,
      "vs_none": "better"
     },
     {
      "recipe": "airpls_snv",
-     "rank": 10.8974,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "bc_sg_snv",
-     "rank": 10.9128,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "wavelet_bc_snv",
-     "rank": 11.0974,
+     "rank": 10.9303,
      "vs_none": "better"
     },
     {
      "recipe": "snv",
-     "rank": 11.2436,
+     "rank": 10.9758,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "wavelet_bc_snv",
+     "rank": 11.1333,
+     "vs_none": "better"
+    },
+    {
+     "recipe": "bc_sg_snv",
+     "rank": 11.2879,
      "vs_none": "better"
     },
     {
      "recipe": "sg_d1_snv",
-     "rank": 11.2769,
+     "rank": 11.3939,
      "vs_none": "better"
-    },
-    {
-     "recipe": "bc_snv",
-     "rank": 11.5949,
-     "vs_none": "better"
-    },
-    {
-     "recipe": "crr_snv",
-     "rank": 12.5821,
-     "vs_none": "not_separated"
     },
     {
      "recipe": "gcu_lvse",
-     "rank": 12.659,
+     "rank": 12.0242,
      "vs_none": "not_separated"
     },
     {
-     "recipe": "all",
-     "rank": 13.4821,
+     "recipe": "bc_snv",
+     "rank": 12.0424,
      "vs_none": "not_separated"
     },
     {
-     "recipe": "arpls_snv",
-     "rank": 13.6872,
-     "vs_none": "not_separated"
-    },
-    {
-     "recipe": "bc_sg",
-     "rank": 13.7692,
+     "recipe": "crr_snv",
+     "rank": 12.7545,
      "vs_none": "not_separated"
     },
     {
      "recipe": "prep_ensemble",
-     "rank": 13.8308,
+     "rank": 13.4727,
      "vs_none": "not_separated"
     },
     {
      "recipe": "bc",
-     "rank": 13.8897,
+     "rank": 13.4848,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "bc_sg",
+     "rank": 13.697,
      "vs_none": "not_separated"
     },
     {
      "recipe": "lvse",
-     "rank": 14.1436,
+     "rank": 13.7636,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "arpls_snv",
+     "rank": 14.1848,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "all",
+     "rank": 14.2848,
      "vs_none": "not_separated"
     },
     {
      "recipe": "avgpool",
-     "rank": 14.7077,
-     "vs_none": "not_separated"
-    },
-    {
-     "recipe": "emsc",
-     "rank": 14.9,
-     "vs_none": "not_separated"
-    },
-    {
-     "recipe": "bc_sg_msc",
-     "rank": 15.0026,
+     "rank": 14.3061,
      "vs_none": "not_separated"
     },
     {
      "recipe": "sg",
-     "rank": 15.2,
-     "vs_none": "not_separated"
-    },
-    {
-     "recipe": "msc",
-     "rank": 15.3436,
+     "rank": 14.7818,
      "vs_none": "not_separated"
     },
     {
      "recipe": "none",
-     "rank": 15.4231,
+     "rank": 15.0545,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "emsc",
+     "rank": 15.2455,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "msc",
+     "rank": 15.2697,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "bc_sg_msc",
+     "rank": 15.7121,
      "vs_none": "not_separated"
     },
     {
      "recipe": "sg_d2_snv",
-     "rank": 15.6359,
-     "vs_none": "not_separated"
-    },
-    {
-     "recipe": "gcu",
-     "rank": 15.9026,
+     "rank": 15.8273,
      "vs_none": "not_separated"
     },
     {
      "recipe": "stdscale",
-     "rank": 16.0949,
+     "rank": 15.9394,
      "vs_none": "not_separated"
     },
     {
      "recipe": "decimate",
-     "rank": 16.5308,
+     "rank": 16.1091,
+     "vs_none": "not_separated"
+    },
+    {
+     "recipe": "gcu",
+     "rank": 16.1636,
      "vs_none": "not_separated"
     }
    ],
@@ -4622,30 +4550,26 @@
     ],
     [
      1,
-     10
-    ],
-    [
-     2,
-     11
+     13
     ],
     [
      4,
      14
     ],
     [
-     7,
-     15
+     5,
+     16
     ],
     [
-     8,
-     21
+     7,
+     18
+    ],
+    [
+     9,
+     22
     ],
     [
      10,
-     24
-    ],
-    [
-     11,
      25
     ]
    ]
@@ -4658,10 +4582,10 @@
    "n_models": 14,
    "n_targets": 91,
    "shares": {
-    "model": 70.64,
-    "recipe": 9.09,
-    "interaction": 14.03,
-    "noise": 2.65
+    "model": 68.89,
+    "recipe": 10.02,
+    "interaction": 14.18,
+    "noise": 2.84
    }
   },
   {
@@ -4680,24 +4604,24 @@
    "label": "Classification, all models",
    "task": "classification",
    "n_models": 15,
-   "n_targets": 13,
+   "n_targets": 12,
    "shares": {
-    "model": 56.02,
-    "recipe": 14.74,
-    "interaction": 16.76,
-    "noise": 3.43
+    "model": 62.74,
+    "recipe": 14.05,
+    "interaction": 18.72,
+    "noise": 3.09
    }
   },
   {
    "label": "Classification, TFMs",
    "task": "classification",
    "n_models": 4,
-   "n_targets": 13,
+   "n_targets": 12,
    "shares": {
-    "model": 12.84,
-    "recipe": 51.01,
-    "interaction": 7.49,
-    "noise": 8.65
+    "model": 13.9,
+    "recipe": 53.54,
+    "interaction": 7.89,
+    "noise": 8.62
    }
   }
  ],
@@ -4719,22 +4643,22 @@
     "none": 26.5,
     "global": 34.4,
     "cv": 21.5,
-    "oracle": 11.2,
+    "oracle": 11.5,
     "targets": 91
    },
    {
     "model": "TabPFN-3.5",
     "family": "Tabular foundation",
-    "none": 33.6,
+    "none": 33.9,
     "global": 22.8,
     "cv": 22.6,
-    "oracle": 4.8,
+    "oracle": 4.9,
     "targets": 91
    },
    {
     "model": "TabICLv2",
     "family": "Tabular foundation",
-    "none": 59.4,
+    "none": 61.8,
     "global": 28.4,
     "cv": 27.4,
     "oracle": 9.8,
@@ -4745,7 +4669,7 @@
     "family": "Deep learning",
     "none": 75.3,
     "global": 49.7,
-    "cv": 40.9,
+    "cv": 42.0,
     "oracle": 30.7,
     "targets": 91
    },
@@ -4754,8 +4678,8 @@
     "family": "Deep learning",
     "none": 95.5,
     "global": 56.7,
-    "cv": 52.6,
-    "oracle": 35.7,
+    "cv": 55.3,
+    "oracle": 37.2,
     "targets": 91
    },
    {
@@ -4763,7 +4687,7 @@
     "family": "Chemometric",
     "none": 99.9,
     "global": 85.9,
-    "cv": 51.7,
+    "cv": 52.5,
     "oracle": 39.2,
     "targets": 91
    },
@@ -4781,8 +4705,8 @@
     "family": "Chemometric",
     "none": 108.5,
     "global": 106.7,
-    "cv": 56.3,
-    "oracle": 42.0,
+    "cv": 56.8,
+    "oracle": 44.4,
     "targets": 91
    },
    {
@@ -4790,7 +4714,7 @@
     "family": "Tree ensembles",
     "none": 152.5,
     "global": 67.1,
-    "cv": 61.9,
+    "cv": 63.6,
     "oracle": 43.5,
     "targets": 79
    },
@@ -4798,24 +4722,24 @@
     "model": "XGB",
     "family": "Tree ensembles",
     "none": 162.6,
-    "global": 85.0,
+    "global": 86.0,
     "cv": 75.0,
-    "oracle": 51.0,
+    "oracle": 52.2,
     "targets": 91
    },
    {
     "model": "RF",
     "family": "Tree ensembles",
-    "none": 169.5,
+    "none": 173.3,
     "global": 86.1,
-    "cv": 63.3,
+    "cv": 63.4,
     "oracle": 51.3,
     "targets": 91
    },
    {
     "model": "kNN",
     "family": "Chemometric",
-    "none": 221.6,
+    "none": 236.5,
     "global": 139.7,
     "cv": 116.3,
     "oracle": 100.1,
@@ -4824,11 +4748,11 @@
    {
     "model": "SVM",
     "family": "Kernel methods",
-    "none": 284.2,
-    "global": 216.5,
-    "cv": 140.8,
-    "oracle": 134.0,
-    "targets": 89
+    "none": 249.4,
+    "global": 168.1,
+    "cv": 105.5,
+    "oracle": 93.0,
+    "targets": 91
    }
   ]
  },
@@ -4839,9 +4763,9 @@
     "family": "Tabular foundation",
     "recipe": "msc",
     "ins": -0.71,
-    "held": 0.82,
-    "lo": -2.54,
-    "hi": 3.09,
+    "held": 0.98,
+    "lo": -2.74,
+    "hi": 3.3,
     "stable": false
    },
    {
@@ -4849,9 +4773,9 @@
     "family": "Tabular foundation",
     "recipe": "snv",
     "ins": -4.16,
-    "held": -1.25,
-    "lo": -6.42,
-    "hi": 1.43,
+    "held": -2.59,
+    "lo": -6.55,
+    "hi": 1.57,
     "stable": false
    },
    {
@@ -4859,9 +4783,9 @@
     "family": "Tabular foundation",
     "recipe": "prep_ensemble",
     "ins": -7.45,
-    "held": -5.09,
-    "lo": -10.33,
-    "hi": -1.71,
+    "held": -5.23,
+    "lo": -10.4,
+    "hi": -1.64,
     "stable": true
    },
    {
@@ -4869,9 +4793,9 @@
     "family": "Chemometric",
     "recipe": "bc_sg_snv",
     "ins": -8.95,
-    "held": -5.57,
-    "lo": -12.11,
-    "hi": 4.18,
+    "held": -4.94,
+    "lo": -11.47,
+    "hi": 4.49,
     "stable": false
    },
    {
@@ -4879,9 +4803,9 @@
     "family": "Chemometric",
     "recipe": "wavelet_bc_snv",
     "ins": -9.6,
-    "held": -1.74,
-    "lo": -24.87,
-    "hi": 10.97,
+    "held": -1.67,
+    "lo": -21.46,
+    "hi": 12.09,
     "stable": false
    },
    {
@@ -4889,9 +4813,9 @@
     "family": "Chemometric",
     "recipe": "bc_sg_snv",
     "ins": -10.13,
-    "held": -6.9,
-    "lo": -13.79,
-    "hi": 4.13,
+    "held": -6.68,
+    "lo": -13.39,
+    "hi": 3.81,
     "stable": false
    },
    {
@@ -4899,9 +4823,9 @@
     "family": "Deep learning",
     "recipe": "bc_snv_avgpool",
     "ins": -10.75,
-    "held": -7.11,
-    "lo": -12.93,
-    "hi": -0.5,
+    "held": -6.62,
+    "lo": -11.0,
+    "hi": -0.81,
     "stable": true
    },
    {
@@ -4909,9 +4833,9 @@
     "family": "Deep learning",
     "recipe": "bc_snv_avgpool",
     "ins": -12.35,
-    "held": -8.48,
-    "lo": -17.63,
-    "hi": -0.57,
+    "held": -8.12,
+    "lo": -16.54,
+    "hi": -0.41,
     "stable": true
    },
    {
@@ -4919,9 +4843,9 @@
     "family": "Tabular foundation",
     "recipe": "emsc",
     "ins": -12.96,
-    "held": -8.68,
-    "lo": -18.62,
-    "hi": -3.57,
+    "held": -10.58,
+    "lo": -18.78,
+    "hi": -3.46,
     "stable": true
    },
    {
@@ -4929,19 +4853,19 @@
     "family": "Chemometric",
     "recipe": "bc_sg_snv",
     "ins": -18.27,
-    "held": -16.52,
-    "lo": -21.78,
-    "hi": -7.48,
+    "held": -15.94,
+    "lo": -21.33,
+    "hi": -7.64,
     "stable": true
    },
    {
     "model": "SVM",
     "family": "Kernel methods",
     "recipe": "all",
-    "ins": -18.8,
-    "held": -14.89,
-    "lo": -26.49,
-    "hi": -4.56,
+    "ins": -23.48,
+    "held": -16.37,
+    "lo": -34.4,
+    "hi": -3.25,
     "stable": true
    },
    {
@@ -4949,9 +4873,9 @@
     "family": "Tree ensembles",
     "recipe": "prep_ensemble",
     "ins": -25.31,
-    "held": -21.54,
-    "lo": -27.5,
-    "hi": -12.99,
+    "held": -21.92,
+    "lo": -27.36,
+    "hi": -12.78,
     "stable": true
    },
    {
@@ -4959,9 +4883,9 @@
     "family": "Tree ensembles",
     "recipe": "prep_ensemble",
     "ins": -26.26,
-    "held": -22.26,
-    "lo": -31.65,
-    "hi": -15.36,
+    "held": -21.75,
+    "lo": -31.83,
+    "hi": -14.96,
     "stable": true
    },
    {
@@ -4969,9 +4893,9 @@
     "family": "Tree ensembles",
     "recipe": "prep_ensemble",
     "ins": -26.87,
-    "held": -21.81,
+    "held": -20.92,
     "lo": -31.28,
-    "hi": -17.6,
+    "hi": -16.87,
     "stable": true
    }
   ],
@@ -4980,139 +4904,139 @@
     "model": "Kumo",
     "family": "Tabular foundation",
     "recipe": "gcu_lvse",
-    "ins": 0.1,
-    "held": -0.16,
-    "lo": -1.43,
-    "hi": 0.48,
+    "ins": 0.07,
+    "held": -0.13,
+    "lo": -1.35,
+    "hi": 0.68,
     "stable": false
    },
    {
     "model": "ReZeroNet",
     "family": "Deep learning",
     "recipe": "bc_snv_avgpool",
-    "ins": 0.35,
-    "held": -0.32,
-    "lo": -2.22,
-    "hi": 0.98,
+    "ins": 0.17,
+    "held": -0.44,
+    "lo": -2.4,
+    "hi": 0.85,
     "stable": false
    },
    {
     "model": "RamanPFN",
     "family": "Tabular foundation",
-    "recipe": "airpls_snv",
-    "ins": 0.56,
-    "held": -0.15,
-    "lo": -1.26,
-    "hi": 0.61,
+    "recipe": "sg_rubberband_snv",
+    "ins": 0.4,
+    "held": -0.24,
+    "lo": -1.7,
+    "hi": 0.56,
     "stable": false
    },
    {
     "model": "DeepCNN",
     "family": "Deep learning",
     "recipe": "bc_sg_snv",
-    "ins": 1.07,
-    "held": -0.03,
-    "lo": -1.77,
-    "hi": 1.68,
+    "ins": 0.51,
+    "held": -0.35,
+    "lo": -2.06,
+    "hi": 1.44,
     "stable": false
    },
    {
     "model": "TabPFN-3.5",
     "family": "Tabular foundation",
-    "recipe": "avgpool",
-    "ins": 1.34,
-    "held": 0.21,
-    "lo": -1.12,
-    "hi": 4.1,
-    "stable": false
-   },
-   {
-    "model": "TabICLv2",
-    "family": "Tabular foundation",
     "recipe": "gcu_lvse",
-    "ins": 1.99,
-    "held": 1.28,
-    "lo": -1.33,
-    "hi": 3.65,
+    "ins": 1.53,
+    "held": 0.92,
+    "lo": -0.6,
+    "hi": 5.56,
     "stable": false
    },
    {
     "model": "PCR",
     "family": "Chemometric",
     "recipe": "all",
-    "ins": 1.99,
-    "held": 1.67,
-    "lo": -1.47,
+    "ins": 1.83,
+    "held": 0.21,
+    "lo": -2.48,
     "hi": 7.94,
     "stable": false
    },
    {
     "model": "PLS",
     "family": "Chemometric",
-    "recipe": "all",
-    "ins": 2.18,
-    "held": 1.69,
-    "lo": -0.88,
-    "hi": 6.93,
+    "recipe": "sg_rubberband_snv",
+    "ins": 1.92,
+    "held": 1.31,
+    "lo": -1.1,
+    "hi": 7.64,
+    "stable": false
+   },
+   {
+    "model": "TabICLv2",
+    "family": "Tabular foundation",
+    "recipe": "bc_snv",
+    "ins": 2.14,
+    "held": 1.6,
+    "lo": -0.36,
+    "hi": 3.89,
     "stable": false
    },
    {
     "model": "PCA-LDA",
     "family": "Chemometric",
     "recipe": "sg_rubberband_snv",
-    "ins": 2.48,
-    "held": 2.22,
-    "lo": -2.09,
-    "hi": 5.73,
+    "ins": 2.35,
+    "held": 1.99,
+    "lo": -2.56,
+    "hi": 6.52,
     "stable": false
    },
    {
     "model": "Ridge",
     "family": "Chemometric",
-    "recipe": "sg_d1_snv",
-    "ins": 5.79,
+    "recipe": "snv",
+    "ins": 5.77,
     "held": 3.26,
-    "lo": 0.68,
-    "hi": 7.15,
+    "lo": 0.42,
+    "hi": 9.88,
     "stable": true
    },
    {
     "model": "XGB",
     "family": "Tree ensembles",
-    "recipe": "airpls_snv",
-    "ins": 8.89,
-    "held": 5.23,
-    "lo": 0.36,
-    "hi": 11.99,
+    "recipe": "all",
+    "ins": 9.69,
+    "held": 7.22,
+    "lo": -0.09,
+    "hi": 13.33,
+    "stable": false
+   },
+   {
+    "model": "GBM",
+    "family": "Tree ensembles",
+    "recipe": "prep_ensemble",
+    "ins": 10.07,
+    "held": 7.22,
+    "lo": 0.24,
+    "hi": 13.41,
     "stable": true
    },
    {
     "model": "RF",
     "family": "Tree ensembles",
     "recipe": "wavelet_bc_snv",
-    "ins": 9.5,
-    "held": 5.61,
-    "lo": 0.9,
-    "hi": 11.5,
-    "stable": true
-   },
-   {
-    "model": "GBM",
-    "family": "Tree ensembles",
-    "recipe": "prep_ensemble",
-    "ins": 9.92,
-    "held": 5.35,
+    "ins": 10.35,
+    "held": 7.27,
     "lo": 0.31,
-    "hi": 12.13,
+    "hi": 12.31,
     "stable": true
    },
    {
     "model": "kNN",
     "family": "Chemometric",
     "recipe": "wavelet_bc_snv",
-    "ins": 10.16,
-    "held": 4.47,
-    "lo": -0.23,
+    "ins": 11.18,
+    "held": 4.62,
+    "lo": -0.29,
     "hi": 14.05,
     "stable": false
    },
@@ -5120,10 +5044,10 @@
     "model": "SVM",
     "family": "Kernel methods",
     "recipe": "all",
-    "ins": 13.03,
-    "held": 10.35,
-    "lo": 1.06,
-    "hi": 22.28,
+    "ins": 14.1,
+    "held": 10.96,
+    "lo": 0.68,
+    "hi": 24.25,
     "stable": true
    }
   ]
@@ -5135,13 +5059,13 @@
     "label": "< 50",
     "n": 15,
     "median": {
-     "global": -12.43,
-     "family": -13.38,
-     "nested": -21.6
+     "global": -10.16,
+     "family": -13.53,
+     "nested": -25.28
     },
     "worse": {
      "global": 27,
-     "family": 13,
+     "family": 27,
      "nested": 13
     }
    },
@@ -5150,9 +5074,9 @@
     "label": "50–100",
     "n": 13,
     "median": {
-     "global": 7.55,
-     "family": -2.05,
-     "nested": -10.2
+     "global": 7.33,
+     "family": -2.47,
+     "nested": -9.51
     },
     "worse": {
      "global": 54,
@@ -5166,7 +5090,7 @@
     "n": 28,
     "median": {
      "global": -8.22,
-     "family": -11.5,
+     "family": -11.83,
      "nested": -13.68
     },
     "worse": {
@@ -5195,12 +5119,12 @@
     "label": "> 500",
     "n": 21,
     "median": {
-     "global": -8.75,
+     "global": -8.33,
      "family": -9.14,
      "nested": -16.07
     },
     "worse": {
-     "global": 14,
+     "global": 19,
      "family": 14,
      "nested": 5
     }
@@ -5210,113 +5134,113 @@
    {
     "g": 0,
     "key": "acetic_acid_species__0",
-    "dataset": "acetic_acid_species",
-    "global": -72.51,
-    "family": -74.98,
-    "nested": -39.27
+    "dataset": "acid_titrations",
+    "global": -70.57,
+    "family": -51.55,
+    "nested": -39.54
    },
    {
     "g": 0,
     "key": "acetic_acid_species__1",
-    "dataset": "acetic_acid_species",
-    "global": -69.32,
-    "family": -74.65,
-    "nested": -37.63
+    "dataset": "acid_titrations",
+    "global": -64.91,
+    "family": -42.46,
+    "nested": -37.88
+   },
+   {
+    "g": 0,
+    "key": "citric_acid_species__1",
+    "dataset": "acid_titrations",
+    "global": -15.4,
+    "family": -37.2,
+    "nested": -25.28
+   },
+   {
+    "g": 0,
+    "key": "formic_acid_species__0",
+    "dataset": "acid_titrations",
+    "global": 96.8,
+    "family": 3.44,
+    "nested": 5.16
+   },
+   {
+    "g": 0,
+    "key": "formic_acid_species__1",
+    "dataset": "acid_titrations",
+    "global": -49.57,
+    "family": 0.2,
+    "nested": -31.98
+   },
+   {
+    "g": 0,
+    "key": "formic_acid_species__2",
+    "dataset": "acid_titrations",
+    "global": 52.07,
+    "family": -1.45,
+    "nested": -6.14
+   },
+   {
+    "g": 0,
+    "key": "itaconic_acid_species__0",
+    "dataset": "acid_titrations",
+    "global": -36.14,
+    "family": -50.01,
+    "nested": -40.74
+   },
+   {
+    "g": 0,
+    "key": "itaconic_acid_species__1",
+    "dataset": "acid_titrations",
+    "global": -7.2,
+    "family": -24.62,
+    "nested": -25.68
+   },
+   {
+    "g": 0,
+    "key": "levulinic_acid_species__0",
+    "dataset": "acid_titrations",
+    "global": -6.16,
+    "family": -16.88,
+    "nested": -34.72
+   },
+   {
+    "g": 0,
+    "key": "levulinic_acid_species__1",
+    "dataset": "acid_titrations",
+    "global": -35.27,
+    "family": -44.54,
+    "nested": -53.11
    },
    {
     "g": 0,
     "key": "ait_glucose_blood_sers__0",
     "dataset": "ait_glucose_blood_sers",
     "global": -0.37,
-    "family": -0.7,
-    "nested": -5.49
-   },
-   {
-    "g": 0,
-    "key": "citric_acid_species__1",
-    "dataset": "citric_acid_species",
-    "global": -17.37,
-    "family": -56.67,
-    "nested": -23.55
-   },
-   {
-    "g": 0,
-    "key": "formic_acid_species__0",
-    "dataset": "formic_acid_species",
-    "global": 104.99,
-    "family": 4.79,
-    "nested": 5.16
-   },
-   {
-    "g": 0,
-    "key": "formic_acid_species__1",
-    "dataset": "formic_acid_species",
-    "global": -50.84,
-    "family": -4.42,
-    "nested": -21.6
-   },
-   {
-    "g": 0,
-    "key": "formic_acid_species__2",
-    "dataset": "formic_acid_species",
-    "global": 53.93,
-    "family": -7.27,
-    "nested": -1.08
+    "family": -0.37,
+    "nested": -24.1
    },
    {
     "g": 0,
     "key": "fuel_benchtop__1",
     "dataset": "fuel",
     "global": 4.82,
-    "family": -0.36,
+    "family": 5.49,
     "nested": 11.16
    },
    {
     "g": 0,
     "key": "fuel_handheld__1",
     "dataset": "fuel",
-    "global": -12.43,
-    "family": -13.38,
+    "global": -17.7,
+    "family": -13.53,
     "nested": -19.94
-   },
-   {
-    "g": 0,
-    "key": "itaconic_acid_species__0",
-    "dataset": "itaconic_acid_species",
-    "global": -38.74,
-    "family": -45.02,
-    "nested": -40.4
-   },
-   {
-    "g": 0,
-    "key": "itaconic_acid_species__1",
-    "dataset": "itaconic_acid_species",
-    "global": -16.61,
-    "family": -36.12,
-    "nested": -25.67
-   },
-   {
-    "g": 0,
-    "key": "levulinic_acid_species__0",
-    "dataset": "levulinic_acid_species",
-    "global": -6.16,
-    "family": -17.0,
-    "nested": -34.72
-   },
-   {
-    "g": 0,
-    "key": "levulinic_acid_species__1",
-    "dataset": "levulinic_acid_species",
-    "global": -35.27,
-    "family": -16.9,
-    "nested": -51.94
    },
    {
     "g": 0,
     "key": "microgel_synthesis__0",
     "dataset": "microgel_synthesis",
     "global": -10.16,
-    "family": -10.56,
+    "family": -4.1,
     "nested": -7.01
    },
    {
@@ -5324,7 +5248,7 @@
     "key": "streptococcus_thermophilus_fermentation_kaiser__1",
     "dataset": "streptococcus_thermophilus_fermentation_kaiser",
     "global": 15.07,
-    "family": 6.76,
+    "family": 94.4,
     "nested": 0.0
    },
    {
@@ -5332,7 +5256,7 @@
     "key": "flow_microgel_synthesis__0",
     "dataset": "flow_microgel_synthesis",
     "global": -4.48,
-    "family": -2.05,
+    "family": -2.54,
     "nested": -4.98
    },
    {
@@ -5347,9 +5271,9 @@
     "g": 50,
     "key": "ralstonia_fermentations__1",
     "dataset": "ralstonia_fermentations",
-    "global": -11.44,
-    "family": -12.36,
-    "nested": -23.46
+    "global": -13.69,
+    "family": -13.69,
+    "nested": -24.98
    },
    {
     "g": 50,
@@ -5365,7 +5289,7 @@
     "dataset": "ralstonia_fermentations",
     "global": -2.47,
     "family": -2.47,
-    "nested": -23.05
+    "nested": -31.67
    },
    {
     "g": 50,
@@ -5396,32 +5320,32 @@
     "key": "succinic_acid_species__1",
     "dataset": "succinic_acid_species",
     "global": 25.14,
-    "family": -13.98,
-    "nested": -27.12
+    "family": -21.59,
+    "nested": -34.54
    },
    {
     "g": 50,
     "key": "yeast_fermentation__0",
     "dataset": "yeast_fermentation",
-    "global": 7.55,
-    "family": 9.65,
-    "nested": -3.11
+    "global": 7.33,
+    "family": 9.8,
+    "nested": -3.1
    },
    {
     "g": 50,
     "key": "yeast_fermentation__1",
     "dataset": "yeast_fermentation",
-    "global": 16.87,
-    "family": 13.04,
+    "global": 17.07,
+    "family": 14.49,
     "nested": 3.98
    },
    {
     "g": 50,
     "key": "yeast_fermentation__2",
     "dataset": "yeast_fermentation",
-    "global": -1.69,
-    "family": -2.75,
-    "nested": -10.2
+    "global": -1.06,
+    "family": -2.64,
+    "nested": -9.51
    },
    {
     "g": 50,
@@ -5460,8 +5384,8 @@
     "key": "bioprocess_analytes_timegate__0",
     "dataset": "bioprocess_analytes_timegate",
     "global": -41.8,
-    "family": -36.24,
-    "nested": -40.54
+    "family": -37.38,
+    "nested": -42.68
    },
    {
     "g": 100,
@@ -5500,7 +5424,7 @@
     "key": "fuel_benchtop__11",
     "dataset": "fuel_benchtop",
     "global": 10.97,
-    "family": -9.31,
+    "family": -9.95,
     "nested": -17.9
    },
    {
@@ -5524,8 +5448,8 @@
     "key": "fuel_benchtop__4",
     "dataset": "fuel_benchtop",
     "global": -10.83,
-    "family": -14.83,
-    "nested": -16.57
+    "family": -17.74,
+    "nested": -26.06
    },
    {
     "g": 100,
@@ -5540,14 +5464,14 @@
     "key": "fuel_benchtop__6",
     "dataset": "fuel_benchtop",
     "global": -3.3,
-    "family": -1.48,
+    "family": -2.43,
     "nested": 1.07
    },
    {
     "g": 100,
     "key": "fuel_benchtop__7",
     "dataset": "fuel_benchtop",
-    "global": 0.15,
+    "global": 0.66,
     "family": -3.57,
     "nested": -5.3
    },
@@ -5565,7 +5489,7 @@
     "dataset": "fuel_benchtop",
     "global": -13.55,
     "family": -14.07,
-    "nested": -15.72
+    "nested": -17.65
    },
    {
     "g": 100,
@@ -5587,7 +5511,7 @@
     "g": 100,
     "key": "fuel_handheld__11",
     "dataset": "fuel_handheld",
-    "global": -21.74,
+    "global": -24.88,
     "family": -21.15,
     "nested": -24.32
    },
@@ -5595,8 +5519,8 @@
     "g": 100,
     "key": "fuel_handheld__2",
     "dataset": "fuel_handheld",
-    "global": -15.7,
-    "family": -13.95,
+    "global": -20.17,
+    "family": -13.22,
     "nested": -11.32
    },
    {
@@ -5604,7 +5528,7 @@
     "key": "fuel_handheld__3",
     "dataset": "fuel_handheld",
     "global": -14.65,
-    "family": -13.29,
+    "family": -13.05,
     "nested": -12.04
    },
    {
@@ -5619,32 +5543,32 @@
     "g": 100,
     "key": "fuel_handheld__5",
     "dataset": "fuel_handheld",
-    "global": -5.91,
+    "global": -6.15,
     "family": -6.17,
-    "nested": -5.26
+    "nested": -6.66
    },
    {
     "g": 100,
     "key": "fuel_handheld__6",
     "dataset": "fuel_handheld",
-    "global": -0.19,
-    "family": -0.31,
-    "nested": -0.28
+    "global": -4.05,
+    "family": -0.71,
+    "nested": -0.73
    },
    {
     "g": 100,
     "key": "fuel_handheld__7",
     "dataset": "fuel_handheld",
     "global": -6.08,
-    "family": -5.25,
-    "nested": -5.94
+    "family": -6.08,
+    "nested": -6.39
    },
    {
     "g": 100,
     "key": "fuel_handheld__8",
     "dataset": "fuel_handheld",
     "global": -4.06,
-    "family": -4.81,
+    "family": -5.0,
     "nested": -3.18
    },
    {
@@ -5652,7 +5576,7 @@
     "key": "fuel_handheld__9",
     "dataset": "fuel_handheld",
     "global": -9.56,
-    "family": -9.2,
+    "family": -10.63,
     "nested": -6.01
    },
    {
@@ -5675,9 +5599,9 @@
     "g": 200,
     "key": "bioprocess_analytes_anton_532__1",
     "dataset": "bioprocess_analytes_anton_532",
-    "global": -1.93,
-    "family": -2.04,
-    "nested": -2.29
+    "global": -2.63,
+    "family": -1.37,
+    "nested": -2.02
    },
    {
     "g": 200,
@@ -5701,7 +5625,7 @@
     "dataset": "bioprocess_analytes_anton_785",
     "global": -15.73,
     "family": -8.06,
-    "nested": -26.58
+    "nested": -24.62
    },
    {
     "g": 200,
@@ -5717,15 +5641,15 @@
     "dataset": "bioprocess_analytes_metrohm",
     "global": -36.99,
     "family": -45.29,
-    "nested": -34.44
+    "nested": -36.64
    },
    {
     "g": 200,
     "key": "bioprocess_analytes_metrohm__1",
     "dataset": "bioprocess_analytes_metrohm",
     "global": -20.89,
-    "family": -37.01,
-    "nested": -39.25
+    "family": -36.95,
+    "nested": -37.29
    },
    {
     "g": 200,
@@ -5740,16 +5664,16 @@
     "key": "bioprocess_analytes_mettler_toledo__0",
     "dataset": "bioprocess_analytes_mettler_toledo",
     "global": 1.4,
-    "family": -8.55,
-    "nested": -11.24
+    "family": -22.25,
+    "nested": -16.86
    },
    {
     "g": 200,
     "key": "bioprocess_analytes_mettler_toledo__1",
     "dataset": "bioprocess_analytes_mettler_toledo",
     "global": -29.67,
-    "family": -22.89,
-    "nested": -11.4
+    "family": -15.6,
+    "nested": -9.82
    },
    {
     "g": 200,
@@ -5764,8 +5688,8 @@
     "key": "bioprocess_analytes_tec5__0",
     "dataset": "bioprocess_analytes_tec5",
     "global": -7.13,
-    "family": -17.49,
-    "nested": -13.8
+    "family": -23.16,
+    "nested": -16.51
    },
    {
     "g": 200,
@@ -5780,16 +5704,16 @@
     "key": "bioprocess_analytes_tec5__2",
     "dataset": "bioprocess_analytes_tec5",
     "global": -28.22,
-    "family": -30.86,
-    "nested": -31.24
+    "family": -29.53,
+    "nested": -30.62
    },
    {
     "g": 200,
     "key": "bioprocess_analytes_tornado__0",
     "dataset": "bioprocess_analytes_tornado",
     "global": -46.04,
-    "family": -41.65,
-    "nested": -38.13
+    "family": -43.27,
+    "nested": -39.29
    },
    {
     "g": 200,
@@ -5805,7 +5729,7 @@
     "dataset": "bioprocess_analytes_tornado",
     "global": -38.63,
     "family": -38.63,
-    "nested": -37.92
+    "nested": -39.41
    },
    {
     "g": 200,
@@ -5868,7 +5792,7 @@
     "key": "ht_raman_bio_catalysis_axp__2",
     "dataset": "ht_raman_bio_catalysis_axp",
     "global": -17.3,
-    "family": -6.88,
+    "family": -8.04,
     "nested": -27.74
    },
    {
@@ -5884,8 +5808,8 @@
     "key": "microgel_size_raw_global__0",
     "dataset": "microgel_size_raw_global",
     "global": 0.33,
-    "family": -1.81,
-    "nested": -1.77
+    "family": -3.26,
+    "nested": -1.97
    },
    {
     "g": 500,
@@ -5995,17 +5919,17 @@
     "g": 500,
     "key": "sugar_mixtures_high_snr__0",
     "dataset": "sugar_mixtures_high_snr",
-    "global": 8.57,
+    "global": 15.24,
     "family": 4.84,
-    "nested": 2.22
+    "nested": 3.99
    },
    {
     "g": 500,
     "key": "sugar_mixtures_high_snr__1",
     "dataset": "sugar_mixtures_high_snr",
-    "global": -5.96,
+    "global": -3.94,
     "family": -3.94,
-    "nested": -9.57
+    "nested": -3.62
    },
    {
     "g": 500,
@@ -6019,23 +5943,23 @@
     "g": 500,
     "key": "sugar_mixtures_high_snr__3",
     "dataset": "sugar_mixtures_high_snr",
-    "global": -3.59,
+    "global": -3.7,
     "family": 8.99,
-    "nested": -27.56
+    "nested": -19.8
    },
    {
     "g": 500,
     "key": "sugar_mixtures_low_snr__0",
     "dataset": "sugar_mixtures_low_snr",
-    "global": -7.7,
+    "global": 0.72,
     "family": -6.49,
-    "nested": -9.63
+    "nested": -5.08
    },
    {
     "g": 500,
     "key": "sugar_mixtures_low_snr__1",
     "dataset": "sugar_mixtures_low_snr",
-    "global": -8.5,
+    "global": -8.33,
     "family": -4.46,
     "nested": -16.07
    },
@@ -6043,17 +5967,17 @@
     "g": 500,
     "key": "sugar_mixtures_low_snr__2",
     "dataset": "sugar_mixtures_low_snr",
-    "global": -9.46,
+    "global": -2.13,
     "family": -6.8,
-    "nested": -5.26
+    "nested": -2.31
    },
    {
     "g": 500,
     "key": "sugar_mixtures_low_snr__3",
     "dataset": "sugar_mixtures_low_snr",
-    "global": -5.55,
+    "global": -5.27,
     "family": -9.14,
-    "nested": -7.63
+    "nested": -7.1
    }
   ],
   "n_models": 13
